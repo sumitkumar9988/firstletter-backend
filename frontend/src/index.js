@@ -5,7 +5,7 @@ import './styles/index.css';
 import reportWebVitals from './reportWebVitals';
 import Modal from "react-modal";
 
-Modal.setAppElement("#root");
+
 
 ReactDOM.render(
   <React.StrictMode>
