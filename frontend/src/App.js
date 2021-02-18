@@ -1,12 +1,14 @@
 import React from "react";
 import LandingPage from './LandingPage/Index'
+import PortfolioPage from './PortfolioPage/Index'
 import {BrowserRouter as Router,Route, Switch} from 'react-router-dom'
 function App() {
   return (
     <div >
         <Router >
             <Switch>
-              <LandingPage/>
+              <Route path="/user" component={PortfolioPage}/>
+              <Route path="/" component={LandingPage}/>
             </Switch>
       </Router>
      

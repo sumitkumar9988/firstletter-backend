@@ -11,7 +11,7 @@ export default () => {
   return (
      <div>
        <Headers/>
-       <Introduction/>
+       {/* <Introduction/> */}
        <Hero/>
        <Feature/>
        <AllFeature/>
