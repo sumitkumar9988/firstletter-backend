@@ -2,7 +2,7 @@ import React from 'react'
 
 const Feature = () => {
     return (
-        <div>
+        <div id="feature">
              <div class="flex items-center justify-center py-10 text-white bg-white sm:py-16 md:py-24 lg:py-32">
 
 <div class="relative max-w-3xl px-10 text-center text-white auto lg:px-0">

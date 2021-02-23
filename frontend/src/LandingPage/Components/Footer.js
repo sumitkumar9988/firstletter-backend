@@ -70,7 +70,7 @@ const Footer = () => {
             </a>
         </div>
         <p class="mt-8 text-base leading-6 text-center text-gray-400">
-            &copy; 2020 SomeCompany, Inc. All rights reserved.
+            &copy; 2021 firstletter All rights reserved.
         </p>
     </div>
 </footer>

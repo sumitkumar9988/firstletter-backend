@@ -24,14 +24,14 @@ const Headers = () => {
         </nav> */}
 
         <div class="relative z-10 inline-flex items-center space-x-3 md:ml-5 lg:justify-end">
-            <a  class="inline-flex items-center justify-center px-4 py-2 text-base font-medium leading-6 text-gray-600 whitespace-no-wrap bg-white border border-gray-200 rounded-md shadow-sm hover:bg-gray-50 ">
+            {/* <a  class="inline-flex items-center justify-center px-4 py-2 text-base font-medium leading-6 text-gray-600 whitespace-no-wrap bg-white border border-gray-200 rounded-md shadow-sm hover:bg-gray-50 ">
                 Sign in
             </a>
             <span class="inline-flex rounded-md shadow-sm">
                 <a  class="inline-flex items-center justify-center px-4 py-2 text-base font-medium leading-6 text-white whitespace-no-wrap bg-purple-500 border bg-purple-600 rounded-md shadow-sm hover:bg-purple-700 ">
                     Sign up
                 </a>
-            </span>
+            </span> */}
         </div>
     </div>
 </header>

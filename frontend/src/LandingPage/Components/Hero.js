@@ -5,7 +5,7 @@ const Hero = () => {
             <div class="px-2 pt-32 bg-white md:px-0">
     <div class="container items-center max-w-6xl px-5 mx-auto space-y-6 text-center">
         <h1 class="text-4xl font-extrabold tracking-tight text-left text-gray-900 sm:text-5xl md:text-6xl md:text-center">
-            <span class="block">Level Up Your <span class="block mt-1 text-purple-500 lg:inline lg:mt-0">Landing Pages</span></span>
+            <span class="block">Create Your Own <span class="block mt-1 text-purple-500 lg:inline lg:mt-0">Portfolio Pages</span></span>
         </h1>
         <p class="w-full mx-auto text-base text-left text-gray-500 md:max-w-md sm:text-lg lg:text-2xl md:max-w-3xl md:text-center">
             Award winning pages that will take your game to the next level!
@@ -18,7 +18,7 @@ const Hero = () => {
                     <polyline points="12 5 19 12 12 19"></polyline>
                 </svg>
             </a>
-            <a href="#_" class="flex items-center px-6 py-3 text-gray-500 bg-gray-100 rounded-md hover:bg-gray-200 hover:text-gray-600">
+            <a href="#feature" class="flex items-center px-6 py-3 text-gray-500 bg-gray-100 rounded-md hover:bg-gray-200 hover:text-gray-600">
                 Learn More
             </a>
         </div>
