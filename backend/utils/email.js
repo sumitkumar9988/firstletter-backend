@@ -1,14 +1,14 @@
 const nodemailer = require('nodemailer');
 
-const sendEmail = async options => {
+const sendEmail = async (options) => {
   // 1) Create a transporter
   const transport = nodemailer.createTransport({
-    host: "smtp.mailtrap.io",
+    host: 'smtp.mailtrap.io',
     port: 2525,
     auth: {
-      user: "9efbd34dbfc623",
-      pass: "4682cbebe961de"
-    }
+      user: '9efbd34dbfc623',
+      pass: '4682cbebe961de',
+    },
   });
 
   // 2) Define the email options
@@ -16,7 +16,7 @@ const sendEmail = async options => {
     from: 'sumit kumar <hi@firstletter.io>',
     to: options.email,
     subject: options.subject,
-    text: options.message
+    text: options.message,
     // html:
   };
 
