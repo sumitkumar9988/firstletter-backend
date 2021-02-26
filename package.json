@@ -21,5 +21,8 @@
     "moongoose": "0.0.5",
     "nodemailer": "^6.4.18",
     "validator": "^13.5.2"
+  },
+  "devDependencies": {
+    "prettier": "2.2.1"
   }
 }
