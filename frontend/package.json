@@ -4,34 +4,23 @@
   "homepage": ".",
   "private": true,
   "dependencies": {
-    "@craco/craco": "^6.1.1",
-    "@testing-library/jest-dom": "^5.11.4",
-    "@testing-library/react": "^11.1.0",
-    "@testing-library/user-event": "^12.1.10",
-    "autoprefixer": "^9.8.6",
+    "@testing-library/jest-dom": "^5.11.9",
+    "@testing-library/react": "^11.2.5",
+    "@testing-library/user-event": "^12.7.3",
     "feather-icons": "^4.28.0",
-    "framer-motion": "^3.3.0",
-    "postcss": "^7.0.35",
+    "postcss": "^8.2.6",
     "react": "^17.0.1",
-    "react-anchor-link-smooth-scroll": "^1.0.12",
     "react-dom": "^17.0.1",
-    "react-modal": "^3.12.1",
-    "react-rnd": "^10.2.4",
     "react-router-dom": "^5.2.0",
-    "react-scripts": "4.0.2",
-    "react-slick": "^0.28.0",
-    "slick-carousel": "^1.8.1",
-    "styled-components": "^5.2.1",
-    "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.0.3",
-    "twin.macro": "^2.2.3",
-    "use-in-view": "^1.0.15",
-    "web-vitals": "^1.0.1"
+    "react-scripts": "4.0.3",
+    "web-vitals": "^1.1.0"
   },
   "scripts": {
-    "start": "craco start",
-    "build": "craco build",
-    "test": "craco test",
-    "eject": "react-scripts eject"
+    "start": "npm run watch:css && react-scripts start",
+    "build": "npm run watch:css && react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "watch:css": "postcss src/styles/tailwind.css -o src/styles/index.css"
   },
   "eslintConfig": {
     "extends": [
@@ -52,6 +41,8 @@
     ]
   },
   "devDependencies": {
-    "postcss-cli": "^8.3.1"
+    "autoprefixer": "^9.8.6",
+    "postcss-cli": "^8.3.1",
+    "tailwindcss": "^2.0.3"
   }
 }

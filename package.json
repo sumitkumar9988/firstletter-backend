@@ -5,13 +5,17 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon backend/index.js"
+    "start": "nodemon backend/index.js",
+    "client": "npm start --prefix frontend",
+    "dev": "concurrently \"npm run start\" \"npm run client\"",
+    "production": "npm install --prefix frontend && npm run build --prefix frontend"
   },
   "author": "sumit kumar",
   "license": "ISC",
   "dependencies": {
     "audit": "0.0.6",
     "bcryptjs": "^2.4.3",
+    "craco": "0.0.3",
     "crypto": "^1.0.1",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
