@@ -21,6 +21,7 @@
     "mongoose": "^5.11.16",
     "moongoose": "0.0.5",
     "nodemailer": "^6.4.18",
+    "nodemon": "^2.0.7",
     "validator": "^13.5.2"
   },
   "devDependencies": {
