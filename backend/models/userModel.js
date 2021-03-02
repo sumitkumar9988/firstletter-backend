@@ -4,10 +4,9 @@ const validator = require('validator');
 const bcrypt = require('bcryptjs');
 
 const educationSchema = new mongoose.Schema({
-  school: {
+  institute: {
     type: String,
-  },
-  basicinfo: String,
+  },basicinfo: String,
   degree: String,
   startDate: Number,
   endDate: Number,
@@ -21,7 +20,7 @@ const workExperienceSchema = new mongoose.Schema({
   startDate: String,
   endDate: String,
   duration: Number,
-  responsibilities: [{ type: String }],
+  responsibilities:String,
 });
 
 const userSchema = new mongoose.Schema({
@@ -54,11 +53,20 @@ const userSchema = new mongoose.Schema({
     enum: ['user', 'admin'],
     default: 'user',
   },
+  skills: {
+    type: [String],
+    required: true
+  },
+  location: {
+    type: String
+  },
+  
   bio: {
     type: String,
     minlength: 10,
-    maxlength: 30,
+    maxlength: 100,
   },
+  
   twitterAcount: { type: String },
   facebookAccount: { type: String },
   linkedInAccount: { type: String },
@@ -68,11 +76,25 @@ const userSchema = new mongoose.Schema({
   spojAccount: { type: String },
   mediumAccount: { type: String },
   dribbleAccount: { type: String },
+  education: [educationSchema],
+  workExperience: [workExperienceSchema],
+  project:{
+    type:mongoose.Schema.ObjectId,  
+    ref:'Project'
+  },
   password: {
     type: String,
     required: [true, 'Please provide a password'],
     minlength: 8,
     select: false,
+  },
+  lookingForJob:{
+    type:Boolean,
+    default:true
+  },
+  accountCreateAt:{
+    type:Date,
+    default:Date.now()
   },
   passwordConfirm: {
     type: String,
@@ -85,8 +107,7 @@ const userSchema = new mongoose.Schema({
       message: 'Passwords are not the same!',
     },
   },
-  education: [educationSchema],
-  workExperience: [workExperienceSchema],
+
   passwordChangedAt: Date,
   passwordResetToken: String,
   passwordResetExpires: Date,
@@ -95,16 +116,15 @@ const userSchema = new mongoose.Schema({
     default: true,
     select: false,
   },
+},{
+  toJSON: { virtuals: true },
+  toObject: { virtuals: true }
 });
 
 userSchema.pre('save', async function (next) {
-  // Only run this function if password was actually modified
+ 
   if (!this.isModified('password')) return next();
-
-  // Hash the password with cost of 12
   this.password = await bcrypt.hash(this.password, 12);
-
-  // Delete passwordConfirm field
   this.passwordConfirm = undefined;
   next();
 });
