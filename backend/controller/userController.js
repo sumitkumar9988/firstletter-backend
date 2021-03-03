@@ -1,5 +1,7 @@
 const User = require('./../models/userModel');
 const Project=require('./../models/projectModel')
+const Education=require('./../models/educationModel')
+const Experience=require('./../models/experienceModels')
 const AppError = require('./../utils/AppError');
 const catchAsync = require('./../utils/catchAsync');
 
@@ -27,7 +29,7 @@ exports.updateUserDetail=catchAsync(async(req,res,next)=>{
 
   const filteredBody = filterObj(req.body, 'name', 'email','photo','bio','skills','location','lookingForJob');
 
-  const updatedUser =awaitUser.findByIdAndUpdate(req.user.id,filteredBody,{
+  const updatedUser =await User.findByIdAndUpdate(req.user.id,filteredBody,{
     new:true,
     runValidators: true
   })
@@ -52,32 +54,38 @@ exports.deleteUser = catchAsync(async (req, res, next) => {
 
 exports.getEducationDetail=catchAsync(async(req,res,next)=>{
 
-  const filteredBody=filterObj(req.body,'education');
-  const user=await User.findByIdAndUpdate(req.user.id,filteredBody,{
-    new:true,
-    runValidators:true
+  const user=await User.findById(req.user.id).populate('education');
+  res.status(201).json({
+    status:'success',
+    data:{
+      education:user.education
+    }
   })
-
-
 })
 
 exports.addEducation=catchAsync(async(req,res,next)=>{
 
-  const filteredBody=filterObj(req.body,'education');
-  const user=await User.findByIdAndUpdate(req.user.id,filteredBody,{
-    new:true,
-    runValidators:true
+
+  const education=req.body;
+  console.log(education)
+  const educationDoc=await Education.create(education);
+
+  const user=await User.findById(req.user.id);
+  console.log(educationDoc._id);
+  user.education.unshift(educationDoc._id);
+  await user.save();
+
+  res.status(200).json({
+    status:'success',
+    message:'education update successful'
   })
 
 })
 
 exports.deleteEducationDetail=catchAsync(async(req,res,next)=>{
 
-  const filteredBody=filterObj(req.body,'education');
-  const user=await User.findByIdAndUpdate(req.user.id,filteredBody,{
-    new:true,
-    runValidators:true
-  })
+  // const user=await User.findById(req.user.id);
+  // user.education.s
 
 })
 

@@ -29,18 +29,14 @@ router.post('/experience',authController.protect,userController.addExperience)
 router.delete('/experience/:id',authController.protect,userController.deleteExperienceDetail)
 router.patch('/experience/:id',authController.protect,userController.updateExperience)
 
-  
-//add experience 
-//remove experience
-//update Social networking sites
-//Add username and bio
+router.patch('/basic',authController.protect,userController.updateBasicDetails)
+router.patch('/social',authController.protect,userController.updateSocialNetworking)
+
+
 //github verification and add github username
 //project fetch 
 // compitative programming data
 //get all user details
-//vercel wildcard subdomin
-
-
-
+//add certificate
 
 module.exports = router;

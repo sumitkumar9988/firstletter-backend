@@ -3,26 +3,6 @@ const mongoose = require('mongoose');
 const validator = require('validator');
 const bcrypt = require('bcryptjs');
 
-const educationSchema = new mongoose.Schema({
-  institute: {
-    type: String,
-  },basicinfo: String,
-  degree: String,
-  startDate: Number,
-  endDate: Number,
-  grade: String,
-  activitiesAndSocieties: String,
-});
-
-const workExperienceSchema = new mongoose.Schema({
-  jobTitle: String,
-  organization: String,
-  startDate: String,
-  endDate: String,
-  duration: Number,
-  responsibilities:String,
-});
-
 const userSchema = new mongoose.Schema({
   name: {
     type: String,
@@ -76,8 +56,10 @@ const userSchema = new mongoose.Schema({
   spojAccount: { type: String },
   mediumAccount: { type: String },
   dribbleAccount: { type: String },
-  education: [educationSchema],
-  workExperience: [workExperienceSchema],
+  
+  education: [{type:mongoose.Schema.ObjectId,ref:'Education'}],
+  workExperience: [{type:mongoose.Schema.ObjectId,ref:'Experience'}],
+
   project:{
     type:mongoose.Schema.ObjectId,  
     ref:'Project'
@@ -96,17 +78,7 @@ const userSchema = new mongoose.Schema({
     type:Date,
     default:Date.now()
   },
-  passwordConfirm: {
-    type: String,
-    required: [true, 'Please confirm your password'],
-    validate: {
-      // This only works on CREATE and SAVE!!!
-      validator: function (el) {
-        return el === this.password;
-      },
-      message: 'Passwords are not the same!',
-    },
-  },
+  
 
   passwordChangedAt: Date,
   passwordResetToken: String,
@@ -125,7 +97,7 @@ userSchema.pre('save', async function (next) {
  
   if (!this.isModified('password')) return next();
   this.password = await bcrypt.hash(this.password, 12);
-  this.passwordConfirm = undefined;
+
   next();
 });
 
