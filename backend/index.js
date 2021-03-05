@@ -27,5 +27,5 @@ app.all('*', (req, res, next) => {
 });
 app.use(globalErrorHandler);
 
-const port = process.env.PORT || 3002;
+const port = process.env.PORT || 3000;
 app.listen(port, console.log(`working on port ${port}`));

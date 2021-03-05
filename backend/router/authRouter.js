@@ -1,7 +1,7 @@
 const express = require('express');
 const authController = require('./../controller/authController');
 const userController = require('./../controller/userController');
-
+const projectController=require('./../controller/projectController');
 const router = express.Router();
 router.post('/signup', authController.signUp);
 router.post('/login', authController.login);
@@ -38,5 +38,9 @@ router.patch('/social',authController.protect,userController.updateSocialNetwork
 // compitative programming data
 //get all user details
 //add certificate
+
+router.get('/githubauth',projectController.guthubOAoth);
+router.get('/github/callback',projectController.githubCallBack);
+
 
 module.exports = router;
