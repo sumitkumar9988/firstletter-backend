@@ -13,6 +13,7 @@ exports.guthubOAoth = catchAsync(async(req,res,next)=>{
 
 
 exports.githubCallBack=catchAsync(async(req,res,next)=>{
+   
     const requestToken=req.query.code;
     const {data}=await axios.post(`https://github.com/login/oauth/access_token?client_id=${process.env.GITHUB_CLIENT_ID}&client_secret=${process.env.GITHUB_SECRET_KEY}&code=${requestToken}`)
     let access_token=data.split('&')[0];
@@ -22,13 +23,20 @@ exports.githubCallBack=catchAsync(async(req,res,next)=>{
     const response=await axios.get(`https://api.github.com/user`, {headers:{
         Authorization: 'token ' + access_token
       }})
-      
+    
+    const setGitHubUserName={
+        gitHubAccount:response.data.login
+    }
+    console.log(setGitHubUserName);
+    
     res.status(201).json({
         status:'success',
         redirect:'/success',
         data:{
            user: response.data}
     })
+
+
 })
 
 
