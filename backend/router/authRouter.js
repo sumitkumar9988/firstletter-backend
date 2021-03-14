@@ -2,7 +2,10 @@ const express = require('express');
 const authController = require('./../controller/authController');
 const userController = require('./../controller/userController');
 const projectController=require('./../controller/projectController');
+const cloudinary = require('./../utils/cloudinary');
+const upload = require('./../utils/multer');
 const router = express.Router();
+
 router.post('/signup', authController.signUp);
 router.post('/login', authController.login);
 router.post('/forgetpassword', authController.forgotPassword);
@@ -13,10 +16,10 @@ router.post(
   authController.updatePassword
 );
 router
-  .route('/')
-  .get(authController.protect, userController.userDetail)
-  .patch(authController.protect,userController.updateUserDetail)
-  .delete(authController.protect,userController.deleteUser);
+    .route('/')
+    .get(authController.protect, userController.userDetail)
+    .patch(authController.protect,userController.updateUserDetail)
+    .delete(authController.protect,userController.deleteUser);
 
 router.get('/education',authController.protect,userController.getEducationDetail)  
 router.post('/education',authController.protect,userController.addEducation)
@@ -33,14 +36,12 @@ router.patch('/basic',authController.protect,userController.updateBasicDetails)
 router.patch('/social',authController.protect,userController.updateSocialNetworking)
 
 
-//project fetch 
-// compitative programming data
-//get all user details
-//add certificate
-//cloudinary setup
+router.get('/githubauth',authController.protect,projectController.guthubOAoth);
+router.get('/github/callback',authController.protect,projectController.githubCallBack);
 
-router.get('/githubauth',projectController.guthubOAoth);
-router.get('/github/callback',projectController.githubCallBack);
+router.route('/certificate')
+      .get(authController.protect,userController.getYourCertificate)
+      .post(authController.protect,upload.single('image'),userController.addCertificate);
 
 
 module.exports = router;

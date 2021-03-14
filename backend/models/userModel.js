@@ -10,8 +10,8 @@ const userSchema = new mongoose.Schema({
   },
   username: {
     type: String,
-    unique: true,
     lowercase: true,
+    
   },
   email: {
     type: String,
@@ -35,7 +35,6 @@ const userSchema = new mongoose.Schema({
   },
   skills: {
     type: [String],
-    required: true
   },
   location: {
     type: String

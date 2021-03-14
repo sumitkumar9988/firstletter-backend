@@ -1,10 +1,11 @@
 const User = require('./../models/userModel');
-const Project=require('./../models/projectModel')
 const Education=require('./../models/educationModel')
 const Experience=require('./../models/experienceModels')
 const AppError = require('./../utils/AppError');
 const catchAsync = require('./../utils/catchAsync');
-
+const Certificate=require('./../models/CertificateModels');
+const cloudinary = require('./../utils/cloudinary');
+const upload = require('./../utils/multer');
 
 const filterObj = (obj, ...allowedFields) => {
   const newObj = {};
@@ -226,5 +227,33 @@ exports.updateSocialNetworking=catchAsync(async(req,res,next)=>{
     }
   })
 
+})
+
+
+
+exports.addCertificate=catchAsync(async(req,res,next)=>{
+
+  const result = await cloudinary.uploader.upload(req.file.path);
+
+    const certificateData={
+      user:req.user.id,
+      name:req.body.name,
+      image: result.secure_url,
+      isseueDate: req.body.isseueDate,
+      Organization: req.body.Organization,
+      url: req.body.url,
+    };
+    const certificate=await Certificate.create(certificateData);
+    res.status(200).json({
+      status: 'success'
+    })
+})
+
+exports.getYourCertificate=catchAsync(async(req,res,next)=>{
+  const certificate=await Certificate.find({user:req.user.id});
+  res.status(200).json({
+    status: 'success',
+    data:{ certificate}
+  })
 })
 

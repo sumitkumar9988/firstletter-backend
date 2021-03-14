@@ -1,8 +1,14 @@
 const mongoose = require('mongoose');
 
 const workExperienceSchema = new mongoose.Schema({
-    jobTitle: String,
-    organization: String,
+    jobTitle: {
+      type: 'string',
+      required: [true, 'Enter tittle of work experience']
+    },
+    organization: {
+      type: String,
+      required: [true, 'Enter your organization Name']
+    },
     startDate: String,
     endDate: String,
     duration: Number,

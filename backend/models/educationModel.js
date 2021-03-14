@@ -4,6 +4,7 @@ const mongoose = require('mongoose');
 const educationSchema = new mongoose.Schema({
     institute: {
       type: String,
+      required: [true, 'Enter your Institute Name']
     },basicinfo: String,
     degree: String,
     startDate: Number,
