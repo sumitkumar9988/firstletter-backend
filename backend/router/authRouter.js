@@ -33,11 +33,11 @@ router.patch('/basic',authController.protect,userController.updateBasicDetails)
 router.patch('/social',authController.protect,userController.updateSocialNetworking)
 
 
-//github verification and add github username
 //project fetch 
 // compitative programming data
 //get all user details
 //add certificate
+//cloudinary setup
 
 router.get('/githubauth',projectController.guthubOAoth);
 router.get('/github/callback',projectController.githubCallBack);

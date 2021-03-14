@@ -28,17 +28,36 @@ exports.githubCallBack=catchAsync(async(req,res,next)=>{
         gitHubAccount:response.data.login
     }
     console.log(setGitHubUserName);
-    
+  
+      if(!response.data.login){
+        return next(new AppError('Some error occurred while GitHub OAuth', 404));
+      }
+        
+      const user =await User.findByIdAndUpdate(req.user.id,setGitHubUserName,{
+        new:true,
+        runValidators:true
+      })        
     res.status(201).json({
         status:'success',
         redirect:'/success',
         data:{
            user: response.data}
     })
-
-
 })
 
 
 
+exports.getAllUserProject = catchAsync(async(req,res,next)=>{
 
+    const user=await User.findById(req.user.id);
+    if(!user.gitHubAccount){
+        return next(new AppError('Please provide your GitHub account', 404));
+    }
+    console.log(user.gitHubAccount);
+    data = await axios.get(`https://api.github.com/users/${user.gitHubAccount}`);
+
+    res.status('200').json({
+        status: 'success',
+        data:{data}
+    })
+})

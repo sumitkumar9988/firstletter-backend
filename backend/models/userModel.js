@@ -60,10 +60,6 @@ const userSchema = new mongoose.Schema({
   education: [{type:mongoose.Schema.ObjectId,ref:'Education'}],
   workExperience: [{type:mongoose.Schema.ObjectId,ref:'Experience'}],
 
-  project:{
-    type:mongoose.Schema.ObjectId,  
-    ref:'Project'
-  },
   password: {
     type: String,
     required: [true, 'Please provide a password'],
