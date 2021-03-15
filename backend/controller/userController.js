@@ -5,7 +5,6 @@ const AppError = require('./../utils/AppError');
 const catchAsync = require('./../utils/catchAsync');
 const Certificate=require('./../models/CertificateModels');
 const cloudinary = require('./../utils/cloudinary');
-const upload = require('./../utils/multer');
 
 const filterObj = (obj, ...allowedFields) => {
   const newObj = {};
@@ -233,17 +232,17 @@ exports.updateSocialNetworking=catchAsync(async(req,res,next)=>{
 
 exports.addCertificate=catchAsync(async(req,res,next)=>{
 
-  const result = await cloudinary.uploader.upload(req.file.path);
 
     const certificateData={
       user:req.user.id,
       name:req.body.name,
-      image: result.secure_url,
+      image: req.result.url,
       isseueDate: req.body.isseueDate,
       Organization: req.body.Organization,
       url: req.body.url,
     };
     const certificate=await Certificate.create(certificateData);
+    console.log(certificate);
     res.status(200).json({
       status: 'success'
     })

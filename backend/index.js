@@ -1,7 +1,7 @@
 const express = require('express');
 const dotenv = require('dotenv');
 const mongoose = require('mongoose');
-
+const bodyParser = require("body-parser");
 const globalErrorHandler = require('./controller/errorController');
 const AppError = require('./utils/AppError');
 const authRouter = require('./router/authRouter');
@@ -25,6 +25,7 @@ app.use('/api/v1/user', authRouter);
 app.all('*', (req, res, next) => {
   next(new AppError(`Can't find ${req.originalUrl} on this server!`, 404));
 });
+
 app.use(globalErrorHandler);
 
 const port = process.env.PORT || 3000;

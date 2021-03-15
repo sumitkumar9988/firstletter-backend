@@ -3,7 +3,7 @@ const authController = require('./../controller/authController');
 const userController = require('./../controller/userController');
 const projectController=require('./../controller/projectController');
 const cloudinary = require('./../utils/cloudinary');
-const upload = require('./../utils/multer');
+const multer = require('./../utils/multer');
 const router = express.Router();
 
 router.post('/signup', authController.signUp);
@@ -41,7 +41,8 @@ router.get('/github/callback',authController.protect,projectController.githubCal
 
 router.route('/certificate')
       .get(authController.protect,userController.getYourCertificate)
-      .post(authController.protect,upload.single('image'),userController.addCertificate);
+      .post(authController.protect,multer.uploadUserPhoto,
+        multer.uploadImagetoCloudinary,userController.addCertificate);
 
-
+//     
 module.exports = router;
