@@ -1,7 +1,6 @@
 const express = require('express');
 const dotenv = require('dotenv');
 const mongoose = require('mongoose');
-const bodyParser = require("body-parser");
 const globalErrorHandler = require('./controller/errorController');
 const AppError = require('./utils/AppError');
 const authRouter = require('./router/authRouter');

@@ -1,10 +1,9 @@
 const User = require('./../models/userModel');
-const Education=require('./../models/educationModel')
-const Experience=require('./../models/experienceModels')
+const Education = require('./../models/educationModel')
+const Experience = require('./../models/experienceModels')
 const AppError = require('./../utils/AppError');
 const catchAsync = require('./../utils/catchAsync');
-const Certificate=require('./../models/CertificateModels');
-const cloudinary = require('./../utils/cloudinary');
+const Certificate = require('./../models/CertificateModels');
 
 const filterObj = (obj, ...allowedFields) => {
   const newObj = {};
@@ -25,14 +24,22 @@ exports.userDetail = catchAsync(async (req, res, next) => {
 });
 
 
-exports.updateUserDetail=catchAsync(async(req,res,next)=>{
 
-  const filteredBody = filterObj(req.body, 'name', 'email','photo','bio','skills','location','lookingForJob');
 
-  const updatedUser =await User.findByIdAndUpdate(req.user.id,filteredBody,{
-    new:true,
+exports.updateUserDetail = catchAsync(async (req, res, next) => {
+
+  data = req.body;
+  if (req.result) {
+    data.photo = req.result.url;
+  }
+  console.log(data)
+  const filteredBody = filterObj(data, 'email', 'name', 'photo', 'bio', 'skills', 'location', 'lookingForJob');
+  console.log(filteredBody);
+  const updatedUser = await User.findByIdAndUpdate(req.user.id, filteredBody, {
+    new: true,
     runValidators: true
   })
+
   res.status(200).json({
     status: 'success',
     data: {
@@ -43,72 +50,74 @@ exports.updateUserDetail=catchAsync(async(req,res,next)=>{
 
 
 exports.deleteUser = catchAsync(async (req, res, next) => {
-  const user = await User.findByIdAndUpdate(req.user.id,{ active: false });
- 
+  const user = await User.findByIdAndUpdate(req.user.id, {
+    active: false
+  });
+
   res.status(200).json({
     status: 'success',
-    data:null
+    data: null
   });
 });
 
 
-exports.getEducationDetail=catchAsync(async(req,res,next)=>{
+exports.getEducationDetail = catchAsync(async (req, res, next) => {
 
-  const user=await User.findById(req.user.id).populate('education');
+  const user = await User.findById(req.user.id).populate('education');
   res.status(201).json({
-    status:'success',
-    length:user.education.size,
-    data:{
-      education:user.education
+    status: 'success',
+    length: user.education.size,
+    data: {
+      education: user.education
     }
   })
 })
 
-exports.addEducation=catchAsync(async(req,res,next)=>{
+exports.addEducation = catchAsync(async (req, res, next) => {
 
 
-  const education=req.body;
+  const education = req.body;
   console.log(education)
-  const educationDoc=await Education.create(education);
+  const educationDoc = await Education.create(education);
 
-  const user=await User.findById(req.user.id);
+  const user = await User.findById(req.user.id);
   console.log(educationDoc._id);
   user.education.unshift(educationDoc._id);
   await user.save();
 
   res.status(200).json({
-    status:'success',
-    message:'education update successful'
+    status: 'success',
+    message: 'education update successful'
   })
 
 })
 
-exports.deleteEducationDetail=catchAsync(async(req,res,next)=>{
+exports.deleteEducationDetail = catchAsync(async (req, res, next) => {
 
-  
-    const educationDoc= await Education.findByIdAndDelete(req.params.id);
-    if(!educationDoc){
-      return next(new AppError('No document found with that ID', 404));
-    }
+
+  const educationDoc = await Education.findByIdAndDelete(req.params.id);
+  if (!educationDoc) {
+    return next(new AppError('No document found with that ID', 404));
+  }
   res.status(200).json({
-    status:'success',
-    message:'item delete successfully'
+    status: 'success',
+    message: 'item delete successfully'
   })
 })
 
-exports.updateEducation=catchAsync(async(req,res,next)=>{
+exports.updateEducation = catchAsync(async (req, res, next) => {
 
- 
-  const education=await Education.findByIdAndUpdate(req.params.id,req.body,{
-    new:true,
-    runValidators:true
+
+  const education = await Education.findByIdAndUpdate(req.params.id, req.body, {
+    new: true,
+    runValidators: true
   })
 
-  if(!education){
+  if (!education) {
     return next(new AppError('No document found with that ID', 404));
   }
   res.status(201).json({
-      status:'success'   
+    status: 'success'
   })
 
 })
@@ -116,74 +125,74 @@ exports.updateEducation=catchAsync(async(req,res,next)=>{
 
 
 
-exports.getExperienceDetail=catchAsync(async(req,res,next)=>{
+exports.getExperienceDetail = catchAsync(async (req, res, next) => {
 
-  const user=await User.findById(req.user.id).populate('experience');
+  const user = await User.findById(req.user.id).populate('experience');
   res.status(201).json({
-    status:'success',
-    data:{
-      experience:user.experience
+    status: 'success',
+    data: {
+      experience: user.experience
     }
   })
 
 })
 
-exports.addExperience=catchAsync(async(req,res,next)=>{
+exports.addExperience = catchAsync(async (req, res, next) => {
 
-  const experience=req.body;
+  const experience = req.body;
 
-  const experienceDoc=await Experience.create(experience);
+  const experienceDoc = await Experience.create(experience);
 
-  const user=await User.findById(req.user.id);
+  const user = await User.findById(req.user.id);
   console.log(experienceDoc._id);
   user.education.unshift(experienceDoc._id);
   await user.save();
 
   res.status(200).json({
-    status:'success',
-    message:'experience update successful'
+    status: 'success',
+    message: 'experience update successful'
   })
 
 })
 
-exports.deleteExperienceDetail=catchAsync(async(req,res,next)=>{
+exports.deleteExperienceDetail = catchAsync(async (req, res, next) => {
 
-  const experienceDoc= await Experience.findByIdAndDelete(req.params.id);
-  if(!experienceDoc){
+  const experienceDoc = await Experience.findByIdAndDelete(req.params.id);
+  if (!experienceDoc) {
     return next(new AppError('No document found with that ID', 404));
   }
-res.status(200).json({
-  status:'success',
-  message:'item delete successfully'
-})
-
-})
-
-exports.updateExperience=catchAsync(async(req,res,next)=>{
-
-  const education=await Education.findByIdAndUpdate(req.params.id,req.body,{
-    new:true,
-    runValidators:true
+  res.status(200).json({
+    status: 'success',
+    message: 'item delete successfully'
   })
 
-  if(!education){
+})
+
+exports.updateExperience = catchAsync(async (req, res, next) => {
+
+  const education = await Education.findByIdAndUpdate(req.params.id, req.body, {
+    new: true,
+    runValidators: true
+  })
+
+  if (!education) {
     return next(new AppError('No document found with that ID', 404));
   }
   res.status(201).json({
-      status:'success'   
+    status: 'success'
   })
 
 })
 
-exports.updateBasicDetails=catchAsync(async(req,res,next)=>{
+exports.updateBasicDetails = catchAsync(async (req, res, next) => {
 
-  const userData={
+  const userData = {
     username: req.body.username,
-    profession:req.body.profession,
+    profession: req.body.profession,
     bio: req.body.bio,
   }
-  
-  if(!req.body.username){
+
+  if (!req.body.username) {
     return next(new AppError('username is required', 404));
   }
 
@@ -191,38 +200,38 @@ exports.updateBasicDetails=catchAsync(async(req,res,next)=>{
     username: req.body.username,
   });
 
-  if(checkUsername){
+  if (checkUsername) {
     return next(new AppError('Chooose another username', 404));
   }
 
-  const user =await User.findByIdAndUpdate(req.user.id,userData,{
-    new:true,
-    runValidators:true
+  const user = await User.findByIdAndUpdate(req.user.id, userData, {
+    new: true,
+    runValidators: true
   })
-    res.status(200).json({
-      status: 'success',
-      data:{ 
-        user:user
-      }
-    })
+  res.status(200).json({
+    status: 'success',
+    data: {
+      user: user
+    }
+  })
 
 })
 
 
-exports.updateSocialNetworking=catchAsync(async(req,res,next)=>{
+exports.updateSocialNetworking = catchAsync(async (req, res, next) => {
 
-  const filteredBody=filterObj(req.body,
-    'twitterAcount','facebookAccount','linkedInAccount',
-    'InstaAccount','codeChefAccount','spojAccount','mediumAccount');
-  const user=await User.findByIdAndUpdate(req.user.id,filteredBody,{
-    new:true,
-    runValidators:true
+  const filteredBody = filterObj(req.body,
+    'twitterAcount', 'facebookAccount', 'linkedInAccount',
+    'InstaAccount', 'codeChefAccount', 'spojAccount', 'mediumAccount');
+  const user = await User.findByIdAndUpdate(req.user.id, filteredBody, {
+    new: true,
+    runValidators: true
   })
 
   res.status(200).json({
     status: 'success',
-    data:{ 
-      user:user
+    data: {
+      user: user
     }
   })
 
@@ -230,29 +239,32 @@ exports.updateSocialNetworking=catchAsync(async(req,res,next)=>{
 
 
 
-exports.addCertificate=catchAsync(async(req,res,next)=>{
+exports.addCertificate = catchAsync(async (req, res, next) => {
 
 
-    const certificateData={
-      user:req.user.id,
-      name:req.body.name,
-      image: req.result.url,
-      isseueDate: req.body.isseueDate,
-      Organization: req.body.Organization,
-      url: req.body.url,
-    };
-    const certificate=await Certificate.create(certificateData);
-    console.log(certificate);
-    res.status(200).json({
-      status: 'success'
-    })
-})
-
-exports.getYourCertificate=catchAsync(async(req,res,next)=>{
-  const certificate=await Certificate.find({user:req.user.id});
+  const certificateData = {
+    user: req.user.id,
+    name: req.body.name,
+    image: req.result.url,
+    isseueDate: req.body.isseueDate,
+    Organization: req.body.Organization,
+    url: req.body.url,
+  };
+  const certificate = await Certificate.create(certificateData);
+  console.log(certificate);
   res.status(200).json({
-    status: 'success',
-    data:{ certificate}
+    status: 'success'
   })
 })
 
+exports.getYourCertificate = catchAsync(async (req, res, next) => {
+  const certificate = await Certificate.find({
+    user: req.user.id
+  });
+  res.status(200).json({
+    status: 'success',
+    data: {
+      certificate
+    }
+  })
+})

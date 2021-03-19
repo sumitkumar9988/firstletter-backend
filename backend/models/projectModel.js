@@ -1,9 +1,9 @@
 const mongoose = require('mongoose');
 
 const projectSchema = new mongoose.Schema({
-  user:{ 
-    type:mongoose.Schema.ObjectId,
-    ref:'User'
+  user: {
+    type: mongoose.Schema.ObjectId,
+    ref: 'User'
   },
   name: {
     type: String,
@@ -12,14 +12,28 @@ const projectSchema = new mongoose.Schema({
     type: Boolean,
     default: false
   },
-  repoID:{ type:Number},
-  image:{ type:String},
-  repoUrl:{type:String},
-  language:{type:String},
-  license:String,
-  DemoUrl:{type:String},
-  updated_at: { type: Date },
-  description: { type:String}
+  repoID: {
+    type: Number
+  },
+  image: {
+    type: String
+  },
+  repoUrl: {
+    type: String
+  },
+  language: {
+    type: String
+  },
+  license: String,
+  DemoUrl: {
+    type: String
+  },
+  updated_at: {
+    type: Date
+  },
+  description: {
+    type: String
+  }
 });
 
 
