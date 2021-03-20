@@ -45,16 +45,16 @@ router.patch('/social', authController.protect, userController.updateSocialNetwo
 
 
 router.get('/githubauth', authController.protect, projectController.guthubOAoth);
-router.get('/github/callback', authController.protect, projectController.githubCallBack);
+router.get('/github/callback',projectController.githubCallBack);
+router.post('/setGithubUserName',authController.protect, projectController.setGitHubUserName);
 
 router.route('/certificate')
   .get(authController.protect, userController.getYourCertificate)
   .post(authController.protect, multer.uploadUserPhoto,
     multer.uploadImagetoCloudinary, userController.addCertificate);
-
 router.get('/certificate/:id', authController.protect, userController.getCertificateByID)
 router.delete('/certificate/:id', authController.protect, userController.deleteCertificate);
     
-router.get('/project', projectController.getAllUserProject);
+router.get('/project',authController.protect,projectController.getAllUserProject);
 
 module.exports = router;

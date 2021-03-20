@@ -15,7 +15,10 @@ const projectSchema = new mongoose.Schema({
   repoID: {
     type: Number
   },
-  image: {
+  images: {
+    type: [String]
+  },
+  projectLogo:{
     type: String
   },
   repoUrl: {
