@@ -1,6 +1,5 @@
 const jwt = require('jsonwebtoken');
 const crypto = require('crypto');
-
 const email = require('./../utils/email');
 const AppError = require('./../utils/AppError');
 const User = require('./../models/userModel');
@@ -183,7 +182,7 @@ exports.updatePassword = catchAsync(async (req, res, next) => {
   }
 
   user.password = req.body.password;
-  user.passwordConfirm = req.body.passwordConfirm;
+ 
   await user.save();
 
   createSendToken(user, 200, res);

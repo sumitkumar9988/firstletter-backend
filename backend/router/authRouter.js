@@ -22,16 +22,23 @@ router
     multer.uploadImagetoCloudinary, userController.updateUserDetail)
   .delete(authController.protect, userController.deleteUser);
 
-router.get('/education', authController.protect, userController.getEducationDetail)
-router.post('/education', authController.protect, userController.addEducation)
+router.get('/education', authController.protect, userController.getAllEducation)
+router.post('/education', authController.protect,multer.uploadUserPhoto,
+multer.uploadImagetoCloudinary,userController.addEducation)
 router.delete('/education/:id', authController.protect, userController.deleteEducationDetail)
-router.patch('/education/:id', authController.protect, userController.updateEducation)
+router.get('/education/:id', authController.protect, userController.getEducationDetail)
+router.patch('/education/:id', authController.protect,
+multer.uploadUserPhoto,
+multer.uploadImagetoCloudinary, userController.updateEducation)
 
 
-router.get('/experience', authController.protect, userController.getExperienceDetail)
-router.post('/experience', authController.protect, userController.addExperience)
+router.get('/experience', authController.protect, userController.allUserExeprience)
+router.post('/experience', authController.protect,multer.uploadUserPhoto,
+multer.uploadImagetoCloudinary, userController.addExperience)
+router.get('/experience/:id', authController.protect, userController.getExperienceById)
 router.delete('/experience/:id', authController.protect, userController.deleteExperienceDetail)
-router.patch('/experience/:id', authController.protect, userController.updateExperience)
+router.patch('/experience/:id', authController.protect,multer.uploadUserPhoto,
+multer.uploadImagetoCloudinary, userController.updateExperience)
 
 router.patch('/basic', authController.protect, userController.updateBasicDetails)
 router.patch('/social', authController.protect, userController.updateSocialNetworking)
@@ -45,6 +52,9 @@ router.route('/certificate')
   .post(authController.protect, multer.uploadUserPhoto,
     multer.uploadImagetoCloudinary, userController.addCertificate);
 
+router.get('/certificate/:id', authController.protect, userController.getCertificateByID)
+router.delete('/certificate/:id', authController.protect, userController.deleteCertificate);
+    
 router.get('/project', projectController.getAllUserProject);
 
 module.exports = router;
