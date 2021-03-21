@@ -85,27 +85,69 @@ exports.getAllUserProject = catchAsync(async (req, res, next) => {
     }
   })
 
-  const currentProject=await Project.find({user:req.user.id});
+  const currentProject = await Project.find({
+    user: req.user.id
+  });
   console.log(currentProject)
 
-  
+
   const itemToInsertINtoDatabase = projects.filter((el) => {
     return !currentProject.filter(item => {
       return item.repoID === el.repoID
     }).length
   });
-  console.log("itemToInsertINtoDatabase",itemToInsertINtoDatabase);
+  console.log("itemToInsertINtoDatabase", itemToInsertINtoDatabase);
   // !b.filter(y => y.id === i.id).length
 
   //create multiple documents
   await Project.insertMany(itemToInsertINtoDatabase);
-  const allProject=await Project.find({user:req.user.id});
+  const allProject = await Project.find({
+    user: req.user.id
+  });
 
   res.status('200').json({
     status: 'success',
-    length:allProject.length,
+    length: allProject.length,
     data: {
-      projects:allProject
+      projects: allProject
     }
   })
 })
+
+exports.getProjectDetails = catchAsync(async (req, res, next) => {
+  const project = await Project.findById(req.params.id);
+  if (!project) {
+    return next(new AppError('Project Details Not Found', 404));
+  }
+  res.status(201).json({
+    status: 'success',
+    data: {
+      project: project
+    }
+  })
+})
+
+exports.updateProjectDetails = catchAsync(async (req, res, next) => {
+  data = req.body;
+  if (req.result) {
+    data.projectLogo = req.result.url;
+  }
+
+  const project = await Project.findByIdAndUpdate(req.params.id, data, {
+    new: true,
+    runValidators: true
+  })
+
+  if(!project) {
+    return next(new AppError('Project not found By id',404));
+  }
+  return res.status(200).json({
+    status: 'success',
+    message: 'Project Details Update Successully',
+    data:{
+      project: project
+    }
+  })
+
+})
+

@@ -28,6 +28,7 @@ const createSendToken = (user, statusCode, res) => {
 
 exports.signUp = catchAsync(async (req, res, next) => {
   const newUser = await User.create({
+    username:req.body.username,
     name: req.body.name,
     email: req.body.email,
     password: req.body.password
@@ -205,3 +206,25 @@ exports.checkUsernameAvailablty = catchAsync(async (req, res, error) => {
     });
   }
 });
+
+exports.updateUsername=catchAsync(async (req, res, next) => {
+  const newUsername =req.body.username;
+  if(!newUsername){
+    return next(new AppError("username can't be empty", 404))
+  }
+  const body={
+    username:newUsername
+  }
+  const updateUsernameDetails=await User.findByIdAndUpdate(req.user.id,body,{
+    new: true,
+    runValidators: true
+  })
+
+  return res.status(200).json({
+    status:'success',
+    message:`your username has been change to ${updateUsernameDetails.newUsername}`
+  })
+
+})
+
+
