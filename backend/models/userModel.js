@@ -3,27 +3,6 @@ const mongoose = require('mongoose');
 const validator = require('validator');
 const bcrypt = require('bcryptjs');
 
-const educationSchema = new mongoose.Schema({
-  school: {
-    type: String,
-  },
-  basicinfo: String,
-  degree: String,
-  startDate: Number,
-  endDate: Number,
-  grade: String,
-  activitiesAndSocieties: String,
-});
-
-const workExperienceSchema = new mongoose.Schema({
-  jobTitle: String,
-  organization: String,
-  startDate: String,
-  endDate: String,
-  duration: Number,
-  responsibilities: [{ type: String }],
-});
-
 const userSchema = new mongoose.Schema({
   name: {
     type: String,
@@ -31,8 +10,11 @@ const userSchema = new mongoose.Schema({
   },
   username: {
     type: String,
-    unique: true,
     lowercase: true,
+    minlength: 3,
+    maxlength: 12,
+    unique: [true,'username already taken Please enter another username'],
+    required: [true, 'Please enter username'],
   },
   email: {
     type: String,
@@ -54,11 +36,19 @@ const userSchema = new mongoose.Schema({
     enum: ['user', 'admin'],
     default: 'user',
   },
+  skills: {
+    type: [String],
+  },
+  location: {
+    type: String
+  },
+  
   bio: {
     type: String,
     minlength: 10,
-    maxlength: 30,
+    maxlength: 100,
   },
+  
   twitterAcount: { type: String },
   facebookAccount: { type: String },
   linkedInAccount: { type: String },
@@ -68,25 +58,26 @@ const userSchema = new mongoose.Schema({
   spojAccount: { type: String },
   mediumAccount: { type: String },
   dribbleAccount: { type: String },
+  
+  education: [{type:mongoose.Schema.ObjectId,ref:'Education'}],
+  workExperience: [{type:mongoose.Schema.ObjectId,ref:'Experience'}],
+
   password: {
     type: String,
     required: [true, 'Please provide a password'],
     minlength: 8,
     select: false,
   },
-  passwordConfirm: {
-    type: String,
-    required: [true, 'Please confirm your password'],
-    validate: {
-      // This only works on CREATE and SAVE!!!
-      validator: function (el) {
-        return el === this.password;
-      },
-      message: 'Passwords are not the same!',
-    },
+  lookingForJob:{
+    type:Boolean,
+    default:true
   },
-  education: [educationSchema],
-  workExperience: [workExperienceSchema],
+  accountCreateAt:{
+    type:Date,
+    default:Date.now()
+  },
+  
+
   passwordChangedAt: Date,
   passwordResetToken: String,
   passwordResetExpires: Date,
@@ -95,17 +86,16 @@ const userSchema = new mongoose.Schema({
     default: true,
     select: false,
   },
+},{
+  toJSON: { virtuals: true },
+  toObject: { virtuals: true }
 });
 
 userSchema.pre('save', async function (next) {
-  // Only run this function if password was actually modified
+ 
   if (!this.isModified('password')) return next();
-
-  // Hash the password with cost of 12
   this.password = await bcrypt.hash(this.password, 12);
 
-  // Delete passwordConfirm field
-  this.passwordConfirm = undefined;
   next();
 });
 
