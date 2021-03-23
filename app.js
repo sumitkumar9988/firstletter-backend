@@ -10,10 +10,10 @@ const hpp = require('hpp');
 const compression = require('compression');
 const cors = require('cors');
 
-const globalErrorHandler = require('./controller/errorController');
-const AppError = require('./utils/AppError');
-const authRouter = require('./router/authRouter');
-const portfolioRouter = require('./router/portfolioRouter');
+const globalErrorHandler = require('./backend/controller/errorController');
+const AppError = require('./backend/utils/AppError');
+const authRouter = require('./backend/router/authRouter');
+const portfolioRouter = require('./backend/router/portfolioRouter');
 
 const app = express();
 dotenv.config();
