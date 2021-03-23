@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon backend/index.js",
-    "wsd":"Ad",
+    "start": "nodemon backend/index.js"
+   
   },
   "author": "sumit kumar",
   "license": "ISC",
