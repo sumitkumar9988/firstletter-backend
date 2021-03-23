@@ -9,11 +9,3 @@ phases:
       # Upgrade AWS CLI to the latest version
       - pip install --upgrade awscli
 
-artifacts:
-  files:
-    - backend/index.js
-    - package.json
-    - node_modules/**/*
-    - backend/**/*
-    - package-lock.json
-    - .npmrc
