@@ -6,7 +6,6 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon backend/index.js"
-   
   },
   "author": "sumit kumar",
   "license": "ISC",
@@ -32,14 +31,10 @@
     "morgan": "^1.10.0",
     "multer": "^1.4.2",
     "nodemailer": "^6.4.18",
-
     "path": "^0.12.7",
     "validator": "^13.5.2",
-    "xss-clean": "^0.1.1"
-
-    "nodemon": "^2.0.7",
-    "validator": "^13.5.2"
-
+    "xss-clean": "^0.1.1",
+    "nodemon": "^2.0.7"
   },
   "devDependencies": {
     "prettier": "2.2.1"
