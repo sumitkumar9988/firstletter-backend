@@ -2,7 +2,6 @@ const express = require('express');
 const authController = require('./../controller/authController');
 const userController = require('./../controller/userController');
 const projectController = require('./../controller/projectController');
-const cloudinary = require('./../utils/cloudinary');
 const multer = require('./../utils/multer');
 const router = express.Router();
 

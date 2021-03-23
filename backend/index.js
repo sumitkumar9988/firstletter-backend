@@ -13,6 +13,7 @@ const cors = require('cors');
 const globalErrorHandler = require('./controller/errorController');
 const AppError = require('./utils/AppError');
 const authRouter = require('./router/authRouter');
+const portfolioRouter = require('./router/portfolioRouter');
 
 const app = express();
 dotenv.config();
@@ -47,7 +48,9 @@ mongoose
   .catch((err) => console.log(err));
 
 app.use(express.json());
+
 app.use('/api/v1/user', authRouter);
+app.use('/api/v1', portfolioRouter);
 
 app.all('*', (req, res, next) => {
   next(new AppError(`Can't find ${req.originalUrl} on this server!`, 404));

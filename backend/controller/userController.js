@@ -73,7 +73,7 @@ exports.getAllEducation = catchAsync(async (req, res, next) => {
   });
   res.status(201).json({
     status: 'success',
-    length: education.size,
+    length: education.length,
     data: {
       education: education
     }
