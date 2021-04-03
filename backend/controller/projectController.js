@@ -151,3 +151,8 @@ exports.updateProjectDetails = catchAsync(async (req, res, next) => {
 
 })
 
+
+
+exports.uploadLinkedInResume= catchAsync(async (req, res, next) => {
+  
+})

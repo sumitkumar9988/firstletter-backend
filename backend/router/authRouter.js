@@ -59,4 +59,7 @@ router.get('/project', authController.protect, projectController.getAllUserProje
 router.get('/project/:id', authController.protect, projectController.getProjectDetails);
 router.patch('/project/:id', authController.protect, projectController.updateProjectDetails);
 
+router.post('/uploadLinkedInResume',authController.protect,projectController.uploadLinkedInResume);
+
+
 module.exports = router;
