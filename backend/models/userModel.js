@@ -58,6 +58,7 @@ const userSchema = new mongoose.Schema({
   spojAccount: { type: String },
   mediumAccount: { type: String },
   dribbleAccount: { type: String },
+  codeforcesAccount:{type:String},
   
   education: [{type:mongoose.Schema.ObjectId,ref:'Education'}],
   workExperience: [{type:mongoose.Schema.ObjectId,ref:'Experience'}],
