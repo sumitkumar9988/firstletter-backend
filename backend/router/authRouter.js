@@ -2,6 +2,7 @@ const express = require('express');
 const authController = require('./../controller/authController');
 const userController = require('./../controller/userController');
 const projectController = require('./../controller/projectController');
+const cpController = require('./../controller/compitativeProgrammingController')
 const multer = require('./../utils/multer');
 const router = express.Router();
 
@@ -14,7 +15,6 @@ router.post(
   authController.protect,
   authController.updatePassword
 );
-router.post('/changeUsername', authController.protect)
 router
   .route('/')
   .get(authController.protect, userController.userDetail)
@@ -58,5 +58,18 @@ router.delete('/certificate/:id', authController.protect, userController.deleteC
 router.get('/project', authController.protect, projectController.getAllUserProject);
 router.get('/project/:id', authController.protect, projectController.getProjectDetails);
 router.patch('/project/:id', authController.protect, projectController.updateProjectDetails);
+
+router.post('/uploadLinkedInResume', authController.protect, userController.uploadLinkedInResume);
+
+router.post('/codechef', authController.protect, cpController.saveCodeChefUserName)
+router.get('/codechef', authController.protect, cpController.getCodeChefData)
+
+router.post('/spoj', authController.protect, cpController.saveSPOJUserName)
+router.get('/spoj', authController.protect, cpController.getSpojData)
+
+router.post('/codeforces', authController.protect, cpController.saveCodeForcesUserName)
+router.get('/codeforces', authController.protect, cpController.getCodeforcesData)
+
+
 
 module.exports = router;
