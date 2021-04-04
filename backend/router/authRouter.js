@@ -4,6 +4,7 @@ const userController = require('./../controller/userController');
 const projectController = require('./../controller/projectController');
 const cpController = require('./../controller/compitativeProgrammingController')
 const multer = require('./../utils/multer');
+const uploadPdf=require('./../utils/uploadPdf');
 const router = express.Router();
 
 router.post('/signup', authController.signUp);
@@ -59,7 +60,8 @@ router.get('/project', authController.protect, projectController.getAllUserProje
 router.get('/project/:id', authController.protect, projectController.getProjectDetails);
 router.patch('/project/:id', authController.protect, projectController.updateProjectDetails);
 
-router.post('/uploadLinkedInResume', authController.protect, userController.uploadLinkedInResume);
+router.post('/uploadLinkedInResume', authController.protect,uploadPdf.uploadResume,
+              uploadPdf.uploadResumetoCloudinary, userController.uploadLinkedInResume);
 
 router.post('/codechef', authController.protect, cpController.saveCodeChefUserName)
 router.get('/codechef', authController.protect, cpController.getCodeChefData)

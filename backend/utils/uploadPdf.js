@@ -2,16 +2,17 @@ const multer=require('multer');
 const cloudinary = require('./cloudinary');
 const AppError = require('./AppError');
 const catchAsync = require('./catchAsync');
+const path=require('path');
 
 const multerStorage = multer.diskStorage({});
 
 const multerFilter = (req, file, cb) => {
     const ext=path.extname(file.originalname);
-  if (ext ==='pdf') {
+  // if (ext ==='pdf') {
     cb(null, true);
-  } else {
-    cb(new AppError('Not an Pdf! Please upload only pdf downloaded from https://www.linkedin.com/', 400), false);
-  }
+  // } else {
+  //   cb(new AppError('Not an Pdf! Please upload only pdf downloaded from https://www.linkedin.com/', 400), false);
+  // }
 };
 
 const upload = multer({

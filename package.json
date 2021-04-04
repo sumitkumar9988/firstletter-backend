@@ -11,6 +11,7 @@
   "license": "ISC",
   "dependencies": {
     "audit": "0.0.6",
+    "aws-sdk": "^2.879.0",
     "axios": "^0.21.1",
     "bcryptjs": "^2.4.3",
     "body-parser": "^1.19.0",
@@ -34,6 +35,7 @@
     "nodemon": "^2.0.7",
     "path": "^0.12.7",
     "resume-pdf-to-json": "^0.1.4",
+    "uuid": "^8.3.2",
     "validator": "^13.5.2",
     "xss-clean": "^0.1.1"
   },

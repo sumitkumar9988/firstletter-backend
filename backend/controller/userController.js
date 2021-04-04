@@ -347,5 +347,9 @@ exports.deleteCertificate = catchAsync(async (req, res, next)=>{
 
 
 exports.uploadLinkedInResume= catchAsync(async (req, res, next) => {
-  
+        return res.status(201).json({
+          status:'success',
+          message:'PDF Upload Successfully',
+          url:req.result.url
+        })
 })
