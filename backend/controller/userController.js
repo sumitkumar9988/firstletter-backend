@@ -273,7 +273,7 @@ exports.updateSocialNetworking = catchAsync(async (req, res, next) => {
   console.log(req.body);
   const filteredBody = filterObj(req.body,
     'twitterAcount', 'facebookAccount', 'linkedInAccount',
-    'InstaAccount', 'codeChefAccount', 'spojAccount', 'mediumAccount');
+    'InstaAccount', 'spojAccount', 'mediumAccount');
     console.log(filteredBody);
   const user = await User.findByIdAndUpdate(req.user.id, filteredBody, {
     new: true,
@@ -343,4 +343,9 @@ exports.deleteCertificate = catchAsync(async (req, res, next)=>{
     status: 'success',
     message: 'item delete successfully'
   })
+})
+
+
+exports.uploadLinkedInResume= catchAsync(async (req, res, next) => {
+  
 })

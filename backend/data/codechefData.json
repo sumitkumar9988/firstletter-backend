@@ -1,0 +1,3113 @@
+
+
+{
+    "status": "Success",
+    "rating": 2036,
+    "stars": "5★",
+    "highest_rating": 2212,
+    "global_rank": 3944,
+    "country_rank": 2461,
+    "user_details": {
+      "name": "Ayush Mahajan",
+      "username": "ay2306",
+      "country": "I am a 4th-year student and love competitive programming.\r\n\r\n#define awesomeness code",
+      "state": "India",
+      "city": "Uttar Pradesh",
+      "student/professional": "Ghaziabad",
+      "institution": "Questions must be solved."
+    },
+    "contests": [
+      {
+        "name": "Long Challenge",
+        "rating": 1674,
+        "global_rank": 25638,
+        "country_rank": 20723
+      },
+      {
+        "name": "Cook-off",
+        "rating": 1757,
+        "global_rank": 2970,
+        "country_rank": 1763
+      },
+      {
+        "name": "Lunch Time",
+        "rating": 1756,
+        "global_rank": 1983,
+        "country_rank": 1249
+      }
+    ],
+    "contest_ratings": [
+      {
+        "code": "FEB16",
+        "getyear": "2016",
+        "getmonth": "2",
+        "getday": "15",
+        "reason": null,
+        "penalised_in": null,
+        "rating": "1499",
+        "rank": "2480",
+        "name": "February Challenge 2016",
+        "end_date": "2016-02-15 15:00:00"
+      },
+      {
+        "code": "MAY17",
+        "getyear": "2017",
+        "getmonth": "5",
+        "getday": "18",
+        "reason": null,
+        "penalised_in": null,
+        "rating": "1496",
+        "rank": "4895",
+        "name": "May Challenge 2017",
+        "end_date": "2017-05-18 15:00:00"
+      },
+      {
+        "code": "SEPT17",
+        "getyear": "2017",
+        "getmonth": "9",
+        "getday": "11",
+        "reason": null,
+        "penalised_in": null,
+        "rating": "1574",
+        "rank": "2936",
+        "name": "September Challenge 2017",
+        "end_date": "2017-09-11 15:00:00"
+      },
+      {
+        "code": "OCT17",
+        "getyear": "2017",
+        "getmonth": "10",
+        "getday": "16",
+        "reason": null,
+        "penalised_in": null,
+        "rating": "1466",
+        "rank": "7304",
+        "name": "October Challenge 2017",
+        "end_date": "2017-10-16 15:00:00"
+      },
+      {
+        "code": "NOV17",
+        "getyear": "2017",
+        "getmonth": "11",
+        "getday": "13",
+        "reason": null,
+        "penalised_in": null,
+        "rating": "1426",
+        "rank": "5433",
+        "name": "November Challenge 2017",
+        "end_date": "2017-11-13 19:00:00"
+      },
+      {
+        "code": "LTIME54",
+        "getyear": "2017",
+        "getmonth": "11",
+        "getday": "25",
+        "reason": null,
+        "penalised_in": null,
+        "rating": "1484",
+        "rank": "1320",
+        "name": "November Lunchtime 2017",
+        "end_date": "2017-11-25 22:30:00"
+      },
+      {
+        "code": "DEC17",
+        "getyear": "2017",
+        "getmonth": "12",
+        "getday": "11",
+        "reason": null,
+        "penalised_in": null,
+        "rating": "1357",
+        "rank": "5022",
+        "name": "December Challenge 2017",
+        "end_date": "2017-12-11 15:00:00"
+      },
+      {
+        "code": "JAN18",
+        "getyear": "2018",
+        "getmonth": "1",
+        "getday": "15",
+        "reason": null,
+        "penalised_in": null,
+        "rating": "1475",
+        "rank": "5493",
+        "name": "January Challenge 2018",
+        "end_date": "2018-01-15 15:00:00"
+      },
+      {
+        "code": "FEB18",
+        "getyear": "2018",
+        "getmonth": "2",
+        "getday": "12",
+        "reason": null,
+        "penalised_in": null,
+        "rating": "1679",
+        "rank": "968",
+        "name": "February Challenge 2018",
+        "end_date": "2018-02-12 15:00:00"
+      },
+      {
+        "code": "COOK91",
+        "getyear": "2018",
+        "getmonth": "2",
+        "getday": "19",
+        "reason": null,
+        "penalised_in": null,
+        "rating": "1563",
+        "rank": "2370",
+        "name": "February Cook-Off 2018",
+        "end_date": "2018-02-19 00:00:00"
+      },
+      {
+        "code": "MARCH18B",
+        "getyear": "2018",
+        "getmonth": "3",
+        "getday": "12",
+        "reason": null,
+        "penalised_in": null,
+        "rating": "1602",
+        "rank": "3125",
+        "name": "March Challenge 2018 DIV 2",
+        "end_date": "2018-03-12 15:00:01"
+      },
+      {
+        "code": "APRIL18B",
+        "getyear": "2018",
+        "getmonth": "4",
+        "getday": "17",
+        "reason": null,
+        "penalised_in": null,
+        "rating": "1513",
+        "rank": "5134",
+        "name": "April Challenge 2018 Division 2",
+        "end_date": "2018-04-17 15:01:00"
+      },
+      {
+        "code": "LTIME60B",
+        "getyear": "2018",
+        "getmonth": "5",
+        "getday": "26",
+        "reason": null,
+        "penalised_in": null,
+        "rating": "1477",
+        "rank": "943",
+        "name": "May Lunchtime 2018 Division 2",
+        "end_date": "2018-05-26 22:30:02"
+      },
+      {
+        "code": "JUNE18B",
+        "getyear": "2018",
+        "getmonth": "6",
+        "getday": "11",
+        "reason": null,
+        "penalised_in": null,
+        "rating": "1574",
+        "rank": "2523",
+        "name": "June Challenge 2018 Division 2",
+        "end_date": "2018-06-11 15:00:05"
+      },
+      {
+        "code": "QUCO2018",
+        "getyear": "2018",
+        "getmonth": "6",
+        "getday": "12",
+        "reason": null,
+        "penalised_in": null,
+        "rating": "1487",
+        "rank": "752",
+        "name": "Quick Code (Rated for Division 2)",
+        "end_date": "2018-06-12 23:30:00"
+      },
+      {
+        "code": "COOK95B",
+        "getyear": "2018",
+        "getmonth": "6",
+        "getday": "18",
+        "reason": null,
+        "penalised_in": null,
+        "rating": "1543",
+        "rank": "999",
+        "name": "June Cook-Off 2018 Division 2",
+        "end_date": "2018-06-18 00:00:05"
+      },
+      {
+        "code": "LTIME61B",
+        "getyear": "2018",
+        "getmonth": "6",
+        "getday": "30",
+        "reason": null,
+        "penalised_in": null,
+        "rating": "1435",
+        "rank": "1719",
+        "name": "June Lunchtime 2018 Division 2",
+        "end_date": "2018-06-30 22:30:05"
+      },
+      {
+        "code": "JULY18B",
+        "getyear": "2018",
+        "getmonth": "7",
+        "getday": "16",
+        "reason": null,
+        "penalised_in": null,
+        "rating": "1541",
+        "rank": "1900",
+        "name": "July Challenge 2018 Division 2",
+        "end_date": "2018-07-16 15:00:10"
+      },
+      {
+        "code": "COOK96B",
+        "getyear": "2018",
+        "getmonth": "7",
+        "getday": "23",
+        "reason": null,
+        "penalised_in": null,
+        "rating": "1725",
+        "rank": "155",
+        "name": "July Cook-Off 2018 Division 2",
+        "end_date": "2018-07-23 00:00:05"
+      },
+      {
+        "code": "AUG18B",
+        "getyear": "2018",
+        "getmonth": "8",
+        "getday": "13",
+        "reason": null,
+        "penalised_in": null,
+        "rating": "1734",
+        "rank": "575",
+        "name": "August Challenge 2018 Division 2",
+        "end_date": "2018-08-13 15:00:05"
+      },
+      {
+        "code": "PROC2018",
+        "getyear": "2018",
+        "getmonth": "8",
+        "getday": "16",
+        "reason": null,
+        "penalised_in": null,
+        "rating": "1833",
+        "rank": "223",
+        "name": "ProCon 2018 (Rated for all)",
+        "end_date": "2018-08-16 23:30:00"
+      },
+      {
+        "code": "COOK97A",
+        "getyear": "2018",
+        "getmonth": "8",
+        "getday": "20",
+        "reason": null,
+        "penalised_in": null,
+        "rating": "1852",
+        "rank": "218",
+        "name": "August Cook-Off 2018 Division 1",
+        "end_date": "2018-08-20 00:00:00"
+      },
+      {
+        "code": "LTIME63A",
+        "getyear": "2018",
+        "getmonth": "8",
+        "getday": "25",
+        "reason": null,
+        "penalised_in": null,
+        "rating": "1801",
+        "rank": "327",
+        "name": "August Lunchtime 2018 Division 1",
+        "end_date": "2018-08-25 22:30:00"
+      },
+      {
+        "code": "SEPT18A",
+        "getyear": "2018",
+        "getmonth": "9",
+        "getday": "17",
+        "reason": null,
+        "penalised_in": null,
+        "rating": "1783",
+        "rank": "478",
+        "name": "September Challenge 2018 Division 1",
+        "end_date": "2018-09-17 15:00:00"
+      },
+      {
+        "code": "COOK98B",
+        "getyear": "2018",
+        "getmonth": "9",
+        "getday": "24",
+        "reason": null,
+        "penalised_in": null,
+        "rating": "1832",
+        "rank": "179",
+        "name": "September Mega Cook-Off 2018 Division 2",
+        "end_date": "2018-09-24 00:00:02"
+      },
+      {
+        "code": "LTIME64A",
+        "getyear": "2018",
+        "getmonth": "9",
+        "getday": "29",
+        "reason": null,
+        "penalised_in": null,
+        "rating": "1718",
+        "rank": "362",
+        "name": "September Lunchtime 2018 Division 1",
+        "end_date": "2018-09-29 22:30:00"
+      },
+      {
+        "code": "OCT18B",
+        "getyear": "2018",
+        "getmonth": "10",
+        "getday": "20",
+        "reason": null,
+        "penalised_in": null,
+        "rating": "1718",
+        "rank": "1787",
+        "name": "October Challenge 2018 Division 2",
+        "end_date": "2018-10-20 15:00:03"
+      },
+      {
+        "code": "COOK99B",
+        "getyear": "2018",
+        "getmonth": "10",
+        "getday": "22",
+        "reason": null,
+        "penalised_in": null,
+        "rating": "1847",
+        "rank": "118",
+        "name": "October Mega Cook-Off 2018 Division 2",
+        "end_date": "2018-10-22 00:00:02"
+      },
+      {
+        "code": "ENCO2018",
+        "getyear": "2018",
+        "getmonth": "10",
+        "getday": "27",
+        "reason": "Plagiarised in ENCO2018",
+        "penalised_in": [
+          "ENCO2018"
+        ],
+        "rating": "1572",
+        "rank": "931",
+        "name": "Encoder (Rated for Division 2)",
+        "end_date": "2018-10-27 00:00:00"
+      },
+      {
+        "code": "LTIME65A",
+        "getyear": "2018",
+        "getmonth": "10",
+        "getday": "27",
+        "reason": null,
+        "penalised_in": null,
+        "rating": "1612",
+        "rank": "332",
+        "name": "October Lunchtime 2018 Division 1",
+        "end_date": "2018-10-27 22:30:00"
+      },
+      {
+        "code": "NOV18B",
+        "getyear": "2018",
+        "getmonth": "11",
+        "getday": "12",
+        "reason": "Plagiarised in NOV18B",
+        "penalised_in": [
+          "NOV18B"
+        ],
+        "rating": "1337",
+        "rank": "9730",
+        "name": "November Challenge 2018 Division 2",
+        "end_date": "2018-11-12 15:00:02"
+      },
+      {
+        "code": "COOK100B",
+        "getyear": "2018",
+        "getmonth": "11",
+        "getday": "19",
+        "reason": null,
+        "penalised_in": null,
+        "rating": "1465",
+        "rank": "835",
+        "name": "November Cook-Off 2018 Division 2",
+        "end_date": "2018-11-19 00:00:02"
+      },
+      {
+        "code": "LTIME66B",
+        "getyear": "2018",
+        "getmonth": "11",
+        "getday": "24",
+        "reason": null,
+        "penalised_in": null,
+        "rating": "1661",
+        "rank": "89",
+        "name": "November Lunchtime 2018 Division 2",
+        "end_date": "2018-11-24 22:30:01"
+      },
+      {
+        "code": "DEC18B",
+        "getyear": "2018",
+        "getmonth": "12",
+        "getday": "18",
+        "reason": null,
+        "penalised_in": null,
+        "rating": "1693",
+        "rank": "1794",
+        "name": "December Challenge 2018 Division 2",
+        "end_date": "2018-12-18 01:02:02"
+      },
+      {
+        "code": "COOK101B",
+        "getyear": "2018",
+        "getmonth": "12",
+        "getday": "24",
+        "reason": null,
+        "penalised_in": null,
+        "rating": "1736",
+        "rank": "414",
+        "name": "December Cook-Off 2018 Division 2",
+        "end_date": "2018-12-24 00:00:02"
+      },
+      {
+        "code": "JAN19B",
+        "getyear": "2019",
+        "getmonth": "1",
+        "getday": "14",
+        "reason": null,
+        "penalised_in": null,
+        "rating": "1623",
+        "rank": "5613",
+        "name": "January Challenge 2019 Division 2",
+        "end_date": "2019-01-14 15:00:02"
+      },
+      {
+        "code": "PELT2019",
+        "getyear": "2019",
+        "getmonth": "1",
+        "getday": "14",
+        "reason": null,
+        "penalised_in": null,
+        "rating": "1806",
+        "rank": "137",
+        "name": "Plinth-Enigma'19 LNMIIT Techfest - (Rated for all)",
+        "end_date": "2019-01-14 20:00:00"
+      },
+      {
+        "code": "COOK102A",
+        "getyear": "2019",
+        "getmonth": "1",
+        "getday": "21",
+        "reason": null,
+        "penalised_in": null,
+        "rating": "1642",
+        "rank": "370",
+        "name": "January Cook-Off 2019 Division 1",
+        "end_date": "2019-01-21 00:00:00"
+      },
+      {
+        "code": "FEB19B",
+        "getyear": "2019",
+        "getmonth": "2",
+        "getday": "13",
+        "reason": null,
+        "penalised_in": null,
+        "rating": "1723",
+        "rank": "1403",
+        "name": "February Challenge 2019 Division 2",
+        "end_date": "2019-02-13 15:00:02"
+      },
+      {
+        "code": "MARCH19B",
+        "getyear": "2019",
+        "getmonth": "3",
+        "getday": "13",
+        "reason": null,
+        "penalised_in": null,
+        "rating": "1895",
+        "rank": "208",
+        "name": "March Challenge 2019 Division 2",
+        "end_date": "2019-03-13 15:00:02"
+      },
+      {
+        "code": "COOK104A",
+        "getyear": "2019",
+        "getmonth": "3",
+        "getday": "25",
+        "reason": null,
+        "penalised_in": null,
+        "rating": "1905",
+        "rank": "247",
+        "name": "March Cook-Off 2019 Division 1",
+        "end_date": "2019-03-25 00:00:00"
+      },
+      {
+        "code": "LTIME70A",
+        "getyear": "2019",
+        "getmonth": "3",
+        "getday": "30",
+        "reason": null,
+        "penalised_in": null,
+        "rating": "2042",
+        "rank": "60",
+        "name": "March Lunchtime 2019 Division 1",
+        "end_date": "2019-03-30 22:30:00"
+      },
+      {
+        "code": "ALKH2019",
+        "getyear": "2019",
+        "getmonth": "4",
+        "getday": "16",
+        "reason": null,
+        "penalised_in": null,
+        "rating": "2051",
+        "rank": "90",
+        "name": "Alkhwarizm (Rated for all)",
+        "end_date": "2019-04-16 00:00:00"
+      },
+      {
+        "code": "COOK105A",
+        "getyear": "2019",
+        "getmonth": "4",
+        "getday": "22",
+        "reason": null,
+        "penalised_in": null,
+        "rating": "1972",
+        "rank": "198",
+        "name": " April Cook-Off 2019 Division 1",
+        "end_date": "2019-04-22 00:00:00"
+      },
+      {
+        "code": "LTIME71A",
+        "getyear": "2019",
+        "getmonth": "4",
+        "getday": "27",
+        "reason": null,
+        "penalised_in": null,
+        "rating": "1851",
+        "rank": "249",
+        "name": "April Lunchtime 2019 Division 1",
+        "end_date": "2019-04-27 22:30:00"
+      },
+      {
+        "code": "MAY19A",
+        "getyear": "2019",
+        "getmonth": "5",
+        "getday": "13",
+        "reason": null,
+        "penalised_in": null,
+        "rating": "1852",
+        "rank": "254",
+        "name": "May Challenge 2019 Division 1",
+        "end_date": "2019-05-13 15:00:00"
+      },
+      {
+        "code": "COOK106A",
+        "getyear": "2019",
+        "getmonth": "5",
+        "getday": "20",
+        "reason": null,
+        "penalised_in": null,
+        "rating": "1892",
+        "rank": "261",
+        "name": "May Cook-Off 2019 Division 1",
+        "end_date": "2019-05-20 00:00:00"
+      },
+      {
+        "code": "JUNE19A",
+        "getyear": "2019",
+        "getmonth": "6",
+        "getday": "17",
+        "reason": null,
+        "penalised_in": null,
+        "rating": "1967",
+        "rank": "387",
+        "name": "June Challenge 2019 Division 1",
+        "end_date": "2019-06-17 15:00:00"
+      },
+      {
+        "code": "LTIME73A",
+        "getyear": "2019",
+        "getmonth": "6",
+        "getday": "29",
+        "reason": null,
+        "penalised_in": null,
+        "rating": "2018",
+        "rank": "126",
+        "name": "June Lunchtime 2019 Division 1",
+        "end_date": "2019-06-29 22:30:00"
+      },
+      {
+        "code": "JULY19A",
+        "getyear": "2019",
+        "getmonth": "7",
+        "getday": "15",
+        "reason": null,
+        "penalised_in": null,
+        "rating": "1868",
+        "rank": "646",
+        "name": "July Challenge 2019 Division 1",
+        "end_date": "2019-07-15 15:00:00"
+      },
+      {
+        "code": "COOK108A",
+        "getyear": "2019",
+        "getmonth": "7",
+        "getday": "22",
+        "reason": null,
+        "penalised_in": null,
+        "rating": "1931",
+        "rank": "168",
+        "name": "July Cook-Off 2019 Division 1",
+        "end_date": "2019-07-22 00:00:00"
+      },
+      {
+        "code": "AUG19A",
+        "getyear": "2019",
+        "getmonth": "8",
+        "getday": "12",
+        "reason": null,
+        "penalised_in": null,
+        "rating": "1798",
+        "rank": "922",
+        "name": "August Challenge 2019 Division 1",
+        "end_date": "2019-08-12 15:00:00"
+      },
+      {
+        "code": "COOK109A",
+        "getyear": "2019",
+        "getmonth": "8",
+        "getday": "19",
+        "reason": null,
+        "penalised_in": null,
+        "rating": "1882",
+        "rank": "188",
+        "name": "August Cook-Off 2019 Division 1",
+        "end_date": "2019-08-19 00:00:00"
+      },
+      {
+        "code": "LTIME75A",
+        "getyear": "2019",
+        "getmonth": "8",
+        "getday": "31",
+        "reason": null,
+        "penalised_in": null,
+        "rating": "1852",
+        "rank": "250",
+        "name": "August Lunchtime 2019 Division 1",
+        "end_date": "2019-08-31 23:00:00"
+      },
+      {
+        "code": "SEPT19A",
+        "getyear": "2019",
+        "getmonth": "9",
+        "getday": "16",
+        "reason": null,
+        "penalised_in": null,
+        "rating": "1786",
+        "rank": "611",
+        "name": "September Challenge 2019 Division 1",
+        "end_date": "2019-09-16 15:00:00"
+      },
+      {
+        "code": "LTIME76B",
+        "getyear": "2019",
+        "getmonth": "9",
+        "getday": "28",
+        "reason": null,
+        "penalised_in": null,
+        "rating": "1941",
+        "rank": "54",
+        "name": "September Lunchtime 2019 Division 2",
+        "end_date": "2019-09-28 22:30:02"
+      },
+      {
+        "code": "OCT19A",
+        "getyear": "2019",
+        "getmonth": "10",
+        "getday": "14",
+        "reason": null,
+        "penalised_in": null,
+        "rating": "1840",
+        "rank": "755",
+        "name": "October Challenge 2019 Division 1",
+        "end_date": "2019-10-14 15:00:00"
+      },
+      {
+        "code": "LTIME78A",
+        "getyear": "2019",
+        "getmonth": "11",
+        "getday": "30",
+        "reason": null,
+        "penalised_in": null,
+        "rating": "2001",
+        "rank": "99",
+        "name": "November Lunchtime 2019 Division 1",
+        "end_date": "2019-11-30 22:30:00"
+      },
+      {
+        "code": "COOK113A",
+        "getyear": "2019",
+        "getmonth": "12",
+        "getday": "23",
+        "reason": null,
+        "penalised_in": null,
+        "rating": "2099",
+        "rank": "75",
+        "name": "December Cook-Off 2019 Division 1",
+        "end_date": "2019-12-23 00:30:00"
+      },
+      {
+        "code": "COOK116A",
+        "getyear": "2020",
+        "getmonth": "3",
+        "getday": "23",
+        "reason": null,
+        "penalised_in": null,
+        "rating": "2126",
+        "rank": "186",
+        "name": "March Cook-Off 2020 Division 1 ",
+        "end_date": "2020-03-23 00:00:00"
+      },
+      {
+        "code": "APRIL20A",
+        "getyear": "2020",
+        "getmonth": "4",
+        "getday": "13",
+        "reason": null,
+        "penalised_in": null,
+        "rating": "2150",
+        "rank": "304",
+        "name": "April Challenge 2020 Division 1",
+        "end_date": "2020-04-13 17:30:00"
+      },
+      {
+        "code": "COOK117A",
+        "getyear": "2020",
+        "getmonth": "4",
+        "getday": "21",
+        "reason": null,
+        "penalised_in": null,
+        "rating": "2212",
+        "rank": "110",
+        "name": "April Cook-Off 2020 Division 1 ",
+        "end_date": "2020-04-21 00:00:00"
+      },
+      {
+        "code": "LTIME83A",
+        "getyear": "2020",
+        "getmonth": "4",
+        "getday": "25",
+        "reason": null,
+        "penalised_in": null,
+        "rating": "2070",
+        "rank": "293",
+        "name": "April Lunchtime 2020 Division 1",
+        "end_date": "2020-04-25 22:40:00"
+      },
+      {
+        "code": "JULY20A",
+        "getyear": "2020",
+        "getmonth": "7",
+        "getday": "13",
+        "reason": null,
+        "penalised_in": null,
+        "rating": "1923",
+        "rank": "1380",
+        "name": "July Challenge 2020 Division 1",
+        "end_date": "2020-07-13 15:00:00"
+      },
+      {
+        "code": "COLE2020",
+        "getyear": "2020",
+        "getmonth": "7",
+        "getday": "16",
+        "reason": null,
+        "penalised_in": null,
+        "rating": "1922",
+        "rank": "637",
+        "name": "Coders' Legacy (Rated for all)",
+        "end_date": "2020-07-16 00:15:00"
+      },
+      {
+        "code": "COOK120A",
+        "getyear": "2020",
+        "getmonth": "7",
+        "getday": "20",
+        "reason": null,
+        "penalised_in": null,
+        "rating": "2078",
+        "rank": "57",
+        "name": "July Cook-Off 2020 Division 1",
+        "end_date": "2020-07-20 00:00:00"
+      },
+      {
+        "code": "LTIME86A",
+        "getyear": "2020",
+        "getmonth": "7",
+        "getday": "25",
+        "reason": null,
+        "penalised_in": null,
+        "rating": "2046",
+        "rank": "268",
+        "name": "July Lunchtime 2020 Division 1",
+        "end_date": "2020-07-25 22:30:00"
+      },
+      {
+        "code": "COOK123A",
+        "getyear": "2020",
+        "getmonth": "10",
+        "getday": "19",
+        "reason": null,
+        "penalised_in": null,
+        "rating": "1898",
+        "rank": "440",
+        "name": "October Cook-Off 2020 Division 1",
+        "end_date": "2020-10-19 00:00:00"
+      },
+      {
+        "code": "LTIME89A",
+        "getyear": "2020",
+        "getmonth": "10",
+        "getday": "31",
+        "reason": null,
+        "penalised_in": null,
+        "rating": "2036",
+        "rank": "119",
+        "name": "October Lunchtime 2020 Division 1",
+        "end_date": "2020-10-31 22:30:00"
+      }
+    ],
+    "fully_solved": {
+      "count": 472,
+      "Practice": [
+        {
+          "name": "TEST",
+          "link": "https://www.codechef.com/status/TEST,ay2306"
+        },
+        {
+          "name": "FLOW018",
+          "link": "https://www.codechef.com/status/FLOW018,ay2306"
+        },
+        {
+          "name": "FLOW017",
+          "link": "https://www.codechef.com/status/FLOW017,ay2306"
+        },
+        {
+          "name": "FLOW013",
+          "link": "https://www.codechef.com/status/FLOW013,ay2306"
+        },
+        {
+          "name": "FLOW004",
+          "link": "https://www.codechef.com/status/FLOW004,ay2306"
+        },
+        {
+          "name": "SEBIHWY",
+          "link": "https://www.codechef.com/status/SEBIHWY,ay2306"
+        },
+        {
+          "name": "LOSTMAX",
+          "link": "https://www.codechef.com/status/LOSTMAX,ay2306"
+        },
+        {
+          "name": "MATPAN",
+          "link": "https://www.codechef.com/status/MATPAN,ay2306"
+        },
+        {
+          "name": "HS08TEST",
+          "link": "https://www.codechef.com/status/HS08TEST,ay2306"
+        },
+        {
+          "name": "INTEST",
+          "link": "https://www.codechef.com/status/INTEST,ay2306"
+        },
+        {
+          "name": "FBMT",
+          "link": "https://www.codechef.com/status/FBMT,ay2306"
+        },
+        {
+          "name": "GIT01",
+          "link": "https://www.codechef.com/status/GIT01,ay2306"
+        },
+        {
+          "name": "SMRSTR",
+          "link": "https://www.codechef.com/status/SMRSTR,ay2306"
+        },
+        {
+          "name": "COUPSYS",
+          "link": "https://www.codechef.com/status/COUPSYS,ay2306"
+        },
+        {
+          "name": "STRLBP",
+          "link": "https://www.codechef.com/status/STRLBP,ay2306"
+        },
+        {
+          "name": "GOODBAD",
+          "link": "https://www.codechef.com/status/GOODBAD,ay2306"
+        },
+        {
+          "name": "ORDTEAMS",
+          "link": "https://www.codechef.com/status/ORDTEAMS,ay2306"
+        },
+        {
+          "name": "ZUBREACH",
+          "link": "https://www.codechef.com/status/ZUBREACH,ay2306"
+        },
+        {
+          "name": "C00K0FF",
+          "link": "https://www.codechef.com/status/C00K0FF,ay2306"
+        },
+        {
+          "name": "KOL16B",
+          "link": "https://www.codechef.com/status/KOL16B,ay2306"
+        },
+        {
+          "name": "SNELECT",
+          "link": "https://www.codechef.com/status/SNELECT,ay2306"
+        },
+        {
+          "name": "CHEFAPAR",
+          "link": "https://www.codechef.com/status/CHEFAPAR,ay2306"
+        },
+        {
+          "name": "XENTASK",
+          "link": "https://www.codechef.com/status/XENTASK,ay2306"
+        },
+        {
+          "name": "TEMPLELA",
+          "link": "https://www.codechef.com/status/TEMPLELA,ay2306"
+        },
+        {
+          "name": "SNAKPROC",
+          "link": "https://www.codechef.com/status/SNAKPROC,ay2306"
+        },
+        {
+          "name": "ADACRA",
+          "link": "https://www.codechef.com/status/ADACRA,ay2306"
+        },
+        {
+          "name": "BUGCAL",
+          "link": "https://www.codechef.com/status/BUGCAL,ay2306"
+        },
+        {
+          "name": "SEGM01",
+          "link": "https://www.codechef.com/status/SEGM01,ay2306"
+        },
+        {
+          "name": "NITIKA",
+          "link": "https://www.codechef.com/status/NITIKA,ay2306"
+        },
+        {
+          "name": "NOTINCOM",
+          "link": "https://www.codechef.com/status/NOTINCOM,ay2306"
+        },
+        {
+          "name": "LADDU",
+          "link": "https://www.codechef.com/status/LADDU,ay2306"
+        },
+        {
+          "name": "COOMILK",
+          "link": "https://www.codechef.com/status/COOMILK,ay2306"
+        },
+        {
+          "name": "BRLADDER",
+          "link": "https://www.codechef.com/status/BRLADDER,ay2306"
+        },
+        {
+          "name": "ELEVSTRS",
+          "link": "https://www.codechef.com/status/ELEVSTRS,ay2306"
+        },
+        {
+          "name": "RAINBOWA",
+          "link": "https://www.codechef.com/status/RAINBOWA,ay2306"
+        },
+        {
+          "name": "SIMDISH",
+          "link": "https://www.codechef.com/status/SIMDISH,ay2306"
+        },
+        {
+          "name": "ACBALL",
+          "link": "https://www.codechef.com/status/ACBALL,ay2306"
+        },
+        {
+          "name": "GOODSET",
+          "link": "https://www.codechef.com/status/GOODSET,ay2306"
+        },
+        {
+          "name": "LCOLLIS",
+          "link": "https://www.codechef.com/status/LCOLLIS,ay2306"
+        },
+        {
+          "name": "DEVARRAY",
+          "link": "https://www.codechef.com/status/DEVARRAY,ay2306"
+        },
+        {
+          "name": "EGRANDR",
+          "link": "https://www.codechef.com/status/EGRANDR,ay2306"
+        },
+        {
+          "name": "ICPC16B",
+          "link": "https://www.codechef.com/status/ICPC16B,ay2306"
+        },
+        {
+          "name": "CATSDOGS",
+          "link": "https://www.codechef.com/status/CATSDOGS,ay2306"
+        },
+        {
+          "name": "ANKTRAIN",
+          "link": "https://www.codechef.com/status/ANKTRAIN,ay2306"
+        },
+        {
+          "name": "UTMOPR",
+          "link": "https://www.codechef.com/status/UTMOPR,ay2306"
+        },
+        {
+          "name": "TWONMS",
+          "link": "https://www.codechef.com/status/TWONMS,ay2306"
+        },
+        {
+          "name": "STICKS",
+          "link": "https://www.codechef.com/status/STICKS,ay2306"
+        },
+        {
+          "name": "CHEFSTUD",
+          "link": "https://www.codechef.com/status/CHEFSTUD,ay2306"
+        },
+        {
+          "name": "DWNLD",
+          "link": "https://www.codechef.com/status/DWNLD,ay2306"
+        },
+        {
+          "name": "TTENIS",
+          "link": "https://www.codechef.com/status/TTENIS,ay2306"
+        },
+        {
+          "name": "CANDY123",
+          "link": "https://www.codechef.com/status/CANDY123,ay2306"
+        },
+        {
+          "name": "ALTARAY",
+          "link": "https://www.codechef.com/status/ALTARAY,ay2306"
+        },
+        {
+          "name": "TALAZY",
+          "link": "https://www.codechef.com/status/TALAZY,ay2306"
+        },
+        {
+          "name": "ALPHABET",
+          "link": "https://www.codechef.com/status/ALPHABET,ay2306"
+        },
+        {
+          "name": "CHEFRUN",
+          "link": "https://www.codechef.com/status/CHEFRUN,ay2306"
+        },
+        {
+          "name": "KMXOR",
+          "link": "https://www.codechef.com/status/KMXOR,ay2306"
+        },
+        {
+          "name": "TWOVSTEN",
+          "link": "https://www.codechef.com/status/TWOVSTEN,ay2306"
+        },
+        {
+          "name": "GOHAN",
+          "link": "https://www.codechef.com/status/GOHAN,ay2306"
+        },
+        {
+          "name": "VEGETA",
+          "link": "https://www.codechef.com/status/VEGETA,ay2306"
+        },
+        {
+          "name": "BEERUS",
+          "link": "https://www.codechef.com/status/BEERUS,ay2306"
+        },
+        {
+          "name": "GOODPERM",
+          "link": "https://www.codechef.com/status/GOODPERM,ay2306"
+        },
+        {
+          "name": "LECANDY",
+          "link": "https://www.codechef.com/status/LECANDY,ay2306"
+        },
+        {
+          "name": "CNOTE",
+          "link": "https://www.codechef.com/status/CNOTE,ay2306"
+        },
+        {
+          "name": "SALARY",
+          "link": "https://www.codechef.com/status/SALARY,ay2306"
+        },
+        {
+          "name": "FRGTNLNG",
+          "link": "https://www.codechef.com/status/FRGTNLNG,ay2306"
+        },
+        {
+          "name": "COPS",
+          "link": "https://www.codechef.com/status/COPS,ay2306"
+        },
+        {
+          "name": "CSUB",
+          "link": "https://www.codechef.com/status/CSUB,ay2306"
+        },
+        {
+          "name": "LAPIN",
+          "link": "https://www.codechef.com/status/LAPIN,ay2306"
+        },
+        {
+          "name": "SUMPOWER",
+          "link": "https://www.codechef.com/status/SUMPOWER,ay2306"
+        },
+        {
+          "name": "POTATOES",
+          "link": "https://www.codechef.com/status/POTATOES,ay2306"
+        },
+        {
+          "name": "TREESORT",
+          "link": "https://www.codechef.com/status/TREESORT,ay2306"
+        },
+        {
+          "name": "PRMDIV",
+          "link": "https://www.codechef.com/status/PRMDIV,ay2306"
+        },
+        {
+          "name": "ICPC16A",
+          "link": "https://www.codechef.com/status/ICPC16A,ay2306"
+        },
+        {
+          "name": "PCJ18A",
+          "link": "https://www.codechef.com/status/PCJ18A,ay2306"
+        },
+        {
+          "name": "PCJ18B",
+          "link": "https://www.codechef.com/status/PCJ18B,ay2306"
+        },
+        {
+          "name": "PCJ18C",
+          "link": "https://www.codechef.com/status/PCJ18C,ay2306"
+        },
+        {
+          "name": "PCJ18D",
+          "link": "https://www.codechef.com/status/PCJ18D,ay2306"
+        },
+        {
+          "name": "PCJ18E",
+          "link": "https://www.codechef.com/status/PCJ18E,ay2306"
+        },
+        {
+          "name": "PROBSET",
+          "link": "https://www.codechef.com/status/PROBSET,ay2306"
+        },
+        {
+          "name": "JAGAM",
+          "link": "https://www.codechef.com/status/JAGAM,ay2306"
+        },
+        {
+          "name": "EID",
+          "link": "https://www.codechef.com/status/EID,ay2306"
+        },
+        {
+          "name": "CGMATH",
+          "link": "https://www.codechef.com/status/CGMATH,ay2306"
+        },
+        {
+          "name": "PS18B",
+          "link": "https://www.codechef.com/status/PS18B,ay2306"
+        },
+        {
+          "name": "KTTABLE",
+          "link": "https://www.codechef.com/status/KTTABLE,ay2306"
+        },
+        {
+          "name": "GE06",
+          "link": "https://www.codechef.com/status/GE06,ay2306"
+        },
+        {
+          "name": "OPPOSITE",
+          "link": "https://www.codechef.com/status/OPPOSITE,ay2306"
+        },
+        {
+          "name": "HORSES",
+          "link": "https://www.codechef.com/status/HORSES,ay2306"
+        },
+        {
+          "name": "ICPC16C",
+          "link": "https://www.codechef.com/status/ICPC16C,ay2306"
+        },
+        {
+          "name": "CLFIBD",
+          "link": "https://www.codechef.com/status/CLFIBD,ay2306"
+        },
+        {
+          "name": "NW1",
+          "link": "https://www.codechef.com/status/NW1,ay2306"
+        },
+        {
+          "name": "ABX01",
+          "link": "https://www.codechef.com/status/ABX01,ay2306"
+        },
+        {
+          "name": "WEIRD2",
+          "link": "https://www.codechef.com/status/WEIRD2,ay2306"
+        },
+        {
+          "name": "BINIM2",
+          "link": "https://www.codechef.com/status/BINIM2,ay2306"
+        },
+        {
+          "name": "KANYASAI",
+          "link": "https://www.codechef.com/status/KANYASAI,ay2306"
+        },
+        {
+          "name": "MANIP2",
+          "link": "https://www.codechef.com/status/MANIP2,ay2306"
+        },
+        {
+          "name": "CD1IT4",
+          "link": "https://www.codechef.com/status/CD1IT4,ay2306"
+        },
+        {
+          "name": "BEAUTGAR",
+          "link": "https://www.codechef.com/status/BEAUTGAR,ay2306"
+        },
+        {
+          "name": "FCTRL",
+          "link": "https://www.codechef.com/status/FCTRL,ay2306"
+        },
+        {
+          "name": "CIELAB",
+          "link": "https://www.codechef.com/status/CIELAB,ay2306"
+        },
+        {
+          "name": "CLEANUP",
+          "link": "https://www.codechef.com/status/CLEANUP,ay2306"
+        },
+        {
+          "name": "FCTRL2",
+          "link": "https://www.codechef.com/status/FCTRL2,ay2306"
+        },
+        {
+          "name": "CAPTBIRD",
+          "link": "https://www.codechef.com/status/CAPTBIRD,ay2306"
+        },
+        {
+          "name": "EOSUBSEQ",
+          "link": "https://www.codechef.com/status/EOSUBSEQ,ay2306"
+        },
+        {
+          "name": "PREFNUM",
+          "link": "https://www.codechef.com/status/PREFNUM,ay2306"
+        },
+        {
+          "name": "PPATTERN",
+          "link": "https://www.codechef.com/status/PPATTERN,ay2306"
+        },
+        {
+          "name": "ARMYFGT",
+          "link": "https://www.codechef.com/status/ARMYFGT,ay2306"
+        },
+        {
+          "name": "DECUNI",
+          "link": "https://www.codechef.com/status/DECUNI,ay2306"
+        },
+        {
+          "name": "STONES",
+          "link": "https://www.codechef.com/status/STONES,ay2306"
+        },
+        {
+          "name": "IPCTRAIN",
+          "link": "https://www.codechef.com/status/IPCTRAIN,ay2306"
+        },
+        {
+          "name": "ANUMLA",
+          "link": "https://www.codechef.com/status/ANUMLA,ay2306"
+        },
+        {
+          "name": "KSUBSUM",
+          "link": "https://www.codechef.com/status/KSUBSUM,ay2306"
+        },
+        {
+          "name": "RRATING",
+          "link": "https://www.codechef.com/status/RRATING,ay2306"
+        },
+        {
+          "name": "TSECJ05",
+          "link": "https://www.codechef.com/status/TSECJ05,ay2306"
+        },
+        {
+          "name": "CAPIMOVE",
+          "link": "https://www.codechef.com/status/CAPIMOVE,ay2306"
+        },
+        {
+          "name": "MOSTDIST",
+          "link": "https://www.codechef.com/status/MOSTDIST,ay2306"
+        },
+        {
+          "name": "GALACTIK",
+          "link": "https://www.codechef.com/status/GALACTIK,ay2306"
+        },
+        {
+          "name": "DISHOWN",
+          "link": "https://www.codechef.com/status/DISHOWN,ay2306"
+        },
+        {
+          "name": "JABO",
+          "link": "https://www.codechef.com/status/JABO,ay2306"
+        },
+        {
+          "name": "FILLMTR",
+          "link": "https://www.codechef.com/status/FILLMTR,ay2306"
+        },
+        {
+          "name": "PLINTHP3",
+          "link": "https://www.codechef.com/status/PLINTHP3,ay2306"
+        },
+        {
+          "name": "PALIN",
+          "link": "https://www.codechef.com/status/PALIN,ay2306"
+        },
+        {
+          "name": "WTCH",
+          "link": "https://www.codechef.com/status/WTCH,ay2306"
+        },
+        {
+          "name": "ADAKNG",
+          "link": "https://www.codechef.com/status/ADAKNG,ay2306"
+        },
+        {
+          "name": "FLOW001",
+          "link": "https://www.codechef.com/status/FLOW001,ay2306"
+        },
+        {
+          "name": "TSORT",
+          "link": "https://www.codechef.com/status/TSORT,ay2306"
+        },
+        {
+          "name": "FLOW006",
+          "link": "https://www.codechef.com/status/FLOW006,ay2306"
+        },
+        {
+          "name": "FLOW002",
+          "link": "https://www.codechef.com/status/FLOW002,ay2306"
+        },
+        {
+          "name": "TLG",
+          "link": "https://www.codechef.com/status/TLG,ay2306"
+        },
+        {
+          "name": "START01",
+          "link": "https://www.codechef.com/status/START01,ay2306"
+        },
+        {
+          "name": "MUFFINS3",
+          "link": "https://www.codechef.com/status/MUFFINS3,ay2306"
+        },
+        {
+          "name": "LUCKFOUR",
+          "link": "https://www.codechef.com/status/LUCKFOUR,ay2306"
+        },
+        {
+          "name": "FLOW007",
+          "link": "https://www.codechef.com/status/FLOW007,ay2306"
+        },
+        {
+          "name": "CIELRCPT",
+          "link": "https://www.codechef.com/status/CIELRCPT,ay2306"
+        },
+        {
+          "name": "FSQRT",
+          "link": "https://www.codechef.com/status/FSQRT,ay2306"
+        },
+        {
+          "name": "REMISS",
+          "link": "https://www.codechef.com/status/REMISS,ay2306"
+        },
+        {
+          "name": "SUMTRIAN",
+          "link": "https://www.codechef.com/status/SUMTRIAN,ay2306"
+        },
+        {
+          "name": "PERMUT2",
+          "link": "https://www.codechef.com/status/PERMUT2,ay2306"
+        },
+        {
+          "name": "FLOW008",
+          "link": "https://www.codechef.com/status/FLOW008,ay2306"
+        },
+        {
+          "name": "RECIPE",
+          "link": "https://www.codechef.com/status/RECIPE,ay2306"
+        },
+        {
+          "name": "FLOW005",
+          "link": "https://www.codechef.com/status/FLOW005,ay2306"
+        },
+        {
+          "name": "ONP",
+          "link": "https://www.codechef.com/status/ONP,ay2306"
+        },
+        {
+          "name": "CHOPRT",
+          "link": "https://www.codechef.com/status/CHOPRT,ay2306"
+        },
+        {
+          "name": "PALL01",
+          "link": "https://www.codechef.com/status/PALL01,ay2306"
+        },
+        {
+          "name": "PRB01",
+          "link": "https://www.codechef.com/status/PRB01,ay2306"
+        },
+        {
+          "name": "AMR15A",
+          "link": "https://www.codechef.com/status/AMR15A,ay2306"
+        },
+        {
+          "name": "FLOW010",
+          "link": "https://www.codechef.com/status/FLOW010,ay2306"
+        },
+        {
+          "name": "TRISQ",
+          "link": "https://www.codechef.com/status/TRISQ,ay2306"
+        },
+        {
+          "name": "SMPAIR",
+          "link": "https://www.codechef.com/status/SMPAIR,ay2306"
+        },
+        {
+          "name": "COMM3",
+          "link": "https://www.codechef.com/status/COMM3,ay2306"
+        },
+        {
+          "name": "FLOW009",
+          "link": "https://www.codechef.com/status/FLOW009,ay2306"
+        },
+        {
+          "name": "HEADBOB",
+          "link": "https://www.codechef.com/status/HEADBOB,ay2306"
+        },
+        {
+          "name": "FLOW016",
+          "link": "https://www.codechef.com/status/FLOW016,ay2306"
+        },
+        {
+          "name": "FLOW011",
+          "link": "https://www.codechef.com/status/FLOW011,ay2306"
+        },
+        {
+          "name": "GDOG",
+          "link": "https://www.codechef.com/status/GDOG,ay2306"
+        },
+        {
+          "name": "FLOW014",
+          "link": "https://www.codechef.com/status/FLOW014,ay2306"
+        },
+        {
+          "name": "PPSUM",
+          "link": "https://www.codechef.com/status/PPSUM,ay2306"
+        },
+        {
+          "name": "CHEFSTLT",
+          "link": "https://www.codechef.com/status/CHEFSTLT,ay2306"
+        },
+        {
+          "name": "FRUITS",
+          "link": "https://www.codechef.com/status/FRUITS,ay2306"
+        },
+        {
+          "name": "TWOSTR",
+          "link": "https://www.codechef.com/status/TWOSTR,ay2306"
+        },
+        {
+          "name": "MNMX",
+          "link": "https://www.codechef.com/status/MNMX,ay2306"
+        },
+        {
+          "name": "LCH15JAB",
+          "link": "https://www.codechef.com/status/LCH15JAB,ay2306"
+        },
+        {
+          "name": "TRICOIN",
+          "link": "https://www.codechef.com/status/TRICOIN,ay2306"
+        },
+        {
+          "name": "MISSP",
+          "link": "https://www.codechef.com/status/MISSP,ay2306"
+        },
+        {
+          "name": "CHN09",
+          "link": "https://www.codechef.com/status/CHN09,ay2306"
+        },
+        {
+          "name": "RECTSQ",
+          "link": "https://www.codechef.com/status/RECTSQ,ay2306"
+        },
+        {
+          "name": "NOKIA",
+          "link": "https://www.codechef.com/status/NOKIA,ay2306"
+        },
+        {
+          "name": "COINS",
+          "link": "https://www.codechef.com/status/COINS,ay2306"
+        },
+        {
+          "name": "TWTCLOSE",
+          "link": "https://www.codechef.com/status/TWTCLOSE,ay2306"
+        },
+        {
+          "name": "FLIPCOIN",
+          "link": "https://www.codechef.com/status/FLIPCOIN,ay2306"
+        },
+        {
+          "name": "AMCS03",
+          "link": "https://www.codechef.com/status/AMCS03,ay2306"
+        },
+        {
+          "name": "MARCAPS",
+          "link": "https://www.codechef.com/status/MARCAPS,ay2306"
+        },
+        {
+          "name": "CHRL4",
+          "link": "https://www.codechef.com/status/CHRL4,ay2306"
+        },
+        {
+          "name": "SONGSHOP",
+          "link": "https://www.codechef.com/status/SONGSHOP,ay2306"
+        },
+        {
+          "name": "AGECAL",
+          "link": "https://www.codechef.com/status/AGECAL,ay2306"
+        },
+        {
+          "name": "CHONQ",
+          "link": "https://www.codechef.com/status/CHONQ,ay2306"
+        },
+        {
+          "name": "CHEFSOC",
+          "link": "https://www.codechef.com/status/CHEFSOC,ay2306"
+        },
+        {
+          "name": "RRJOKE",
+          "link": "https://www.codechef.com/status/RRJOKE,ay2306"
+        },
+        {
+          "name": "TRICKYDL",
+          "link": "https://www.codechef.com/status/TRICKYDL,ay2306"
+        },
+        {
+          "name": "SUBREM",
+          "link": "https://www.codechef.com/status/SUBREM,ay2306"
+        },
+        {
+          "name": "SJ1",
+          "link": "https://www.codechef.com/status/SJ1,ay2306"
+        },
+        {
+          "name": "PROC18D",
+          "link": "https://www.codechef.com/status/PROC18D,ay2306"
+        },
+        {
+          "name": "CHEFST",
+          "link": "https://www.codechef.com/status/CHEFST,ay2306"
+        },
+        {
+          "name": "ADAPWNS",
+          "link": "https://www.codechef.com/status/ADAPWNS,ay2306"
+        },
+        {
+          "name": "DINCPATH",
+          "link": "https://www.codechef.com/status/DINCPATH,ay2306"
+        },
+        {
+          "name": "FAPF",
+          "link": "https://www.codechef.com/status/FAPF,ay2306"
+        },
+        {
+          "name": "XORIER",
+          "link": "https://www.codechef.com/status/XORIER,ay2306"
+        },
+        {
+          "name": "CARDMGK",
+          "link": "https://www.codechef.com/status/CARDMGK,ay2306"
+        },
+        {
+          "name": "QABC",
+          "link": "https://www.codechef.com/status/QABC,ay2306"
+        },
+        {
+          "name": "MAXPRODU",
+          "link": "https://www.codechef.com/status/MAXPRODU,ay2306"
+        },
+        {
+          "name": "NUMGAME2",
+          "link": "https://www.codechef.com/status/NUMGAME2,ay2306"
+        },
+        {
+          "name": "CARRAY",
+          "link": "https://www.codechef.com/status/CARRAY,ay2306"
+        },
+        {
+          "name": "EXPXOR",
+          "link": "https://www.codechef.com/status/EXPXOR,ay2306"
+        },
+        {
+          "name": "ANUARM",
+          "link": "https://www.codechef.com/status/ANUARM,ay2306"
+        },
+        {
+          "name": "FIRESC",
+          "link": "https://www.codechef.com/status/FIRESC,ay2306"
+        },
+        {
+          "name": "BATMG",
+          "link": "https://www.codechef.com/status/BATMG,ay2306"
+        },
+        {
+          "name": "CPAIRS",
+          "link": "https://www.codechef.com/status/CPAIRS,ay2306"
+        },
+        {
+          "name": "JOHNY",
+          "link": "https://www.codechef.com/status/JOHNY,ay2306"
+        },
+        {
+          "name": "CONFLIP",
+          "link": "https://www.codechef.com/status/CONFLIP,ay2306"
+        },
+        {
+          "name": "A1",
+          "link": "https://www.codechef.com/status/A1,ay2306"
+        },
+        {
+          "name": "CARVANS",
+          "link": "https://www.codechef.com/status/CARVANS,ay2306"
+        },
+        {
+          "name": "MARCHA1",
+          "link": "https://www.codechef.com/status/MARCHA1,ay2306"
+        },
+        {
+          "name": "NUKES",
+          "link": "https://www.codechef.com/status/NUKES,ay2306"
+        },
+        {
+          "name": "PRIME1",
+          "link": "https://www.codechef.com/status/PRIME1,ay2306"
+        },
+        {
+          "name": "ERROR",
+          "link": "https://www.codechef.com/status/ERROR,ay2306"
+        },
+        {
+          "name": "LEPERMUT",
+          "link": "https://www.codechef.com/status/LEPERMUT,ay2306"
+        },
+        {
+          "name": "VOTERS",
+          "link": "https://www.codechef.com/status/VOTERS,ay2306"
+        },
+        {
+          "name": "DIVIDING",
+          "link": "https://www.codechef.com/status/DIVIDING,ay2306"
+        },
+        {
+          "name": "RIGHTRI",
+          "link": "https://www.codechef.com/status/RIGHTRI,ay2306"
+        },
+        {
+          "name": "RESQ",
+          "link": "https://www.codechef.com/status/RESQ,ay2306"
+        },
+        {
+          "name": "OJUMPS",
+          "link": "https://www.codechef.com/status/OJUMPS,ay2306"
+        },
+        {
+          "name": "EASYPROB",
+          "link": "https://www.codechef.com/status/EASYPROB,ay2306"
+        },
+        {
+          "name": "SPCANDY",
+          "link": "https://www.codechef.com/status/SPCANDY,ay2306"
+        },
+        {
+          "name": "GCD2",
+          "link": "https://www.codechef.com/status/GCD2,ay2306"
+        },
+        {
+          "name": "AMSGAME1",
+          "link": "https://www.codechef.com/status/AMSGAME1,ay2306"
+        },
+        {
+          "name": "PCYCLE",
+          "link": "https://www.codechef.com/status/PCYCLE,ay2306"
+        },
+        {
+          "name": "NAME2",
+          "link": "https://www.codechef.com/status/NAME2,ay2306"
+        },
+        {
+          "name": "LEBOMBS",
+          "link": "https://www.codechef.com/status/LEBOMBS,ay2306"
+        },
+        {
+          "name": "RRCOPY",
+          "link": "https://www.codechef.com/status/RRCOPY,ay2306"
+        },
+        {
+          "name": "TOTR",
+          "link": "https://www.codechef.com/status/TOTR,ay2306"
+        },
+        {
+          "name": "TACHSTCK",
+          "link": "https://www.codechef.com/status/TACHSTCK,ay2306"
+        },
+        {
+          "name": "ALEXNUMB",
+          "link": "https://www.codechef.com/status/ALEXNUMB,ay2306"
+        },
+        {
+          "name": "ANUDTC",
+          "link": "https://www.codechef.com/status/ANUDTC,ay2306"
+        },
+        {
+          "name": "DECSTR",
+          "link": "https://www.codechef.com/status/DECSTR,ay2306"
+        },
+        {
+          "name": "DRAGNXOR",
+          "link": "https://www.codechef.com/status/DRAGNXOR,ay2306"
+        },
+        {
+          "name": "PLZLYKME",
+          "link": "https://www.codechef.com/status/PLZLYKME,ay2306"
+        },
+        {
+          "name": "TAVISUAL",
+          "link": "https://www.codechef.com/status/TAVISUAL,ay2306"
+        },
+        {
+          "name": "ANUWTA",
+          "link": "https://www.codechef.com/status/ANUWTA,ay2306"
+        },
+        {
+          "name": "WALK",
+          "link": "https://www.codechef.com/status/WALK,ay2306"
+        },
+        {
+          "name": "LUCKY5",
+          "link": "https://www.codechef.com/status/LUCKY5,ay2306"
+        },
+        {
+          "name": "RRSUM",
+          "link": "https://www.codechef.com/status/RRSUM,ay2306"
+        },
+        {
+          "name": "ANUBTG",
+          "link": "https://www.codechef.com/status/ANUBTG,ay2306"
+        },
+        {
+          "name": "COMPILER",
+          "link": "https://www.codechef.com/status/COMPILER,ay2306"
+        },
+        {
+          "name": "SUBGCD",
+          "link": "https://www.codechef.com/status/SUBGCD,ay2306"
+        },
+        {
+          "name": "CHEFZOT",
+          "link": "https://www.codechef.com/status/CHEFZOT,ay2306"
+        },
+        {
+          "name": "ATTIC",
+          "link": "https://www.codechef.com/status/ATTIC,ay2306"
+        },
+        {
+          "name": "PRGIFT",
+          "link": "https://www.codechef.com/status/PRGIFT,ay2306"
+        },
+        {
+          "name": "CHEFA",
+          "link": "https://www.codechef.com/status/CHEFA,ay2306"
+        },
+        {
+          "name": "NOCODING",
+          "link": "https://www.codechef.com/status/NOCODING,ay2306"
+        },
+        {
+          "name": "LUCKYSTR",
+          "link": "https://www.codechef.com/status/LUCKYSTR,ay2306"
+        },
+        {
+          "name": "PLAYFIT",
+          "link": "https://www.codechef.com/status/PLAYFIT,ay2306"
+        },
+        {
+          "name": "NOTATRI",
+          "link": "https://www.codechef.com/status/NOTATRI,ay2306"
+        },
+        {
+          "name": "RRECIPE",
+          "link": "https://www.codechef.com/status/RRECIPE,ay2306"
+        },
+        {
+          "name": "BINTREE",
+          "link": "https://www.codechef.com/status/BINTREE,ay2306"
+        },
+        {
+          "name": "RRSTONE",
+          "link": "https://www.codechef.com/status/RRSTONE,ay2306"
+        },
+        {
+          "name": "CHEFSTON",
+          "link": "https://www.codechef.com/status/CHEFSTON,ay2306"
+        },
+        {
+          "name": "AMMEAT",
+          "link": "https://www.codechef.com/status/AMMEAT,ay2306"
+        },
+        {
+          "name": "ROWCOLOP",
+          "link": "https://www.codechef.com/status/ROWCOLOP,ay2306"
+        },
+        {
+          "name": "KINGSHIP",
+          "link": "https://www.codechef.com/status/KINGSHIP,ay2306"
+        },
+        {
+          "name": "MARCHA2",
+          "link": "https://www.codechef.com/status/MARCHA2,ay2306"
+        },
+        {
+          "name": "LCPESY",
+          "link": "https://www.codechef.com/status/LCPESY,ay2306"
+        },
+        {
+          "name": "APPROX",
+          "link": "https://www.codechef.com/status/APPROX,ay2306"
+        },
+        {
+          "name": "CHEFGR",
+          "link": "https://www.codechef.com/status/CHEFGR,ay2306"
+        },
+        {
+          "name": "POINTS",
+          "link": "https://www.codechef.com/status/POINTS,ay2306"
+        },
+        {
+          "name": "GRID",
+          "link": "https://www.codechef.com/status/GRID,ay2306"
+        },
+        {
+          "name": "ANTEATER",
+          "link": "https://www.codechef.com/status/ANTEATER,ay2306"
+        },
+        {
+          "name": "SLUSH",
+          "link": "https://www.codechef.com/status/SLUSH,ay2306"
+        },
+        {
+          "name": "THREEDIF",
+          "link": "https://www.codechef.com/status/THREEDIF,ay2306"
+        },
+        {
+          "name": "BROKPHON",
+          "link": "https://www.codechef.com/status/BROKPHON,ay2306"
+        },
+        {
+          "name": "COMMUTE",
+          "link": "https://www.codechef.com/status/COMMUTE,ay2306"
+        },
+        {
+          "name": "DISCHAR",
+          "link": "https://www.codechef.com/status/DISCHAR,ay2306"
+        },
+        {
+          "name": "LEDIV",
+          "link": "https://www.codechef.com/status/LEDIV,ay2306"
+        },
+        {
+          "name": "PROSUM",
+          "link": "https://www.codechef.com/status/PROSUM,ay2306"
+        },
+        {
+          "name": "DIRECTI",
+          "link": "https://www.codechef.com/status/DIRECTI,ay2306"
+        },
+        {
+          "name": "FROGV",
+          "link": "https://www.codechef.com/status/FROGV,ay2306"
+        },
+        {
+          "name": "KOL15A",
+          "link": "https://www.codechef.com/status/KOL15A,ay2306"
+        },
+        {
+          "name": "CIELDIST",
+          "link": "https://www.codechef.com/status/CIELDIST,ay2306"
+        },
+        {
+          "name": "SPOON",
+          "link": "https://www.codechef.com/status/SPOON,ay2306"
+        },
+        {
+          "name": "KNIGHTMV",
+          "link": "https://www.codechef.com/status/KNIGHTMV,ay2306"
+        },
+        {
+          "name": "NAME1",
+          "link": "https://www.codechef.com/status/NAME1,ay2306"
+        },
+        {
+          "name": "XORNUBER",
+          "link": "https://www.codechef.com/status/XORNUBER,ay2306"
+        },
+        {
+          "name": "NOLOGIC",
+          "link": "https://www.codechef.com/status/NOLOGIC,ay2306"
+        },
+        {
+          "name": "CAPPLE",
+          "link": "https://www.codechef.com/status/CAPPLE,ay2306"
+        },
+        {
+          "name": "RRCODE",
+          "link": "https://www.codechef.com/status/RRCODE,ay2306"
+        },
+        {
+          "name": "PUPPYGM",
+          "link": "https://www.codechef.com/status/PUPPYGM,ay2306"
+        },
+        {
+          "name": "DBOY",
+          "link": "https://www.codechef.com/status/DBOY,ay2306"
+        },
+        {
+          "name": "DAILY",
+          "link": "https://www.codechef.com/status/DAILY,ay2306"
+        },
+        {
+          "name": "MANYCHEF",
+          "link": "https://www.codechef.com/status/MANYCHEF,ay2306"
+        },
+        {
+          "name": "ANUTHM",
+          "link": "https://www.codechef.com/status/ANUTHM,ay2306"
+        },
+        {
+          "name": "HELPLIRA",
+          "link": "https://www.codechef.com/status/HELPLIRA,ay2306"
+        },
+        {
+          "name": "KPRIME",
+          "link": "https://www.codechef.com/status/KPRIME,ay2306"
+        },
+        {
+          "name": "CHEFCH",
+          "link": "https://www.codechef.com/status/CHEFCH,ay2306"
+        },
+        {
+          "name": "CYCLRACE",
+          "link": "https://www.codechef.com/status/CYCLRACE,ay2306"
+        },
+        {
+          "name": "DESTCELL",
+          "link": "https://www.codechef.com/status/DESTCELL,ay2306"
+        },
+        {
+          "name": "SANSKAR",
+          "link": "https://www.codechef.com/status/SANSKAR,ay2306"
+        },
+        {
+          "name": "DEADEND",
+          "link": "https://www.codechef.com/status/DEADEND,ay2306"
+        },
+        {
+          "name": "CMPRSS",
+          "link": "https://www.codechef.com/status/CMPRSS,ay2306"
+        },
+        {
+          "name": "BANSTR",
+          "link": "https://www.codechef.com/status/BANSTR,ay2306"
+        },
+        {
+          "name": "CNTSET",
+          "link": "https://www.codechef.com/status/CNTSET,ay2306"
+        },
+        {
+          "name": "SPACEWLK",
+          "link": "https://www.codechef.com/status/SPACEWLK,ay2306"
+        },
+        {
+          "name": "NUMSUM",
+          "link": "https://www.codechef.com/status/NUMSUM,ay2306"
+        },
+        {
+          "name": "SPROBLEM",
+          "link": "https://www.codechef.com/status/SPROBLEM,ay2306"
+        },
+        {
+          "name": "MOAT",
+          "link": "https://www.codechef.com/status/MOAT,ay2306"
+        },
+        {
+          "name": "NPLQ19C",
+          "link": "https://www.codechef.com/status/NPLQ19C,ay2306"
+        },
+        {
+          "name": "RRTREE",
+          "link": "https://www.codechef.com/status/RRTREE,ay2306"
+        },
+        {
+          "name": "WALK4",
+          "link": "https://www.codechef.com/status/WALK4,ay2306"
+        },
+        {
+          "name": "CHSTR",
+          "link": "https://www.codechef.com/status/CHSTR,ay2306"
+        },
+        {
+          "name": "CHCBOX",
+          "link": "https://www.codechef.com/status/CHCBOX,ay2306"
+        },
+        {
+          "name": "ESCTRE",
+          "link": "https://www.codechef.com/status/ESCTRE,ay2306"
+        },
+        {
+          "name": "FICE",
+          "link": "https://www.codechef.com/status/FICE,ay2306"
+        },
+        {
+          "name": "COINCHNG",
+          "link": "https://www.codechef.com/status/COINCHNG,ay2306"
+        },
+        {
+          "name": "INTWOS",
+          "link": "https://www.codechef.com/status/INTWOS,ay2306"
+        },
+        {
+          "name": "SKYFALL",
+          "link": "https://www.codechef.com/status/SKYFALL,ay2306"
+        },
+        {
+          "name": "RANDCHCL",
+          "link": "https://www.codechef.com/status/RANDCHCL,ay2306"
+        },
+        {
+          "name": "TRERMB",
+          "link": "https://www.codechef.com/status/TRERMB,ay2306"
+        },
+        {
+          "name": "STRCH",
+          "link": "https://www.codechef.com/status/STRCH,ay2306"
+        },
+        {
+          "name": "MXMLCM",
+          "link": "https://www.codechef.com/status/MXMLCM,ay2306"
+        },
+        {
+          "name": "STRPTRE",
+          "link": "https://www.codechef.com/status/STRPTRE,ay2306"
+        },
+        {
+          "name": "IITI15",
+          "link": "https://www.codechef.com/status/IITI15,ay2306"
+        },
+        {
+          "name": "TALCA",
+          "link": "https://www.codechef.com/status/TALCA,ay2306"
+        },
+        {
+          "name": "PENS",
+          "link": "https://www.codechef.com/status/PENS,ay2306"
+        },
+        {
+          "name": "TOWCNT",
+          "link": "https://www.codechef.com/status/TOWCNT,ay2306"
+        },
+        {
+          "name": "GVAWAY",
+          "link": "https://www.codechef.com/status/GVAWAY,ay2306"
+        },
+        {
+          "name": "ARRQRY",
+          "link": "https://www.codechef.com/status/ARRQRY,ay2306"
+        },
+        {
+          "name": "PRMPRT",
+          "link": "https://www.codechef.com/status/PRMPRT,ay2306"
+        },
+        {
+          "name": "FCIPL",
+          "link": "https://www.codechef.com/status/FCIPL,ay2306"
+        },
+        {
+          "name": "CHAPD",
+          "link": "https://www.codechef.com/status/CHAPD,ay2306"
+        },
+        {
+          "name": "CHEFD",
+          "link": "https://www.codechef.com/status/CHEFD,ay2306"
+        },
+        {
+          "name": "ANUSAR",
+          "link": "https://www.codechef.com/status/ANUSAR,ay2306"
+        },
+        {
+          "name": "SNSOCIAL",
+          "link": "https://www.codechef.com/status/SNSOCIAL,ay2306"
+        },
+        {
+          "name": "MARBLES",
+          "link": "https://www.codechef.com/status/MARBLES,ay2306"
+        },
+        {
+          "name": "TREEROOT",
+          "link": "https://www.codechef.com/status/TREEROOT,ay2306"
+        },
+        {
+          "name": "NUMFACT",
+          "link": "https://www.codechef.com/status/NUMFACT,ay2306"
+        },
+        {
+          "name": "SEAVOTE",
+          "link": "https://www.codechef.com/status/SEAVOTE,ay2306"
+        },
+        {
+          "name": "ORDERS",
+          "link": "https://www.codechef.com/status/ORDERS,ay2306"
+        },
+        {
+          "name": "ICPC16F",
+          "link": "https://www.codechef.com/status/ICPC16F,ay2306"
+        },
+        {
+          "name": "REVERSE",
+          "link": "https://www.codechef.com/status/REVERSE,ay2306"
+        },
+        {
+          "name": "DIANE",
+          "link": "https://www.codechef.com/status/DIANE,ay2306"
+        },
+        {
+          "name": "PATHSUMS",
+          "link": "https://www.codechef.com/status/PATHSUMS,ay2306"
+        },
+        {
+          "name": "XOXO",
+          "link": "https://www.codechef.com/status/XOXO,ay2306"
+        },
+        {
+          "name": "COPAR",
+          "link": "https://www.codechef.com/status/COPAR,ay2306"
+        },
+        {
+          "name": "SUBMEXS",
+          "link": "https://www.codechef.com/status/SUBMEXS,ay2306"
+        },
+        {
+          "name": "SSO",
+          "link": "https://www.codechef.com/status/SSO,ay2306"
+        }
+      ],
+      "FEB16": [
+        {
+          "name": "CHEFDETE",
+          "link": "https://www.codechef.com/FEB16/status/CHEFDETE,ay2306"
+        }
+      ],
+      "MAY17": [
+        {
+          "name": "CHEFROUT",
+          "link": "https://www.codechef.com/MAY17/status/CHEFROUT,ay2306"
+        },
+        {
+          "name": "UNICOURS",
+          "link": "https://www.codechef.com/MAY17/status/UNICOURS,ay2306"
+        }
+      ],
+      "SEPT17": [
+        {
+          "name": "CHEFSUM",
+          "link": "https://www.codechef.com/SEPT17/status/CHEFSUM,ay2306"
+        },
+        {
+          "name": "MINPERM",
+          "link": "https://www.codechef.com/SEPT17/status/MINPERM,ay2306"
+        },
+        {
+          "name": "CHEFPDIG",
+          "link": "https://www.codechef.com/SEPT17/status/CHEFPDIG,ay2306"
+        }
+      ],
+      "OCT17": [
+        {
+          "name": "PERFCONT",
+          "link": "https://www.codechef.com/OCT17/status/PERFCONT,ay2306"
+        }
+      ],
+      "NOV17": [
+        {
+          "name": "VILTRIBE",
+          "link": "https://www.codechef.com/NOV17/status/VILTRIBE,ay2306"
+        }
+      ],
+      "JAN18": [
+        {
+          "name": "RECTANGL",
+          "link": "https://www.codechef.com/JAN18/status/RECTANGL,ay2306"
+        },
+        {
+          "name": "MAXSC",
+          "link": "https://www.codechef.com/JAN18/status/MAXSC,ay2306"
+        }
+      ],
+      "FEB18": [
+        {
+          "name": "CHEFCHR",
+          "link": "https://www.codechef.com/FEB18/status/CHEFCHR,ay2306"
+        },
+        {
+          "name": "CHEFPTNT",
+          "link": "https://www.codechef.com/FEB18/status/CHEFPTNT,ay2306"
+        },
+        {
+          "name": "CARPTUN",
+          "link": "https://www.codechef.com/FEB18/status/CARPTUN,ay2306"
+        },
+        {
+          "name": "PERMPAL",
+          "link": "https://www.codechef.com/FEB18/status/PERMPAL,ay2306"
+        }
+      ],
+      "COOK91": [
+        {
+          "name": "CCOOK",
+          "link": "https://www.codechef.com/COOK91/status/CCOOK,ay2306"
+        }
+      ],
+      "NCC2018": [
+        {
+          "name": "NCC1807",
+          "link": "https://www.codechef.com/NCC2018/status/NCC1807,ay2306"
+        },
+        {
+          "name": "NCC1803",
+          "link": "https://www.codechef.com/NCC2018/status/NCC1803,ay2306"
+        }
+      ],
+      "MARCH18B": [
+        {
+          "name": "CHEGLOVE",
+          "link": "https://www.codechef.com/MARCH18B/status/CHEGLOVE,ay2306"
+        },
+        {
+          "name": "BIGSALE",
+          "link": "https://www.codechef.com/MARCH18B/status/BIGSALE,ay2306"
+        },
+        {
+          "name": "MINVOTE",
+          "link": "https://www.codechef.com/MARCH18B/status/MINVOTE,ay2306"
+        },
+        {
+          "name": "MIXCOLOR",
+          "link": "https://www.codechef.com/MARCH18B/status/MIXCOLOR,ay2306"
+        }
+      ],
+      "APRIL18B": [
+        {
+          "name": "CHEFWORK",
+          "link": "https://www.codechef.com/APRIL18B/status/CHEFWORK,ay2306"
+        }
+      ],
+      "LTIME60B": [
+        {
+          "name": "TRACE",
+          "link": "https://www.codechef.com/LTIME60B/status/TRACE,ay2306"
+        }
+      ],
+      "LOCMAY18": [
+        {
+          "name": "REMAIN",
+          "link": "https://www.codechef.com/LOCMAY18/status/REMAIN,ay2306"
+        }
+      ],
+      "JUNE18B": [
+        {
+          "name": "NAICHEF",
+          "link": "https://www.codechef.com/JUNE18B/status/NAICHEF,ay2306"
+        }
+      ],
+      "QUCO2018": [
+        {
+          "name": "FRIEZA",
+          "link": "https://www.codechef.com/QUCO2018/status/FRIEZA,ay2306"
+        }
+      ],
+      "COOK95B": [
+        {
+          "name": "NUMCOMP",
+          "link": "https://www.codechef.com/COOK95B/status/NUMCOMP,ay2306"
+        }
+      ],
+      "LTIME61B": [
+        {
+          "name": "NUM239",
+          "link": "https://www.codechef.com/LTIME61B/status/NUM239,ay2306"
+        }
+      ],
+      "JULY18B": [
+        {
+          "name": "PINS",
+          "link": "https://www.codechef.com/JULY18B/status/PINS,ay2306"
+        },
+        {
+          "name": "MGCSET",
+          "link": "https://www.codechef.com/JULY18B/status/MGCSET,ay2306"
+        }
+      ],
+      "ISCC2018": [
+        {
+          "name": "T21",
+          "link": "https://www.codechef.com/ISCC2018/status/T21,ay2306"
+        },
+        {
+          "name": "T22",
+          "link": "https://www.codechef.com/ISCC2018/status/T22,ay2306"
+        },
+        {
+          "name": "T23",
+          "link": "https://www.codechef.com/ISCC2018/status/T23,ay2306"
+        }
+      ],
+      "COOK96B": [
+        {
+          "name": "ENCMSG",
+          "link": "https://www.codechef.com/COOK96B/status/ENCMSG,ay2306"
+        },
+        {
+          "name": "ORMATRIX",
+          "link": "https://www.codechef.com/COOK96B/status/ORMATRIX,ay2306"
+        }
+      ],
+      "LOCJUL18": [
+        {
+          "name": "COLCHEF",
+          "link": "https://www.codechef.com/LOCJUL18/status/COLCHEF,ay2306"
+        },
+        {
+          "name": "CMK",
+          "link": "https://www.codechef.com/LOCJUL18/status/CMK,ay2306"
+        }
+      ],
+      "LTIME62B": [
+        {
+          "name": "SPLST",
+          "link": "https://www.codechef.com/LTIME62B/status/SPLST,ay2306"
+        }
+      ],
+      "AUG18B": [
+        {
+          "name": "SPELLBOB",
+          "link": "https://www.codechef.com/AUG18B/status/SPELLBOB,ay2306"
+        },
+        {
+          "name": "SHKNUM",
+          "link": "https://www.codechef.com/AUG18B/status/SHKNUM,ay2306"
+        },
+        {
+          "name": "PROBLEMS",
+          "link": "https://www.codechef.com/AUG18B/status/PROBLEMS,ay2306"
+        },
+        {
+          "name": "GCDMOD",
+          "link": "https://www.codechef.com/AUG18B/status/GCDMOD,ay2306"
+        }
+      ],
+      "PROC2018": [
+        {
+          "name": "PROC18A",
+          "link": "https://www.codechef.com/PROC2018/status/PROC18A,ay2306"
+        },
+        {
+          "name": "PROC18B",
+          "link": "https://www.codechef.com/PROC2018/status/PROC18B,ay2306"
+        }
+      ],
+      "COOK97A": [
+        {
+          "name": "MIXGA",
+          "link": "https://www.codechef.com/COOK97A/status/MIXGA,ay2306"
+        }
+      ],
+      "LTIME63A": [
+        {
+          "name": "EID",
+          "link": "https://www.codechef.com/LTIME63A/status/EID,ay2306"
+        }
+      ],
+      "SEPT18A": [
+        {
+          "name": "BSHUFFLE",
+          "link": "https://www.codechef.com/SEPT18A/status/BSHUFFLE,ay2306"
+        }
+      ],
+      "COOK98B": [
+        {
+          "name": "ATM2",
+          "link": "https://www.codechef.com/COOK98B/status/ATM2,ay2306"
+        },
+        {
+          "name": "MAKPERM",
+          "link": "https://www.codechef.com/COOK98B/status/MAKPERM,ay2306"
+        }
+      ],
+      "LTIME64A": [
+        {
+          "name": "CHEFRES",
+          "link": "https://www.codechef.com/LTIME64A/status/CHEFRES,ay2306"
+        }
+      ],
+      "CYSE2018": [
+        {
+          "name": "CYSEP01",
+          "link": "https://www.codechef.com/CYSE2018/status/CYSEP01,ay2306"
+        }
+      ],
+      "OCT18B": [
+        {
+          "name": "CHSERVE",
+          "link": "https://www.codechef.com/OCT18B/status/CHSERVE,ay2306"
+        },
+        {
+          "name": "BITOBYT",
+          "link": "https://www.codechef.com/OCT18B/status/BITOBYT,ay2306"
+        },
+        {
+          "name": "MINDSUM",
+          "link": "https://www.codechef.com/OCT18B/status/MINDSUM,ay2306"
+        }
+      ],
+      "COOK99B": [
+        {
+          "name": "ADASTAIR",
+          "link": "https://www.codechef.com/COOK99B/status/ADASTAIR,ay2306"
+        },
+        {
+          "name": "BINIM2",
+          "link": "https://www.codechef.com/COOK99B/status/BINIM2,ay2306"
+        }
+      ],
+      "LTIME65A": [
+        {
+          "name": "CLORGIRD",
+          "link": "https://www.codechef.com/LTIME65A/status/CLORGIRD,ay2306"
+        }
+      ],
+      "COOK100B": [
+        {
+          "name": "TRUEDARE",
+          "link": "https://www.codechef.com/COOK100B/status/TRUEDARE,ay2306"
+        }
+      ],
+      "AARA2018": [
+        {
+          "name": "ARMBH1",
+          "link": "https://www.codechef.com/AARA2018/status/ARMBH1,ay2306"
+        }
+      ],
+      "LTIME66B": [
+        {
+          "name": "EVENT",
+          "link": "https://www.codechef.com/LTIME66B/status/EVENT,ay2306"
+        }
+      ],
+      "DEC18B": [
+        {
+          "name": "CHFINTRO",
+          "link": "https://www.codechef.com/DEC18B/status/CHFINTRO,ay2306"
+        },
+        {
+          "name": "CHFIDEAL",
+          "link": "https://www.codechef.com/DEC18B/status/CHFIDEAL,ay2306"
+        },
+        {
+          "name": "MAXEP",
+          "link": "https://www.codechef.com/DEC18B/status/MAXEP,ay2306"
+        }
+      ],
+      "KGP18ROL": [
+        {
+          "name": "PLAYPIAN",
+          "link": "https://www.codechef.com/KGP18ROL/status/PLAYPIAN,ay2306"
+        },
+        {
+          "name": "NOMATCH",
+          "link": "https://www.codechef.com/KGP18ROL/status/NOMATCH,ay2306"
+        }
+      ],
+      "COOK101B": [
+        {
+          "name": "CAMPON",
+          "link": "https://www.codechef.com/COOK101B/status/CAMPON,ay2306"
+        }
+      ],
+      "JAN19B": [
+        {
+          "name": "FANCY",
+          "link": "https://www.codechef.com/JAN19B/status/FANCY,ay2306"
+        },
+        {
+          "name": "DPAIRS",
+          "link": "https://www.codechef.com/JAN19B/status/DPAIRS,ay2306"
+        }
+      ],
+      "PELT2019": [
+        {
+          "name": "XORNEY",
+          "link": "https://www.codechef.com/PELT2019/status/XORNEY,ay2306"
+        },
+        {
+          "name": "SUMNCR",
+          "link": "https://www.codechef.com/PELT2019/status/SUMNCR,ay2306"
+        },
+        {
+          "name": "GARGOYLE",
+          "link": "https://www.codechef.com/PELT2019/status/GARGOYLE,ay2306"
+        }
+      ],
+      "COOK102A": [
+        {
+          "name": "ADASCOOL",
+          "link": "https://www.codechef.com/COOK102A/status/ADASCOOL,ay2306"
+        }
+      ],
+      "FEB19B": [
+        {
+          "name": "HMAPPY2",
+          "link": "https://www.codechef.com/FEB19B/status/HMAPPY2,ay2306"
+        },
+        {
+          "name": "CHEFING",
+          "link": "https://www.codechef.com/FEB19B/status/CHEFING,ay2306"
+        },
+        {
+          "name": "DEPCHEF",
+          "link": "https://www.codechef.com/FEB19B/status/DEPCHEF,ay2306"
+        },
+        {
+          "name": "MAGICJAR",
+          "link": "https://www.codechef.com/FEB19B/status/MAGICJAR,ay2306"
+        },
+        {
+          "name": "ARTBALAN",
+          "link": "https://www.codechef.com/FEB19B/status/ARTBALAN,ay2306"
+        },
+        {
+          "name": "MANRECT",
+          "link": "https://www.codechef.com/FEB19B/status/MANRECT,ay2306"
+        }
+      ],
+      "BLUP2019": [
+        {
+          "name": "MOALP",
+          "link": "https://www.codechef.com/BLUP2019/status/MOALP,ay2306"
+        },
+        {
+          "name": "DIV4",
+          "link": "https://www.codechef.com/BLUP2019/status/DIV4,ay2306"
+        }
+      ],
+      "MARCH19B": [
+        {
+          "name": "JAIN",
+          "link": "https://www.codechef.com/MARCH19B/status/JAIN,ay2306"
+        },
+        {
+          "name": "CHDIGER",
+          "link": "https://www.codechef.com/MARCH19B/status/CHDIGER,ay2306"
+        },
+        {
+          "name": "CHNUM",
+          "link": "https://www.codechef.com/MARCH19B/status/CHNUM,ay2306"
+        },
+        {
+          "name": "SUBPRNJL",
+          "link": "https://www.codechef.com/MARCH19B/status/SUBPRNJL,ay2306"
+        },
+        {
+          "name": "INTERLEA",
+          "link": "https://www.codechef.com/MARCH19B/status/INTERLEA,ay2306"
+        }
+      ],
+      "COOK104A": [
+        {
+          "name": "NBONACCI",
+          "link": "https://www.codechef.com/COOK104A/status/NBONACCI,ay2306"
+        },
+        {
+          "name": "MARCAPS",
+          "link": "https://www.codechef.com/COOK104A/status/MARCAPS,ay2306"
+        }
+      ],
+      "LTIME70A": [
+        {
+          "name": "SEVENSEG",
+          "link": "https://www.codechef.com/LTIME70A/status/SEVENSEG,ay2306"
+        },
+        {
+          "name": "TRVLCHEF",
+          "link": "https://www.codechef.com/LTIME70A/status/TRVLCHEF,ay2306"
+        }
+      ],
+      "ALKH2019": [
+        {
+          "name": "DANOW",
+          "link": "https://www.codechef.com/ALKH2019/status/DANOW,ay2306"
+        },
+        {
+          "name": "MIRTREE",
+          "link": "https://www.codechef.com/ALKH2019/status/MIRTREE,ay2306"
+        }
+      ],
+      "COOK105A": [
+        {
+          "name": "PEWDSVTS",
+          "link": "https://www.codechef.com/COOK105A/status/PEWDSVTS,ay2306"
+        }
+      ],
+      "LTIME71A": [
+        {
+          "name": "MINARRS",
+          "link": "https://www.codechef.com/LTIME71A/status/MINARRS,ay2306"
+        }
+      ],
+      "MAY19A": [
+        {
+          "name": "WTBTR",
+          "link": "https://www.codechef.com/MAY19A/status/WTBTR,ay2306"
+        }
+      ],
+      "COOK106A": [
+        {
+          "name": "GCDSET",
+          "link": "https://www.codechef.com/COOK106A/status/GCDSET,ay2306"
+        }
+      ],
+      "JUNE19A": [
+        {
+          "name": "SUMAGCD",
+          "link": "https://www.codechef.com/JUNE19A/status/SUMAGCD,ay2306"
+        },
+        {
+          "name": "CHFING",
+          "link": "https://www.codechef.com/JUNE19A/status/CHFING,ay2306"
+        },
+        {
+          "name": "LENTMO",
+          "link": "https://www.codechef.com/JUNE19A/status/LENTMO,ay2306"
+        }
+      ],
+      "LTIME73A": [
+        {
+          "name": "BURARRAY",
+          "link": "https://www.codechef.com/LTIME73A/status/BURARRAY,ay2306"
+        }
+      ],
+      "COOK108A": [
+        {
+          "name": "BDGFT",
+          "link": "https://www.codechef.com/COOK108A/status/BDGFT,ay2306"
+        }
+      ],
+      "AUG19A": [
+        {
+          "name": "CHEFDIL",
+          "link": "https://www.codechef.com/AUG19A/status/CHEFDIL,ay2306"
+        },
+        {
+          "name": "KS1",
+          "link": "https://www.codechef.com/AUG19A/status/KS1,ay2306"
+        }
+      ],
+      "COOK109A": [
+        {
+          "name": "RICHSTR",
+          "link": "https://www.codechef.com/COOK109A/status/RICHSTR,ay2306"
+        }
+      ],
+      "SEPT19A": [
+        {
+          "name": "CHEFK1",
+          "link": "https://www.codechef.com/SEPT19A/status/CHEFK1,ay2306"
+        }
+      ],
+      "LTIME76B": [
+        {
+          "name": "CATFEED",
+          "link": "https://www.codechef.com/LTIME76B/status/CATFEED,ay2306"
+        },
+        {
+          "name": "WATCHFB",
+          "link": "https://www.codechef.com/LTIME76B/status/WATCHFB,ay2306"
+        },
+        {
+          "name": "PAIRSUM2",
+          "link": "https://www.codechef.com/LTIME76B/status/PAIRSUM2,ay2306"
+        },
+        {
+          "name": "ALLSUB",
+          "link": "https://www.codechef.com/LTIME76B/status/ALLSUB,ay2306"
+        }
+      ],
+      "OCT19A": [
+        {
+          "name": "MARM",
+          "link": "https://www.codechef.com/OCT19A/status/MARM,ay2306"
+        },
+        {
+          "name": "MSV",
+          "link": "https://www.codechef.com/OCT19A/status/MSV,ay2306"
+        },
+        {
+          "name": "EVEDG",
+          "link": "https://www.codechef.com/OCT19A/status/EVEDG,ay2306"
+        }
+      ],
+      "LTIME78A": [
+        {
+          "name": "DEADEND",
+          "link": "https://www.codechef.com/LTIME78A/status/DEADEND,ay2306"
+        },
+        {
+          "name": "APARTS",
+          "link": "https://www.codechef.com/LTIME78A/status/APARTS,ay2306"
+        },
+        {
+          "name": "PRFCTN",
+          "link": "https://www.codechef.com/LTIME78A/status/PRFCTN,ay2306"
+        }
+      ],
+      "COOK113A": [
+        {
+          "name": "XORIT",
+          "link": "https://www.codechef.com/COOK113A/status/XORIT,ay2306"
+        }
+      ],
+      "AABH2020": [
+        {
+          "name": "JGEC",
+          "link": "https://www.codechef.com/AABH2020/status/JGEC,ay2306"
+        },
+        {
+          "name": "XORSGT",
+          "link": "https://www.codechef.com/AABH2020/status/XORSGT,ay2306"
+        },
+        {
+          "name": "STRTLN",
+          "link": "https://www.codechef.com/AABH2020/status/STRTLN,ay2306"
+        }
+      ],
+      "COOK116A": [
+        {
+          "name": "MYSARA",
+          "link": "https://www.codechef.com/COOK116A/status/MYSARA,ay2306"
+        },
+        {
+          "name": "MAXBTY",
+          "link": "https://www.codechef.com/COOK116A/status/MAXBTY,ay2306"
+        }
+      ],
+      "APRIL20A": [
+        {
+          "name": "STRNO",
+          "link": "https://www.codechef.com/APRIL20A/status/STRNO,ay2306"
+        },
+        {
+          "name": "SQRDSUB",
+          "link": "https://www.codechef.com/APRIL20A/status/SQRDSUB,ay2306"
+        },
+        {
+          "name": "REBIT",
+          "link": "https://www.codechef.com/APRIL20A/status/REBIT,ay2306"
+        },
+        {
+          "name": "UNITGCD",
+          "link": "https://www.codechef.com/APRIL20A/status/UNITGCD,ay2306"
+        },
+        {
+          "name": "CARSELL",
+          "link": "https://www.codechef.com/APRIL20A/status/CARSELL,ay2306"
+        },
+        {
+          "name": "ANSLEAK",
+          "link": "https://www.codechef.com/APRIL20A/status/ANSLEAK,ay2306"
+        },
+        {
+          "name": "PPDIV",
+          "link": "https://www.codechef.com/APRIL20A/status/PPDIV,ay2306"
+        }
+      ],
+      "COOK117A": [
+        {
+          "name": "MINOPS",
+          "link": "https://www.codechef.com/COOK117A/status/MINOPS,ay2306"
+        }
+      ],
+      "LTIME83A": [
+        {
+          "name": "MEXUM",
+          "link": "https://www.codechef.com/LTIME83A/status/MEXUM,ay2306"
+        }
+      ],
+      "JULY20A": [
+        {
+          "name": "PTMSSNG",
+          "link": "https://www.codechef.com/JULY20A/status/PTMSSNG,ay2306"
+        }
+      ],
+      "COLE2020": [
+        {
+          "name": "CLLCM",
+          "link": "https://www.codechef.com/COLE2020/status/CLLCM,ay2306"
+        },
+        {
+          "name": "CLPNT",
+          "link": "https://www.codechef.com/COLE2020/status/CLPNT,ay2306"
+        },
+        {
+          "name": "CLBRKT",
+          "link": "https://www.codechef.com/COLE2020/status/CLBRKT,ay2306"
+        }
+      ],
+      "COOK120A": [
+        {
+          "name": "EVENTUAL",
+          "link": "https://www.codechef.com/COOK120A/status/EVENTUAL,ay2306"
+        },
+        {
+          "name": "ORTHODOX",
+          "link": "https://www.codechef.com/COOK120A/status/ORTHODOX,ay2306"
+        },
+        {
+          "name": "PATHETIC",
+          "link": "https://www.codechef.com/COOK120A/status/PATHETIC,ay2306"
+        },
+        {
+          "name": "BOJACK",
+          "link": "https://www.codechef.com/COOK120A/status/BOJACK,ay2306"
+        }
+      ],
+      "LTIME86A": [
+        {
+          "name": "BINFUN",
+          "link": "https://www.codechef.com/LTIME86A/status/BINFUN,ay2306"
+        }
+      ],
+      "DEM2020": [
+        {
+          "name": "TOWIN",
+          "link": "https://www.codechef.com/DEM2020/status/TOWIN,ay2306"
+        },
+        {
+          "name": "HELPHAND",
+          "link": "https://www.codechef.com/DEM2020/status/HELPHAND,ay2306"
+        }
+      ],
+      "LTIME89A": [
+        {
+          "name": "COPAR",
+          "link": "https://www.codechef.com/LTIME89A/status/COPAR,ay2306"
+        },
+        {
+          "name": "SSO",
+          "link": "https://www.codechef.com/LTIME89A/status/SSO,ay2306"
+        },
+        {
+          "name": "GSUB",
+          "link": "https://www.codechef.com/LTIME89A/status/GSUB,ay2306"
+        }
+      ]
+    },
+    "partially_solved": {
+      "count": 35,
+      "Practice": [
+        {
+          "name": "CHEFKEY",
+          "link": "https://www.codechef.com/status/CHEFKEY,ay2306"
+        },
+        {
+          "name": "CHCHCL",
+          "link": "https://www.codechef.com/status/CHCHCL,ay2306"
+        },
+        {
+          "name": "TICKETS5",
+          "link": "https://www.codechef.com/status/TICKETS5,ay2306"
+        },
+        {
+          "name": "TASHIFT",
+          "link": "https://www.codechef.com/status/TASHIFT,ay2306"
+        },
+        {
+          "name": "FRCPRT",
+          "link": "https://www.codechef.com/status/FRCPRT,ay2306"
+        },
+        {
+          "name": "GCDMOD",
+          "link": "https://www.codechef.com/status/GCDMOD,ay2306"
+        },
+        {
+          "name": "NMNMX",
+          "link": "https://www.codechef.com/status/NMNMX,ay2306"
+        },
+        {
+          "name": "DIVMAC",
+          "link": "https://www.codechef.com/status/DIVMAC,ay2306"
+        },
+        {
+          "name": "PERMPART",
+          "link": "https://www.codechef.com/status/PERMPART,ay2306"
+        },
+        {
+          "name": "TRIP2",
+          "link": "https://www.codechef.com/status/TRIP2,ay2306"
+        },
+        {
+          "name": "FCTRE",
+          "link": "https://www.codechef.com/status/FCTRE,ay2306"
+        },
+        {
+          "name": "STRNO",
+          "link": "https://www.codechef.com/status/STRNO,ay2306"
+        },
+        {
+          "name": "CHEFAOR",
+          "link": "https://www.codechef.com/status/CHEFAOR,ay2306"
+        },
+        {
+          "name": "GSUB",
+          "link": "https://www.codechef.com/status/GSUB,ay2306"
+        }
+      ],
+      "CDVA16": [
+        {
+          "name": "CDVA1603",
+          "link": "https://www.codechef.com/CDVA16/status/CDVA1603,ay2306"
+        }
+      ],
+      "SEPT17": [
+        {
+          "name": "SEACO",
+          "link": "https://www.codechef.com/SEPT17/status/SEACO,ay2306"
+        }
+      ],
+      "LTIME54": [
+        {
+          "name": "SMRSTR",
+          "link": "https://www.codechef.com/LTIME54/status/SMRSTR,ay2306"
+        }
+      ],
+      "FEB18": [
+        {
+          "name": "CHANOQ",
+          "link": "https://www.codechef.com/FEB18/status/CHANOQ,ay2306"
+        },
+        {
+          "name": "POINPOLY",
+          "link": "https://www.codechef.com/FEB18/status/POINPOLY,ay2306"
+        }
+      ],
+      "LOCMAY18": [
+        {
+          "name": "DSERIES",
+          "link": "https://www.codechef.com/LOCMAY18/status/DSERIES,ay2306"
+        }
+      ],
+      "JUNE18B": [
+        {
+          "name": "SHKSTR",
+          "link": "https://www.codechef.com/JUNE18B/status/SHKSTR,ay2306"
+        }
+      ],
+      "JULY18B": [
+        {
+          "name": "NSA",
+          "link": "https://www.codechef.com/JULY18B/status/NSA,ay2306"
+        }
+      ],
+      "LTIME62B": [
+        {
+          "name": "PRMDIV",
+          "link": "https://www.codechef.com/LTIME62B/status/PRMDIV,ay2306"
+        },
+        {
+          "name": "FRCPRT",
+          "link": "https://www.codechef.com/LTIME62B/status/FRCPRT,ay2306"
+        }
+      ],
+      "OCT18B": [
+        {
+          "name": "HMAPPY",
+          "link": "https://www.codechef.com/OCT18B/status/HMAPPY,ay2306"
+        }
+      ],
+      "LTIME66B": [
+        {
+          "name": "USF",
+          "link": "https://www.codechef.com/LTIME66B/status/USF,ay2306"
+        }
+      ],
+      "DEC18B": [
+        {
+          "name": "INTXOR",
+          "link": "https://www.codechef.com/DEC18B/status/INTXOR,ay2306"
+        }
+      ],
+      "MARCH19B": [
+        {
+          "name": "CHONQ",
+          "link": "https://www.codechef.com/MARCH19B/status/CHONQ,ay2306"
+        },
+        {
+          "name": "CHEFSOC",
+          "link": "https://www.codechef.com/MARCH19B/status/CHEFSOC,ay2306"
+        }
+      ],
+      "LTIME71A": [
+        {
+          "name": "DRMP",
+          "link": "https://www.codechef.com/LTIME71A/status/DRMP,ay2306"
+        }
+      ],
+      "JUNE19A": [
+        {
+          "name": "KS2",
+          "link": "https://www.codechef.com/JUNE19A/status/KS2,ay2306"
+        },
+        {
+          "name": "INTRPATH",
+          "link": "https://www.codechef.com/JUNE19A/status/INTRPATH,ay2306"
+        },
+        {
+          "name": "COOLCHEF",
+          "link": "https://www.codechef.com/JUNE19A/status/COOLCHEF,ay2306"
+        }
+      ],
+      "JULY19A": [
+        {
+          "name": "CIRMERGE",
+          "link": "https://www.codechef.com/JULY19A/status/CIRMERGE,ay2306"
+        }
+      ],
+      "LTIME75A": [
+        {
+          "name": "DESTCELL",
+          "link": "https://www.codechef.com/LTIME75A/status/DESTCELL,ay2306"
+        }
+      ],
+      "APRIL20A": [
+        {
+          "name": "FCTRE",
+          "link": "https://www.codechef.com/APRIL20A/status/FCTRE,ay2306"
+        }
+      ],
+      "LTIME89A": [
+        {
+          "name": "CDSUMS",
+          "link": "https://www.codechef.com/LTIME89A/status/CDSUMS,ay2306"
+        }
+      ]
+    }
+  }

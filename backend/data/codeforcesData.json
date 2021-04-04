@@ -1,0 +1,1363 @@
+
+{
+    "status": "Success",
+    "username": "tourist",
+    "platform": "Codeforces",
+    "rating": 3697,
+    "max rating": 3783,
+    "rank": "legendary grandmaster",
+    "max rank": "legendary grandmaster",
+    "contests": [
+      {
+        "Contest": "Codeforces Round #712 (Div. 1)",
+        "Rank": "2",
+        "Solved": "5",
+        "Rating Change": "+29",
+        "New Rating": "3697"
+      },
+      {
+        "Contest": "Codeforces Round #707 (Div. 1, based on Moscow Open Olympiad in Informatics)",
+        "Rank": "1",
+        "Solved": "5",
+        "Rating Change": "+96",
+        "New Rating": "3668"
+      },
+      {
+        "Contest": "Codeforces Round #706 (Div. 1)",
+        "Rank": "3",
+        "Solved": "6",
+        "Rating Change": "+7",
+        "New Rating": "3572"
+      },
+      {
+        "Contest": "Codeforces Global Round 13",
+        "Rank": "35",
+        "Solved": "6",
+        "Rating Change": "-183",
+        "New Rating": "3565"
+      },
+      {
+        "Contest": "Codeforces Round #698 (Div. 1)",
+        "Rank": "3",
+        "Solved": "5",
+        "Rating Change": "-30",
+        "New Rating": "3748"
+      },
+      {
+        "Contest": "Codeforces Round #694 (Div. 1)",
+        "Rank": "1",
+        "Solved": "5",
+        "Rating Change": "+76",
+        "New Rating": "3778"
+      },
+      {
+        "Contest": "Good Bye 2020",
+        "Rank": "1",
+        "Solved": "8",
+        "Rating Change": "+101",
+        "New Rating": "3702"
+      },
+      {
+        "Contest": "Codeforces Round #692 (Div. 1, based on Technocup 2021 Elimination Round 3)",
+        "Rank": "20",
+        "Solved": "4",
+        "Rating Change": "-182",
+        "New Rating": "3601"
+      },
+      {
+        "Contest": "Codeforces Round #691 (Div. 1)",
+        "Rank": "1",
+        "Solved": "5",
+        "Rating Change": "+71",
+        "New Rating": "3783"
+      },
+      {
+        "Contest": "Codeforces Global Round 12",
+        "Rank": "2",
+        "Solved": "9",
+        "Rating Change": "+25",
+        "New Rating": "3712"
+      },
+      {
+        "Contest": "VK Cup 2019-2020 - Final Round (Engine)",
+        "Rank": "1",
+        "Solved": "5",
+        "Rating Change": "+68",
+        "New Rating": "3687"
+      },
+      {
+        "Contest": "Codeforces Round #679 (Div. 1, based on Technocup 2021 Elimination Round 1)",
+        "Rank": "1",
+        "Solved": "4",
+        "Rating Change": "+110",
+        "New Rating": "3619"
+      },
+      {
+        "Contest": "Codeforces Global Round 11",
+        "Rank": "22",
+        "Solved": "5",
+        "Rating Change": "-120",
+        "New Rating": "3509"
+      },
+      {
+        "Contest": "Grakn Forces 2020",
+        "Rank": "1",
+        "Solved": "9",
+        "Rating Change": "+96",
+        "New Rating": "3629"
+      },
+      {
+        "Contest": "Codeforces Round #673 (Div. 1)",
+        "Rank": "1",
+        "Solved": "6",
+        "Rating Change": "+95",
+        "New Rating": "3533"
+      },
+      {
+        "Contest": "Codeforces Round #668 (Div. 1)",
+        "Rank": "36",
+        "Solved": "4",
+        "Rating Change": "-175",
+        "New Rating": "3438"
+      },
+      {
+        "Contest": "Codeforces Round #666 (Div. 1)",
+        "Rank": "1",
+        "Solved": "5",
+        "Rating Change": "+107",
+        "New Rating": "3613"
+      },
+      {
+        "Contest": "Codeforces Global Round 10",
+        "Rank": "4",
+        "Solved": "8",
+        "Rating Change": "-9",
+        "New Rating": "3506"
+      },
+      {
+        "Contest": "Codeforces Round #664 (Div. 1)",
+        "Rank": "41",
+        "Solved": "3",
+        "Rating Change": "-220",
+        "New Rating": "3515"
+      },
+      {
+        "Contest": "Codeforces Round #659 (Div. 1)",
+        "Rank": "1",
+        "Solved": "6",
+        "Rating Change": "+66",
+        "New Rating": "3735"
+      },
+      {
+        "Contest": "Codeforces Global Round 9",
+        "Rank": "1",
+        "Solved": "8",
+        "Rating Change": "+102",
+        "New Rating": "3669"
+      },
+      {
+        "Contest": "Codeforces Global Round 8",
+        "Rank": "2",
+        "Solved": "8",
+        "Rating Change": "+47",
+        "New Rating": "3567"
+      },
+      {
+        "Contest": "Codeforces Round #647 (Div. 1) - Thanks, Algo Muse!",
+        "Rank": "1",
+        "Solved": "6",
+        "Rating Change": "+111",
+        "New Rating": "3520"
+      },
+      {
+        "Contest": "Codeforces Round #641 (Div. 1)",
+        "Rank": "26",
+        "Solved": "3",
+        "Rating Change": "-132",
+        "New Rating": "3409"
+      },
+      {
+        "Contest": "Codeforces Round #635 (Div. 1)",
+        "Rank": "29",
+        "Solved": "4",
+        "Rating Change": "-192",
+        "New Rating": "3541"
+      },
+      {
+        "Contest": "Codeforces Round #633 (Div. 1)",
+        "Rank": "1",
+        "Solved": "5",
+        "Rating Change": "+60",
+        "New Rating": "3733"
+      },
+      {
+        "Contest": "Codeforces Round #631 (Div. 1) - Thanks, Denis aramis Shitov!",
+        "Rank": "2",
+        "Solved": "4",
+        "Rating Change": "+4",
+        "New Rating": "3673"
+      },
+      {
+        "Contest": "Codeforces Global Round 7",
+        "Rank": "1",
+        "Solved": "8",
+        "Rating Change": "+84",
+        "New Rating": "3669"
+      },
+      {
+        "Contest": "Ozon Tech Challenge 2020 (Div.1 + Div.2, Rated, T-shirts + prizes!)",
+        "Rank": "1",
+        "Solved": "7",
+        "Rating Change": "+89",
+        "New Rating": "3585"
+      },
+      {
+        "Contest": "VK Cup 2019-2020 - Elimination Round (Engine)",
+        "Rank": "1",
+        "Solved": "5",
+        "Rating Change": "+92",
+        "New Rating": "3496"
+      },
+      {
+        "Contest": "Codeforces Round #621 (Div. 1 + Div. 2)",
+        "Rank": "26",
+        "Solved": "5",
+        "Rating Change": "-145",
+        "New Rating": "3404"
+      },
+      {
+        "Contest": "Codeforces Round #616 (Div. 1)",
+        "Rank": "1",
+        "Solved": "5",
+        "Rating Change": "+88",
+        "New Rating": "3549"
+      },
+      {
+        "Contest": "Codeforces Round #614 (Div. 1)",
+        "Rank": "2",
+        "Solved": "5",
+        "Rating Change": "+31",
+        "New Rating": "3461"
+      },
+      {
+        "Contest": "Hello 2020",
+        "Rank": "4",
+        "Solved": "6",
+        "Rating Change": "+12",
+        "New Rating": "3430"
+      },
+      {
+        "Contest": "Good Bye 2019",
+        "Rank": "50",
+        "Solved": "6",
+        "Rating Change": "-197",
+        "New Rating": "3418"
+      },
+      {
+        "Contest": "Codeforces Round #609 (Div. 1)",
+        "Rank": "1",
+        "Solved": "5",
+        "Rating Change": "+76",
+        "New Rating": "3615"
+      },
+      {
+        "Contest": "Codeforces Global Round 6",
+        "Rank": "3",
+        "Solved": "6",
+        "Rating Change": "-17",
+        "New Rating": "3539"
+      },
+      {
+        "Contest": "Codeforces Round #604 (Div. 1)",
+        "Rank": "2",
+        "Solved": "6",
+        "Rating Change": "+12",
+        "New Rating": "3556"
+      },
+      {
+        "Contest": "Codeforces Round #602 (Div. 1, based on Technocup 2020 Elimination Round 3)",
+        "Rank": "2",
+        "Solved": "8",
+        "Rating Change": "+12",
+        "New Rating": "3544"
+      },
+      {
+        "Contest": "Codeforces Round #596 (Div. 1, based on Technocup 2020 Elimination Round 2)",
+        "Rank": "3",
+        "Solved": "5",
+        "Rating Change": "-25",
+        "New Rating": "3532"
+      },
+      {
+        "Contest": "Codeforces Round #584 - Dasha Code Championship - Elimination Round (rated, open for everyone, Div. 1 + Div. 2)",
+        "Rank": "11",
+        "Solved": "8",
+        "Rating Change": "-154",
+        "New Rating": "3557"
+      },
+      {
+        "Contest": "Manthan, Codefest 19 (open for everyone, rated, Div. 1 + Div. 2)",
+        "Rank": "1",
+        "Solved": "8",
+        "Rating Change": "+66",
+        "New Rating": "3711"
+      },
+      {
+        "Contest": "Codeforces Round #576 (Div. 1)",
+        "Rank": "2",
+        "Solved": "6",
+        "Rating Change": "-41",
+        "New Rating": "3645"
+      },
+      {
+        "Contest": "Codeforces Global Round 3",
+        "Rank": "2",
+        "Solved": "7",
+        "Rating Change": "-12",
+        "New Rating": "3686"
+      },
+      {
+        "Contest": "Forethought Future Cup - Elimination Round",
+        "Rank": "1",
+        "Solved": "8",
+        "Rating Change": "+70",
+        "New Rating": "3698"
+      },
+      {
+        "Contest": "Codeforces Global Round 2",
+        "Rank": "2",
+        "Solved": "6",
+        "Rating Change": "+4",
+        "New Rating": "3628"
+      },
+      {
+        "Contest": "Codeforces Global Round 1",
+        "Rank": "1",
+        "Solved": "7",
+        "Rating Change": "+85",
+        "New Rating": "3624"
+      },
+      {
+        "Contest": "Hello 2019",
+        "Rank": "3",
+        "Solved": "7",
+        "Rating Change": "-20",
+        "New Rating": "3539"
+      },
+      {
+        "Contest": "Good Bye 2018",
+        "Rank": "1",
+        "Solved": "8",
+        "Rating Change": "+90",
+        "New Rating": "3559"
+      },
+      {
+        "Contest": "Avito Cool Challenge 2018",
+        "Rank": "1",
+        "Solved": "7",
+        "Rating Change": "+97",
+        "New Rating": "3469"
+      },
+      {
+        "Contest": "Mail.Ru Cup 2018 Round 2",
+        "Rank": "5",
+        "Solved": "6",
+        "Rating Change": "-29",
+        "New Rating": "3372"
+      },
+      {
+        "Contest": "Lyft Level 5 Challenge 2018 - Final Round",
+        "Rank": "1",
+        "Solved": "6",
+        "Rating Change": "+89",
+        "New Rating": "3401"
+      },
+      {
+        "Contest": "Codeforces Round #519 by Botan Investments",
+        "Rank": "126",
+        "Solved": "5",
+        "Rating Change": "-269",
+        "New Rating": "3312"
+      },
+      {
+        "Contest": "Lyft Level 5 Challenge 2018 - Elimination Round",
+        "Rank": "1",
+        "Solved": "7",
+        "Rating Change": "+72",
+        "New Rating": "3581"
+      },
+      {
+        "Contest": "Manthan, Codefest 18 (rated, Div. 1 + Div. 2)",
+        "Rank": "1",
+        "Solved": "8",
+        "Rating Change": "+75",
+        "New Rating": "3509"
+      },
+      {
+        "Contest": "Codeforces Round #485 (Div. 1)",
+        "Rank": "1",
+        "Solved": "6",
+        "Rating Change": "+93",
+        "New Rating": "3434"
+      },
+      {
+        "Contest": "Avito Code Challenge 2018",
+        "Rank": "1",
+        "Solved": "8",
+        "Rating Change": "+106",
+        "New Rating": "3341"
+      },
+      {
+        "Contest": "Codeforces Round #477 (rated, Div. 1, based on VK Cup 2018 Round 3)",
+        "Rank": "3",
+        "Solved": "5",
+        "Rating Change": "+29",
+        "New Rating": "3235"
+      },
+      {
+        "Contest": "Codeforces Round #470 (rated, Div. 1, based on VK Cup 2018 Round 1)",
+        "Rank": "140",
+        "Solved": "3",
+        "Rating Change": "-290",
+        "New Rating": "3206"
+      },
+      {
+        "Contest": "MemSQL Start[c]UP 3.0 - Round 2 and Codeforces Round #437 (Div. 1)",
+        "Rank": "1",
+        "Solved": "5",
+        "Rating Change": "+85",
+        "New Rating": "3496"
+      },
+      {
+        "Contest": "Manthan, Codefest 17",
+        "Rank": "3",
+        "Solved": "6",
+        "Rating Change": "-27",
+        "New Rating": "3411"
+      },
+      {
+        "Contest": "MemSQL Start[c]UP 3.0 - Round 1",
+        "Rank": "4",
+        "Solved": "7",
+        "Rating Change": "-50",
+        "New Rating": "3438"
+      },
+      {
+        "Contest": "AIM Tech Round 4 (Div. 1)",
+        "Rank": "7",
+        "Solved": "3",
+        "Rating Change": "-114",
+        "New Rating": "3488"
+      },
+      {
+        "Contest": "Playrix Codescapes Cup (Codeforces Round #413, rated, Div. 1 + Div. 2)",
+        "Rank": "1",
+        "Solved": "6",
+        "Rating Change": "+68",
+        "New Rating": "3602"
+      },
+      {
+        "Contest": "ICM Technex 2017 and Codeforces Round #400 (Div. 1 + Div. 2, combined)",
+        "Rank": "2",
+        "Solved": "7",
+        "Rating Change": "-10",
+        "New Rating": "3534"
+      },
+      {
+        "Contest": "8VC Venture Cup 2017 - Final Round",
+        "Rank": "7",
+        "Solved": "4",
+        "Rating Change": "-195",
+        "New Rating": "3544"
+      },
+      {
+        "Contest": "8VC Venture Cup 2017 - Elimination Round",
+        "Rank": "1",
+        "Solved": "7",
+        "Rating Change": "+69",
+        "New Rating": "3739"
+      },
+      {
+        "Contest": "Codecraft-17 and Codeforces Round #391 (Div. 1 + Div. 2, combined)",
+        "Rank": "1",
+        "Solved": "6",
+        "Rating Change": "+55",
+        "New Rating": "3670"
+      },
+      {
+        "Contest": "Good Bye 2016",
+        "Rank": "2",
+        "Solved": "6",
+        "Rating Change": "-23",
+        "New Rating": "3615"
+      },
+      {
+        "Contest": "Codeforces Round #385 (Div. 1)",
+        "Rank": "1",
+        "Solved": "4",
+        "Rating Change": "+58",
+        "New Rating": "3638"
+      },
+      {
+        "Contest": "VK Cup 2016 - Finals",
+        "Rank": "1",
+        "Solved": "6",
+        "Rating Change": "+55",
+        "New Rating": "3580"
+      },
+      {
+        "Contest": "Codeforces Round #360 (Div. 1)",
+        "Rank": "2",
+        "Solved": "5",
+        "Rating Change": "-29",
+        "New Rating": "3525"
+      },
+      {
+        "Contest": "VK Cup 2016 - Round 3",
+        "Rank": "1",
+        "Solved": "5",
+        "Rating Change": "+53",
+        "New Rating": "3554"
+      },
+      {
+        "Contest": "VK Cup 2016 - Round 2",
+        "Rank": "4",
+        "Solved": "6",
+        "Rating Change": "-139",
+        "New Rating": "3501"
+      },
+      {
+        "Contest": "CROC 2016 - Final Round [Private, For Onsite Finalists Only]",
+        "Rank": "1",
+        "Solved": "4",
+        "Rating Change": "+52",
+        "New Rating": "3640"
+      },
+      {
+        "Contest": "VK Cup 2016 - Round 1",
+        "Rank": "1",
+        "Solved": "5",
+        "Rating Change": "+54",
+        "New Rating": "3588"
+      },
+      {
+        "Contest": "CROC 2016 - Elimination Round",
+        "Rank": "2",
+        "Solved": "6",
+        "Rating Change": "-48",
+        "New Rating": "3534"
+      },
+      {
+        "Contest": "Codeforces Round #345 (Div. 1)",
+        "Rank": "1",
+        "Solved": "5",
+        "Rating Change": "+64",
+        "New Rating": "3582"
+      },
+      {
+        "Contest": "8VC Venture Cup 2016 - Final Round",
+        "Rank": "1",
+        "Solved": "5",
+        "Rating Change": "+74",
+        "New Rating": "3518"
+      },
+      {
+        "Contest": "Manthan, Codefest 16",
+        "Rank": "1",
+        "Solved": "8",
+        "Rating Change": "+71",
+        "New Rating": "3444"
+      },
+      {
+        "Contest": "8VC Venture Cup 2016 - Elimination Round",
+        "Rank": "6",
+        "Solved": "6",
+        "Rating Change": "-71",
+        "New Rating": "3373"
+      },
+      {
+        "Contest": "Good Bye 2015",
+        "Rank": "1",
+        "Solved": "7",
+        "Rating Change": "+70",
+        "New Rating": "3444"
+      },
+      {
+        "Contest": "Codeforces Round #336 (Div. 1)",
+        "Rank": "2",
+        "Solved": "4",
+        "Rating Change": "0",
+        "New Rating": "3374"
+      },
+      {
+        "Contest": "Codeforces Round #318 [RussianCodeCup Thanks-Round] (Div. 1)",
+        "Rank": "166",
+        "Solved": "2",
+        "Rating Change": "-129",
+        "New Rating": "3374"
+      },
+      {
+        "Contest": "VK Cup 2015 - Finals",
+        "Rank": "1",
+        "Solved": "5",
+        "Rating Change": "+58",
+        "New Rating": "3503"
+      },
+      {
+        "Contest": "Looksery Cup 2015",
+        "Rank": "1",
+        "Solved": "7",
+        "Rating Change": "+38",
+        "New Rating": "3445"
+      },
+      {
+        "Contest": "VK Cup 2015 - Раунд 3",
+        "Rank": "1",
+        "Solved": "5",
+        "Rating Change": "+66",
+        "New Rating": "3407"
+      },
+      {
+        "Contest": "VK Cup 2015 - Round 2",
+        "Rank": "1",
+        "Solved": "6",
+        "Rating Change": "+67",
+        "New Rating": "3341"
+      },
+      {
+        "Contest": "ZeptoLab Code Rush 2015",
+        "Rank": "1",
+        "Solved": "6",
+        "Rating Change": "+51",
+        "New Rating": "3274"
+      },
+      {
+        "Contest": "VK Cup 2015 - Round 1",
+        "Rank": "4",
+        "Solved": "6",
+        "Rating Change": "-16",
+        "New Rating": "3223"
+      },
+      {
+        "Contest": "Rockethon 2015",
+        "Rank": "1",
+        "Solved": "13",
+        "Rating Change": "+38",
+        "New Rating": "3239"
+      },
+      {
+        "Contest": "Codeforces Round #290 (Div. 1)",
+        "Rank": "5",
+        "Solved": "5",
+        "Rating Change": "-53",
+        "New Rating": "3201"
+      },
+      {
+        "Contest": "Good Bye 2014",
+        "Rank": "1",
+        "Solved": "6",
+        "Rating Change": "+14",
+        "New Rating": "3254"
+      },
+      {
+        "Contest": "Codeforces Round #282 (Div. 1)",
+        "Rank": "1",
+        "Solved": "4",
+        "Rating Change": "+37",
+        "New Rating": "3240"
+      },
+      {
+        "Contest": "Codeforces Round #275 (Div. 1)",
+        "Rank": "1",
+        "Solved": "4",
+        "Rating Change": "+39",
+        "New Rating": "3203"
+      },
+      {
+        "Contest": "Codeforces Round #270",
+        "Rank": "21",
+        "Solved": "5",
+        "Rating Change": "-135",
+        "New Rating": "3164"
+      },
+      {
+        "Contest": "Codeforces Round #265 (Div. 1)",
+        "Rank": "1",
+        "Solved": "4",
+        "Rating Change": "+39",
+        "New Rating": "3299"
+      },
+      {
+        "Contest": "MemSQL Start[c]UP 2.0 - Round 2 - Online Round",
+        "Rank": "1",
+        "Solved": "4",
+        "Rating Change": "+47",
+        "New Rating": "3260"
+      },
+      {
+        "Contest": "Codeforces Round #260 (Div. 1)",
+        "Rank": "1",
+        "Solved": "5",
+        "Rating Change": "+40",
+        "New Rating": "3213"
+      },
+      {
+        "Contest": "MemSQL Start[c]UP 2.0 - Round 1",
+        "Rank": "8",
+        "Solved": "5",
+        "Rating Change": "-72",
+        "New Rating": "3173"
+      },
+      {
+        "Contest": "Codeforces Round #253 (Div. 1)",
+        "Rank": "1",
+        "Solved": "5",
+        "Rating Change": "+39",
+        "New Rating": "3245"
+      },
+      {
+        "Contest": "Zepto Code Rush 2014",
+        "Rank": "3",
+        "Solved": "4",
+        "Rating Change": "-22",
+        "New Rating": "3206"
+      },
+      {
+        "Contest": "RCC 2014 Warmup (Div. 1)",
+        "Rank": "1",
+        "Solved": "3",
+        "Rating Change": "+42",
+        "New Rating": "3228"
+      },
+      {
+        "Contest": "Codeforces Round #239 (Div. 1)",
+        "Rank": "1",
+        "Solved": "4",
+        "Rating Change": "+45",
+        "New Rating": "3186"
+      },
+      {
+        "Contest": "Codeforces Round #228 (Div. 1)",
+        "Rank": "1",
+        "Solved": "4",
+        "Rating Change": "+48",
+        "New Rating": "3141"
+      },
+      {
+        "Contest": "Good Bye 2013",
+        "Rank": "19",
+        "Solved": "5",
+        "Rating Change": "-116",
+        "New Rating": "3093"
+      },
+      {
+        "Contest": "Codeforces Round #222 (Div. 1)",
+        "Rank": "2",
+        "Solved": "4",
+        "Rating Change": "0",
+        "New Rating": "3209"
+      },
+      {
+        "Contest": "Codeforces Round #219 (Div. 1)",
+        "Rank": "2",
+        "Solved": "4",
+        "Rating Change": "+4",
+        "New Rating": "3209"
+      },
+      {
+        "Contest": "Codeforces Round #215 (Div. 1)",
+        "Rank": "4",
+        "Solved": "5",
+        "Rating Change": "-45",
+        "New Rating": "3205"
+      },
+      {
+        "Contest": "Codeforces Round #207 (Div. 1)",
+        "Rank": "1",
+        "Solved": "4",
+        "Rating Change": "+40",
+        "New Rating": "3250"
+      },
+      {
+        "Contest": "Codeforces Round #200 (Div. 1)",
+        "Rank": "1",
+        "Solved": "5",
+        "Rating Change": "+45",
+        "New Rating": "3210"
+      },
+      {
+        "Contest": "Codeforces Round #196 (Div. 1)",
+        "Rank": "1",
+        "Solved": "5",
+        "Rating Change": "+44",
+        "New Rating": "3165"
+      },
+      {
+        "Contest": "MemSQL start[c]up Round 2 - online version",
+        "Rank": "1",
+        "Solved": "5",
+        "Rating Change": "+49",
+        "New Rating": "3121"
+      },
+      {
+        "Contest": "Codeforces Round #192 (Div. 1)",
+        "Rank": "9",
+        "Solved": "4",
+        "Rating Change": "-64",
+        "New Rating": "3072"
+      },
+      {
+        "Contest": "ABBYY Cup 3.0 - Finals (online version)",
+        "Rank": "1",
+        "Solved": "10",
+        "Rating Change": "+48",
+        "New Rating": "3136"
+      },
+      {
+        "Contest": "Codeforces Round #188 (Div. 1)",
+        "Rank": "24",
+        "Solved": "3",
+        "Rating Change": "-107",
+        "New Rating": "3088"
+      },
+      {
+        "Contest": "ABBYY Cup 3.0",
+        "Rank": "2",
+        "Solved": "17",
+        "Rating Change": "+7",
+        "New Rating": "3195"
+      },
+      {
+        "Contest": "Croc Champ 2013 - Finals",
+        "Rank": "1",
+        "Solved": "4",
+        "Rating Change": "+31",
+        "New Rating": "3188"
+      },
+      {
+        "Contest": "Croc Champ 2013 - Round 2",
+        "Rank": "1",
+        "Solved": "4",
+        "Rating Change": "+54",
+        "New Rating": "3157"
+      },
+      {
+        "Contest": "Codeforces Round #180 (Div. 1)",
+        "Rank": "1",
+        "Solved": "5",
+        "Rating Change": "+52",
+        "New Rating": "3103"
+      },
+      {
+        "Contest": "Croc Champ 2013 - Round 1",
+        "Rank": "1",
+        "Solved": "5",
+        "Rating Change": "+61",
+        "New Rating": "3051"
+      },
+      {
+        "Contest": "Codeforces Round #172 (Div. 1)",
+        "Rank": "7",
+        "Solved": "3",
+        "Rating Change": "-49",
+        "New Rating": "2990"
+      },
+      {
+        "Contest": "Codeforces Round #167 (Div. 1)",
+        "Rank": "2",
+        "Solved": "4",
+        "Rating Change": "+13",
+        "New Rating": "3039"
+      },
+      {
+        "Contest": "Codeforces Round #165 (Div. 1)",
+        "Rank": "3",
+        "Solved": "4",
+        "Rating Change": "-4",
+        "New Rating": "3026"
+      },
+      {
+        "Contest": "Codeforces Round #153 (Div. 1)",
+        "Rank": "2",
+        "Solved": "4",
+        "Rating Change": "+14",
+        "New Rating": "3030"
+      },
+      {
+        "Contest": "Codeforces Round #150 (Div. 1)",
+        "Rank": "11",
+        "Solved": "2",
+        "Rating Change": "-66",
+        "New Rating": "3016"
+      },
+      {
+        "Contest": "Codeforces Round #148 (Div. 1)",
+        "Rank": "1",
+        "Solved": "4",
+        "Rating Change": "+48",
+        "New Rating": "3082"
+      },
+      {
+        "Contest": "Bayan 2012-2013 Elimination Round (ACM ICPC Rules, English statements)",
+        "Rank": "1",
+        "Solved": "6",
+        "Rating Change": "+57",
+        "New Rating": "3034"
+      },
+      {
+        "Contest": "Codeforces Round #146 (Div. 1)",
+        "Rank": "6",
+        "Solved": "2",
+        "Rating Change": "-45",
+        "New Rating": "2977"
+      },
+      {
+        "Contest": "Codeforces Round #145 (Div. 1, ACM-ICPC Rules)",
+        "Rank": "3",
+        "Solved": "5",
+        "Rating Change": "-20",
+        "New Rating": "3022"
+      },
+      {
+        "Contest": "Codeforces Round #144 (Div. 1)",
+        "Rank": "1",
+        "Solved": "3",
+        "Rating Change": "+51",
+        "New Rating": "3042"
+      },
+      {
+        "Contest": "Codeforces Round #138 (Div. 1)",
+        "Rank": "2",
+        "Solved": "3",
+        "Rating Change": "+18",
+        "New Rating": "2991"
+      },
+      {
+        "Contest": "Codeforces Round #134 (Div. 1)",
+        "Rank": "4",
+        "Solved": "3",
+        "Rating Change": "-25",
+        "New Rating": "2973"
+      },
+      {
+        "Contest": "Codeforces Round #131 (Div. 1)",
+        "Rank": "3",
+        "Solved": "4",
+        "Rating Change": "-12",
+        "New Rating": "2998"
+      },
+      {
+        "Contest": "VK Cup 2012 Finals",
+        "Rank": "3",
+        "Solved": "4",
+        "Rating Change": "-12",
+        "New Rating": "3010"
+      },
+      {
+        "Contest": "Codeforces Round #129 (Div. 1)",
+        "Rank": "1",
+        "Solved": "5",
+        "Rating Change": "+58",
+        "New Rating": "3022"
+      },
+      {
+        "Contest": "Codeforces Round #125 (Div. 1)",
+        "Rank": "2",
+        "Solved": "4",
+        "Rating Change": "+26",
+        "New Rating": "2964"
+      },
+      {
+        "Contest": "Codeforces Round #124 (Div. 1)",
+        "Rank": "1",
+        "Solved": "5",
+        "Rating Change": "+36",
+        "New Rating": "2938"
+      },
+      {
+        "Contest": "Codeforces Round #122 (Div. 1)",
+        "Rank": "2",
+        "Solved": "3",
+        "Rating Change": "+15",
+        "New Rating": "2902"
+      },
+      {
+        "Contest": "Codeforces Round #115",
+        "Rank": "1",
+        "Solved": "5",
+        "Rating Change": "+10",
+        "New Rating": "2887"
+      },
+      {
+        "Contest": "VK Cup 2012 Round 3",
+        "Rank": "8",
+        "Solved": "3",
+        "Rating Change": "-42",
+        "New Rating": "2877"
+      },
+      {
+        "Contest": "Croc Champ 2012 - Round 1",
+        "Rank": "1",
+        "Solved": "5",
+        "Rating Change": "+13",
+        "New Rating": "2919"
+      },
+      {
+        "Contest": "Codeforces Round #114 (Div. 1)",
+        "Rank": "2",
+        "Solved": "4",
+        "Rating Change": "-1",
+        "New Rating": "2906"
+      },
+      {
+        "Contest": "VK Cup 2012 Round 2",
+        "Rank": "1",
+        "Solved": "4",
+        "Rating Change": "+24",
+        "New Rating": "2907"
+      },
+      {
+        "Contest": "VK Cup 2012 Round 1",
+        "Rank": "3",
+        "Solved": "5",
+        "Rating Change": "+6",
+        "New Rating": "2883"
+      },
+      {
+        "Contest": "Codeforces Round #110 (Div. 1)",
+        "Rank": "1",
+        "Solved": "4",
+        "Rating Change": "+46",
+        "New Rating": "2877"
+      },
+      {
+        "Contest": "Codeforces Round #109 (Div. 1)",
+        "Rank": "1",
+        "Solved": "4",
+        "Rating Change": "+48",
+        "New Rating": "2831"
+      },
+      {
+        "Contest": "Codeforces Round #107 (Div. 1)",
+        "Rank": "10",
+        "Solved": "3",
+        "Rating Change": "-26",
+        "New Rating": "2783"
+      },
+      {
+        "Contest": "Codeforces Round #104 (Div. 1)",
+        "Rank": "1",
+        "Solved": "5",
+        "Rating Change": "+47",
+        "New Rating": "2809"
+      },
+      {
+        "Contest": "Codeforces Round #102 (Div. 1)",
+        "Rank": "1",
+        "Solved": "4",
+        "Rating Change": "+58",
+        "New Rating": "2762"
+      },
+      {
+        "Contest": "Codeforces Round #100",
+        "Rank": "3",
+        "Solved": "6",
+        "Rating Change": "+34",
+        "New Rating": "2704"
+      },
+      {
+        "Contest": "Codeforces Beta Round #94 (Div. 1 Only)",
+        "Rank": "5",
+        "Solved": "4",
+        "Rating Change": "-23",
+        "New Rating": "2670"
+      },
+      {
+        "Contest": "Codeforces Beta Round #93 (Div. 1 Only)",
+        "Rank": "2",
+        "Solved": "4",
+        "Rating Change": "+10",
+        "New Rating": "2693"
+      },
+      {
+        "Contest": "Codeforces Beta Round #92 (Div. 1 Only)",
+        "Rank": "1",
+        "Solved": "5",
+        "Rating Change": "+22",
+        "New Rating": "2683"
+      },
+      {
+        "Contest": "Codeforces Beta Round #91 (Div. 1 Only)",
+        "Rank": "1",
+        "Solved": "5",
+        "Rating Change": "+26",
+        "New Rating": "2661"
+      },
+      {
+        "Contest": "School Regional Team Contest, Saratov, 2011",
+        "Rank": "1",
+        "Solved": "10",
+        "Rating Change": "+23",
+        "New Rating": "2635"
+      },
+      {
+        "Contest": "Codeforces Beta Round #88",
+        "Rank": "3",
+        "Solved": "4",
+        "Rating Change": "+17",
+        "New Rating": "2612"
+      },
+      {
+        "Contest": "Codeforces Beta Round #87 (Div. 1 Only)",
+        "Rank": "1",
+        "Solved": "5",
+        "Rating Change": "+35",
+        "New Rating": "2595"
+      },
+      {
+        "Contest": "Codeforces Beta Round #86 (Div. 1 Only)",
+        "Rank": "4",
+        "Solved": "3",
+        "Rating Change": "+11",
+        "New Rating": "2560"
+      },
+      {
+        "Contest": "Codeforces Beta Round #85 (Div. 1 Only)",
+        "Rank": "22",
+        "Solved": "3",
+        "Rating Change": "-52",
+        "New Rating": "2549"
+      },
+      {
+        "Contest": "Codeforces Beta Round #84 (Div. 1 Only)",
+        "Rank": "7",
+        "Solved": "4",
+        "Rating Change": "-12",
+        "New Rating": "2601"
+      },
+      {
+        "Contest": "Codeforces Beta Round #83 (Div. 1 Only)",
+        "Rank": "2",
+        "Solved": "4",
+        "Rating Change": "+9",
+        "New Rating": "2613"
+      },
+      {
+        "Contest": "Codeforces Beta Round #81",
+        "Rank": "5",
+        "Solved": "3",
+        "Rating Change": "-5",
+        "New Rating": "2604"
+      },
+      {
+        "Contest": "Codeforces Beta Round #79 (Div. 1 Only)",
+        "Rank": "4",
+        "Solved": "4",
+        "Rating Change": "-1",
+        "New Rating": "2609"
+      },
+      {
+        "Contest": "Yandex.Algorithm 2011: Finals",
+        "Rank": "7",
+        "Solved": "3",
+        "Rating Change": "-36",
+        "New Rating": "2610"
+      },
+      {
+        "Contest": "Codeforces Beta Round #74 (Div. 1 Only)",
+        "Rank": "2",
+        "Solved": "4",
+        "Rating Change": "+14",
+        "New Rating": "2646"
+      },
+      {
+        "Contest": "Codeforces Beta Round #73 (Div. 1 Only)",
+        "Rank": "4",
+        "Solved": "5",
+        "Rating Change": "+8",
+        "New Rating": "2632"
+      },
+      {
+        "Contest": "Yandex.Algorithm 2011: Round 2",
+        "Rank": "2",
+        "Solved": "3",
+        "Rating Change": "+38",
+        "New Rating": "2624"
+      },
+      {
+        "Contest": "Yandex.Algorithm 2011: Round 1",
+        "Rank": "1",
+        "Solved": "5",
+        "Rating Change": "+39",
+        "New Rating": "2586"
+      },
+      {
+        "Contest": "Codeforces Beta Round #72 (Div. 1 Only)",
+        "Rank": "1",
+        "Solved": "5",
+        "Rating Change": "+33",
+        "New Rating": "2547"
+      },
+      {
+        "Contest": "Yandex.Algorithm 2011: Qualification 2",
+        "Rank": "1",
+        "Solved": "5",
+        "Rating Change": "+13",
+        "New Rating": "2514"
+      },
+      {
+        "Contest": "Codeforces Beta Round #69 (Div. 1 Only)",
+        "Rank": "11",
+        "Solved": "3",
+        "Rating Change": "-16",
+        "New Rating": "2501"
+      },
+      {
+        "Contest": "Codeforces Beta Round #68",
+        "Rank": "1",
+        "Solved": "5",
+        "Rating Change": "+23",
+        "New Rating": "2517"
+      },
+      {
+        "Contest": "Codeforces Beta Round #66",
+        "Rank": "3",
+        "Solved": "5",
+        "Rating Change": "+3",
+        "New Rating": "2494"
+      },
+      {
+        "Contest": "Manthan 2011",
+        "Rank": "1",
+        "Solved": "5",
+        "Rating Change": "+36",
+        "New Rating": "2491"
+      },
+      {
+        "Contest": "Codeforces Beta Round #58",
+        "Rank": "1",
+        "Solved": "4",
+        "Rating Change": "+17",
+        "New Rating": "2455"
+      },
+      {
+        "Contest": "Codeforces Beta Round #56",
+        "Rank": "1",
+        "Solved": "4",
+        "Rating Change": "+19",
+        "New Rating": "2438"
+      },
+      {
+        "Contest": "Codeforces Beta Round #53",
+        "Rank": "1",
+        "Solved": "4",
+        "Rating Change": "+31",
+        "New Rating": "2419"
+      },
+      {
+        "Contest": "Codeforces Beta Round #48",
+        "Rank": "1",
+        "Solved": "5",
+        "Rating Change": "+37",
+        "New Rating": "2388"
+      },
+      {
+        "Contest": "School Personal Contest #2 (Winter Computer School 2010/11) - Codeforces Beta Round #43 (ACM-ICPC Rules)",
+        "Rank": "2",
+        "Solved": "7",
+        "Rating Change": "+10",
+        "New Rating": "2351"
+      },
+      {
+        "Contest": "Codeforces Beta Round #41",
+        "Rank": "1",
+        "Solved": "5",
+        "Rating Change": "+30",
+        "New Rating": "2341"
+      },
+      {
+        "Contest": "Codeforces Beta Round #39",
+        "Rank": "1",
+        "Solved": "5",
+        "Rating Change": "+41",
+        "New Rating": "2311"
+      },
+      {
+        "Contest": "School Personal Contest #1 (Winter Computer School 2010/11) - Codeforces Beta Round #38 (ACM-ICPC Rules)",
+        "Rank": "1",
+        "Solved": "8",
+        "Rating Change": "+14",
+        "New Rating": "2270"
+      },
+      {
+        "Contest": "Codeforces Beta Round #37",
+        "Rank": "3",
+        "Solved": "4",
+        "Rating Change": "+53",
+        "New Rating": "2256"
+      },
+      {
+        "Contest": "Codeforces Beta Round #33 (Codeforces format)",
+        "Rank": "1",
+        "Solved": "5",
+        "Rating Change": "+75",
+        "New Rating": "2203"
+      },
+      {
+        "Contest": "Codeforces Beta Round #28 (Codeforces format)",
+        "Rank": "11",
+        "Solved": "3",
+        "Rating Change": "+30",
+        "New Rating": "2128"
+      },
+      {
+        "Contest": "Codeforces Beta Round #24",
+        "Rank": "20",
+        "Solved": "4",
+        "Rating Change": "+17",
+        "New Rating": "2098"
+      },
+      {
+        "Contest": "Codeforces Beta Round #23",
+        "Rank": "15",
+        "Solved": "3",
+        "Rating Change": "+18",
+        "New Rating": "2081"
+      },
+      {
+        "Contest": "Codeforces Beta Round #19",
+        "Rank": "2",
+        "Solved": "4",
+        "Rating Change": "+96",
+        "New Rating": "2063"
+      },
+      {
+        "Contest": "Codeforces Beta Round #13",
+        "Rank": "11",
+        "Solved": "3",
+        "Rating Change": "+89",
+        "New Rating": "1967"
+      },
+      {
+        "Contest": "Codeforces Beta Round #10",
+        "Rank": "18",
+        "Solved": "3",
+        "Rating Change": "+114",
+        "New Rating": "1878"
+      },
+      {
+        "Contest": "Codeforces Beta Round #8",
+        "Rank": "5",
+        "Solved": "4",
+        "Rating Change": "+162",
+        "New Rating": "1764"
+      },
+      {
+        "Contest": "Codeforces Beta Round #2",
+        "Rank": "14",
+        "Solved": "2",
+        "Rating Change": "+102",
+        "New Rating": "1602"
+      }
+    ]
+  }

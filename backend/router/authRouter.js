@@ -2,6 +2,7 @@ const express = require('express');
 const authController = require('./../controller/authController');
 const userController = require('./../controller/userController');
 const projectController = require('./../controller/projectController');
+const cpController=require('./../controller/compitativeProgrammingController')
 const multer = require('./../utils/multer');
 const router = express.Router();
 
@@ -59,7 +60,10 @@ router.get('/project', authController.protect, projectController.getAllUserProje
 router.get('/project/:id', authController.protect, projectController.getProjectDetails);
 router.patch('/project/:id', authController.protect, projectController.updateProjectDetails);
 
-router.post('/uploadLinkedInResume',authController.protect,projectController.uploadLinkedInResume);
+router.post('/uploadLinkedInResume',authController.protect,userController.uploadLinkedInResume);
+// router.post('/codechef',authController.protect,cpController.saveCodeChefUserName)
+ router.post('/codechef',cpController.saveCodeChefUserName)
+
 
 
 module.exports = router;
