@@ -121,13 +121,8 @@ exports.saveCodeForcesUserName = catchAsync(async (req, res, next) => {
     if (!username) {
         return next(new AppError('Please Enter your CodeForces Username', 404));
     }
-    try {
 
-        const {
-            data
-        } = await axios.get(`${process.env.CP_API_BASE_LINK}/codeforces/${username}`)
-        if (data.status === 'Success') {
-            const body = {
+      const body = {
                 codeforcesAccount: username
             }
             await User.findByIdAndUpdate(req.user.id, body, {
@@ -139,15 +134,6 @@ exports.saveCodeForcesUserName = catchAsync(async (req, res, next) => {
                 status: 'success',
                 message: 'CodeForces Username update Success'
             })
-
-        }
-
-        return next(new AppError(' Please Enter valid Codeforces username', 404));
-
-    } catch (error) {
-        return next(new AppError('Something went wrong with Compitative programming API! Please try again later', 500));
-    }
-
 })
 
 //get your Codeforces profile Data Details
