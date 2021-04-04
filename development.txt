@@ -1,0 +1,15 @@
+Env Variable useded In developmet 
+create .env in root and add these item
+
+NODE_ENV=production
+PORT=3000
+DATABASE
+JWT_SECRET_KEY
+JWT_EXPIRES_IN
+GITHUB_SECRET_KEY
+GITHUB_CLIENT_ID
+CLOUDIANRY_CLOUD_NAME
+CLOUDIANRY_API_KEY
+CLOUDIANRY_SECRET_KEY
+CLOUDINARY_URL
+CP_API_BASE_LINK=http://firstletter-cp-api.ap-south-1.elasticbeanstalk.com/api
