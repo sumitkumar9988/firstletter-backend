@@ -1,28 +1,28 @@
-const multer=require('multer');
+const multer = require('multer');
 const AppError = require('./AppError');
 const catchAsync = require('./catchAsync');
 const { v4: uuidv4 } = require('uuid');
 const s3 = require('./s3');
-const multerStorage = multer.diskStorage({});
 
+const multerStorage = multer.memoryStorage({});
 
 const multerFilter = (req, file, cb) => {
-   if (file.mimetype.split("/")[1] === "pdf") {
+  if (file.mimetype.startsWith('image')) {
     cb(null, true);
-   } else {
-    cb(new AppError('Not an Pdf! Please upload only pdf downloaded from https://www.linkedin.com/', 400), false);
+  } else {
+    cb(new AppError('Not an image! Please upload only images.', 400), false);
   }
 };
 
 const upload = multer({
   storage: multerStorage,
-  fileFilter: multerFilter
+  fileFilter: multerFilter,
 });
 
-exports.uploadResume = upload.single('resume');
+exports.uploadUserPhoto = upload.single('image');
 
-exports.uploadPDFToS3 = catchAsync(async (req, res, next) => {
-  if (!req.file) return next(new AppError('File is missing Please upload file'));
+exports.uploadImageToS3 = catchAsync(async (req, res, next) => {
+  if (!req.file) return next();
 
   let myFile = req.file.originalname.split('.');
   const fileType = myFile[myFile.length - 1];
@@ -48,4 +48,3 @@ exports.uploadPDFToS3 = catchAsync(async (req, res, next) => {
     next();
   });
 });
-

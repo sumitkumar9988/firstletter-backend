@@ -27,3 +27,4 @@ exports.uploadImagetoCloudinary =catchAsync(async (req, res, next) => {
   req.result=result;
   next();
 });
+

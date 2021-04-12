@@ -20,7 +20,6 @@ exports.githubCallBack = catchAsync(async (req, res, next) => {
   } = await axios.post(`https://github.com/login/oauth/access_token?client_id=${process.env.GITHUB_CLIENT_ID}&client_secret=${process.env.GITHUB_SECRET_KEY}&code=${requestToken}`)
   let access_token = data.split('&')[0];
   access_token = access_token.split('=')[1];
-  console.log('accesstoken', access_token)
 
   const response = await axios.get(`https://api.github.com/user`, {
     headers: {
@@ -86,17 +85,15 @@ exports.getAllUserProject = catchAsync(async (req, res, next) => {
   })
 
   const currentProject = await Project.find({
-    user: req.user.id
+    user: req.user.id,
   });
-  console.log(currentProject)
 
 
   const itemToInsertINtoDatabase = projects.filter((el) => {
-    return !currentProject.filter(item => {
-      return item.repoID === el.repoID
-    }).length
+    return !currentProject.filter((item) => {
+      return item.repoID === el.repoID;
+    }).length;
   });
-  console.log("itemToInsertINtoDatabase", itemToInsertINtoDatabase);
   // !b.filter(y => y.id === i.id).length
 
   //create multiple documents
@@ -144,10 +141,7 @@ exports.updateProjectDetails = catchAsync(async (req, res, next) => {
   return res.status(200).json({
     status: 'success',
     message: 'Project Details Update Successully',
-    data:{
-      project: project
-    }
-  })
+  });
 
 })
 

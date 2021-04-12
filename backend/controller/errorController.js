@@ -38,20 +38,20 @@ const sendErrorDev = (err, req, res) => {
 
 const sendErrorProd = (err, res) => {
   // Operational, trusted error: send message to client
-  // if (err.isOperational) {
+  if (err.isOperational) {
     res.status(err.statusCode).json({
       status: err.status,
       message: err.message,
     });
 
-  // } 
-  // else {
+  } 
+  else {
 
-  //   res.status(500).json({
-  //     status: 'error',
-  //     message: 'Something went very wrong!',
-  //   });
-  // }
+    res.status(500).json({
+      status: 'error',
+      message: 'Something went very wrong!',
+    });
+  }
 };
 
 module.exports = (err, req, res, next) => {
@@ -65,7 +65,6 @@ module.exports = (err, req, res, next) => {
   } else if (process.env.NODE_ENV === 'production') {
 
     let error = err;
-    console.log(error.message)
    
 
     if (error.name === 'CastError') error = handleCastErrorDB(error);

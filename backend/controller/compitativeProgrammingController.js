@@ -144,14 +144,14 @@ exports.getCodeforcesData = catchAsync(async (req, res, next) => {
     if (!codeforces) {
         return next(new AppError('Please enter Codeforces username'));
     }
-    const {
-        data
-    } = await axios.get(`${process.env.CP_API_BASE_LINK}/codeforces/${codeforces}`)
+    const { data } = await axios.get(`${process.env.CP_API_BASE_LINK}/codeforces/${codeforces}`)
+    if(data.status==='Failed'){
+        return next(new AppError("You don't have valid Codeforces username Please update "));
+    }
     return res.status(201).json({
         status: 'success',
         data: {
             codeforces: data
         }
     })
-
 })
