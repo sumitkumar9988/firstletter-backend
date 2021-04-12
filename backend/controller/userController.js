@@ -4,6 +4,45 @@ const Experience = require('./../models/experienceModels')
 const AppError = require('./../utils/AppError');
 const catchAsync = require('./../utils/catchAsync');
 const Certificate = require('./../models/CertificateModels');
+const resumePdfToJson = require('linkedin-resume-pdf-to-json');
+const resume = '../data/resume.pdf';
+// https://firstletter-multimedia.s3.ap-south-1.amazonaws.com/resume+(2).pdf
+exports.uploadLinkedInResume = catchAsync(async (req, res, next) => {
+  // const resume = await new ResumeParser(
+  //   'https://firstletter-multimedia.s3.ap-south-1.amazonaws.com/resume+(2).pdf'
+  // );
+
+  resumePdfToJson(resume)
+    .then(function (data) {
+      return res.status(201).json({
+        status: 'success',
+        message: 'PDF Upload Successfully',
+        data: data,
+      });
+    })
+    .catch((error) => {
+      console.error(error);
+      return;
+    });
+  // resumes
+  //   .parseToJSON()
+  //   .then((data) => {
+  //     console.log('Yay! ', data);
+  //     return res.status(201).json({
+  //       status: 'success',
+  //       message: 'PDF Upload Successfully',
+  //       data: data,
+  //     });
+  //   })
+  //   .catch((error) => {
+  //     console.error(error);
+  //   });
+});
+
+
+
+
+
 
 const filterObj = (obj, ...allowedFields) => {
   const newObj = {};
@@ -346,10 +385,3 @@ exports.deleteCertificate = catchAsync(async (req, res, next)=>{
 })
 
 
-exports.uploadLinkedInResume= catchAsync(async (req, res, next) => {
-        return res.status(201).json({
-          status:'success',
-          message:'PDF Upload Successfully',
-          url:req.result.url
-        })
-})

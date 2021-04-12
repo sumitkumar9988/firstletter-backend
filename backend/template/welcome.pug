@@ -1,0 +1,17 @@
+extends baseEmail
+
+block content
+  p Hi #{firstName},
+  p Welcome to Firstletter, we're glad to have you 🎉🙏
+  p Lorem ipsum dolor, sit amet consectetur adipisicing elit. Exercitationem, aliquid. 
+  table.btn.btn-primary(role='presentation', border='0', cellpadding='0', cellspacing='0')
+    tbody
+      tr
+        td(align='left')
+          table(role='presentation', border='0', cellpadding='0', cellspacing='0')
+            tbody
+              tr
+                td
+                  a(href=`${url}`, target='_blank') Upload user photo
+  p Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odit, cupiditate, distinctio fuga, magni odio eligendi voluptatum aut suscipit ad explicabo facilis assumenda voluptatibus tempora ipsum exercitationem ullam in reiciendis. Maiores.
+  p - Sumit kumar, CEO firstletter
