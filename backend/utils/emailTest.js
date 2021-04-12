@@ -2,15 +2,15 @@ const Email = require('./../utils/email');
 const AppError = require('./../utils/AppError');
 const User = require('./../models/userModel');
 const catchAsync = require('./../utils/catchAsync');
-
+const nodemailer = require('nodemailer');
 const sendEmail = async (options) => {
   // 1) Create a transporter
   const transporter = nodemailer.createTransport({
-    host: process.env.SES_HOST,
-    port: process.env.SES_PORT,
+    host: process.env.SENDGRID_HOST,
+    port: process.env.SENDGRID_PORT,
     auth: {
-      user: process.env.SMTP_SES_USERNAME,
-      pass: process.env.SMTP_SES_PASSWORD,
+      user: process.env.SENDGRID_USERNAME,
+      pass: process.env.SENDGRID_API_KEY_PASSWORD,
     },
   });
 
@@ -30,14 +30,13 @@ const sendEmail = async (options) => {
 exports.testEmailWorking = catchAsync(async (req, res, next) => {
   try {
     const option = {};
-    url = 'firstletter.tech';
-    await new Email(req.user, url).sendWelcome();
-    // await sendEmail(option);
+    await sendEmail(option);
 
     res.status(200).json({
       status: 'success',
     });
   } catch (error) {
+    console.log(error);
     res.status(404).json({ status: 'error', error });
   }
 });

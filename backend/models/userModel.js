@@ -61,9 +61,6 @@ const userSchema = new mongoose.Schema(
     dribbleAccount: { type: String },
     codeforcesAccount: { type: String },
 
-    education: [{ type: mongoose.Schema.ObjectId, ref: 'Education' }],
-    workExperience: [{ type: mongoose.Schema.ObjectId, ref: 'Experience' }],
-
     password: {
       type: String,
       required: [true, 'Please provide a password'],
