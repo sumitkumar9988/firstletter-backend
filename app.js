@@ -35,6 +35,7 @@ app.get('/',(req,res) => {
   });
 })
 app.use('/api', limiter);
+
 app.use(compression());
 
 // Data sanitization against NoSQL query injection

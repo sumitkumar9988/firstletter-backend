@@ -51,10 +51,10 @@ exports.setGitHubUserName = catchAsync(async (req, res, next) => {
   githubUserName = {
     gitHubAccount: req.body.githubUserName
   }
-  const user = await User.findByIdAndUpdate(req.user.id, githubUserName, {
-    new: true,
-    runValidators: true
-  })
+   await User.findByIdAndUpdate(req.user.id, githubUserName, {
+     new: true,
+     runValidators: true,
+   });
   res.status(201).json({
     status: 'success',
     message: 'Github username save'
@@ -62,16 +62,29 @@ exports.setGitHubUserName = catchAsync(async (req, res, next) => {
 })
 
 exports.getAllUserProject = catchAsync(async (req, res, next) => {
+  const allProject = await Project.find({
+    user: req.user.id,
+  });
 
+  res.status('200').json({
+    status: 'success',
+    length: allProject.length,
+    data: {
+      projects: allProject,
+    },
+  });
+});
+
+exports.refreshNewProject = catchAsync(async (req, res, next) => {
   const user = await User.findById(req.user.id);
   if (!user.gitHubAccount) {
     return next(new AppError('Please provide your GitHub account', 404));
   }
   console.log(user.gitHubAccount);
 
-  const {
-    data
-  } = await axios.get(`https://api.github.com/users/${user.gitHubAccount}/repos`);
+  const { data } = await axios.get(
+    `https://api.github.com/users/${user.gitHubAccount}/repos`
+  );
   let projects = data.map((item, index) => {
     return {
       user: req.user.id,
@@ -79,15 +92,16 @@ exports.getAllUserProject = catchAsync(async (req, res, next) => {
       repoID: item.id,
       repoUrl: item.url,
       DemoUrl: item.html_url,
+      projectLogo:
+        'https://firstletter-multimedia.s3.ap-south-1.amazonaws.com/project.png',
       updated_at: item.updated_at,
       description: item.description,
-    }
-  })
+    };
+  });
 
   const currentProject = await Project.find({
     user: req.user.id,
   });
-
 
   const itemToInsertINtoDatabase = projects.filter((el) => {
     return !currentProject.filter((item) => {
@@ -99,17 +113,34 @@ exports.getAllUserProject = catchAsync(async (req, res, next) => {
   //create multiple documents
   await Project.insertMany(itemToInsertINtoDatabase);
   const allProject = await Project.find({
-    user: req.user.id
+    user: req.user.id,
   });
 
   res.status('200').json({
     status: 'success',
     length: allProject.length,
     data: {
-      projects: allProject
-    }
-  })
-})
+      projects: allProject,
+    },
+  });
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 exports.getProjectDetails = catchAsync(async (req, res, next) => {
   const project = await Project.findById(req.params.id);
@@ -126,23 +157,23 @@ exports.getProjectDetails = catchAsync(async (req, res, next) => {
 
 exports.updateProjectDetails = catchAsync(async (req, res, next) => {
   data = req.body;
+
   if (req.result) {
     data.projectLogo = req.result.url;
   }
 
   const project = await Project.findByIdAndUpdate(req.params.id, data, {
     new: true,
-    runValidators: true
-  })
+    runValidators: true,
+  });
 
-  if(!project) {
-    return next(new AppError('Project not found By id',404));
+  if (!project) {
+    return next(new AppError('Project not found By id', 404));
   }
   return res.status(200).json({
     status: 'success',
     message: 'Project Details Update Successully',
   });
-
 })
 
 

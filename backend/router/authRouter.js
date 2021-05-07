@@ -117,6 +117,14 @@ router.get(
   authController.protect,
   projectController.getAllUserProject
 );
+
+
+router.get(
+  '/project/refesh',
+  authController.protect,
+  projectController.refreshNewProject
+);
+
 router.get(
   '/project/:id',
   authController.protect,
@@ -125,6 +133,8 @@ router.get(
 router.patch(
   '/project/:id',
   authController.protect,
+  uploadImageToS3.uploadUserPhoto,
+  uploadImageToS3.uploadImageToS3,
   projectController.updateProjectDetails
 );
 

@@ -136,7 +136,7 @@ exports.addEducation = catchAsync(async (req, res, next) => {
 
   let logo;
   if (!req.result) {
-    logo = 'defauult.jpg';
+    logo = 'https://firstletter-multimedia.s3.ap-south-1.amazonaws.com/university.png';
   } else {
     logo = req.result.url;
   }
@@ -229,7 +229,7 @@ exports.addExperience = catchAsync(async (req, res, next) => {
 
   let logo;
   if (!req.result) {
-    logo = 'default.jpg';
+    logo = 'https://firstletter-multimedia.s3.ap-south-1.amazonaws.com/company.png';
   } else {
     logo = req.result.url;
   }
@@ -300,7 +300,7 @@ exports.addCertificate = catchAsync(async (req, res, next) => {
     Organization: req.body.Organization,
     url: req.body.url,
   };
-  const certificate = await Certificate.create(certificateData);
+   await Certificate.create(certificateData);
   res.status(200).json({
     status: 'success',
     message:'New Certificate add successfully'

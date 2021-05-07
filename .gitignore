@@ -9,4 +9,5 @@ node_modules
 
 .vercel
 
-/.vscode
+/.vscodesendgrid.env
+sendgrid.env

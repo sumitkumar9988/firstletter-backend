@@ -1,7 +1,9 @@
-const nodemailer = require('nodemailer');
 const pug = require('pug');
 const htmlToText = require('html-to-text');
-
+const sgMail = require('@sendgrid/mail');
+sgMail.setApiKey(
+  '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'
+);
 module.exports = class Email {
   constructor(user, url) {
     this.to = user.email;
@@ -10,30 +12,6 @@ module.exports = class Email {
     this.from = `${process.env.EMAIL_FROM}`;
   }
 
-  newTransport() {
-    if (process.env.NODE_ENV === 'production') {
-      // Sendgrid
-      
-      return nodemailer.createTransport({
-        host: process.env.SENDGRID_HOST,
-            port: process.env.SENDGRID_PORT,
-            auth: {
-              user: process.env.SENDGRID_USERNAME,
-              pass: process.env.SENDGRID_API_KEY_PASSWORD,
-            },
-      });
-
-    }
-
-    return nodemailer.createTransport({
-      host: process.env.MAILTRAP_HOST,
-      port: process.env.MAILTRAP_PORT,
-      auth: {
-        user: process.env.MAILTRAP_USERNAME,
-        pass: process.env.MAILTRAP_PASSWORD
-      },
-    });
-  }
 
   // Send the actual email
   async send(template, subject) {
@@ -53,8 +31,8 @@ module.exports = class Email {
       text: htmlToText.fromString(html),
     };
 
-    // 3) Create a transport and send email
-    await this.newTransport().sendMail(mailOptions);
+   
+    await sgMail.send(mailOptions);
   }
 
   async sendWelcome() {
