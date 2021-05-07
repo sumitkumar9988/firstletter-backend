@@ -29,28 +29,31 @@ exports.testEmailWorking = catchAsync(async (req, res, next) => {
     await sendEmail();
 
 
-  var options = { method: 'PUT',
+  var options = {
+    method: 'PUT',
     url: 'https://api.sendgrid.com/v3/marketing/contacts',
-    headers: 
-    { 'content-type': 'application/json',
-      authorization: 'Bearer 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'},
-    body: 
-    { list_ids: [ '956575b3-93e1-4b79-b0f4-bafeb6af003f' ],
+    headers: {
+      'content-type': 'application/json',
+      authorization:
+        'Bearer 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',
+    },
+    body: {
+      list_ids: ['956575b3-93e1-4b79-b0f4-bafeb6af003f'],
       contacts: [
-        
         {
-          "email":'sumi9998@gmail.com',
-          "first_name": 'sumit',
-          "last_name": 'kumar'
+          email: 'sumi9998@gmail.com',
+          first_name: 'sumit',
+          last_name: 'kumar',
         },
         {
-          "email":'sumi99@gmail.com',
-          "first_name": 'sumit',
-          "last_name": 'kumar'
-        }
-      ]
+          email: 'sumi99@gmail.com',
+          first_name: 'sumit',
+          last_name: 'kumar',
+        },
+      ],
     },
-    json: true };
+    json: true,
+  };
 
   request(options, function (error, response, body) {
     if (error) throw new Error(error);

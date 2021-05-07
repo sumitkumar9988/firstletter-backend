@@ -28,13 +28,19 @@ const userSchema = new mongoose.Schema(
       type: String,
       enum: ['developer', 'designer'],
     },
+    gender:{
+      type:String,
+      enum:['male','female']
+    },
+    
     photo: {
       type: String,
-      default: 'default.jpg',
+      default: 'https://firstletter-multimedia.s3.ap-south-1.amazonaws.com/user.png',
     },
+
     role: {
       type: String,
-      enum: ['user', 'admin'],
+      enum: ['user', 'admin',],
       default: 'user',
     },
     skills: {
@@ -46,8 +52,11 @@ const userSchema = new mongoose.Schema(
 
     bio: {
       type: String,
-      minlength: 10,
-      maxlength: 100,
+      minlength: [10,'bio should have atleast 10 words'],
+      maxlength: [100,'length of bio should not be greater than 100 words'],
+    },
+    intrestedIn:{
+      type:String
     },
 
     twitterAcount: { type: String },
@@ -75,7 +84,9 @@ const userSchema = new mongoose.Schema(
       type: Date,
       default: Date.now(),
     },
-
+    mobileNumber: {
+      type: Number,
+    },
     passwordChangedAt: Date,
     passwordResetToken: String,
     passwordResetExpires: Date,

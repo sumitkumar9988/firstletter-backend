@@ -48,7 +48,7 @@ exports.signUp = catchAsync(async (req, res, next) => {
 
   //add email to list
 
-  // var options = {
+  // const options = {
   //   method: 'PUT',
   //   url: 'https://api.sendgrid.com/v3/marketing/contacts',
   //   headers: {
