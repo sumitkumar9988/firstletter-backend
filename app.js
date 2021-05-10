@@ -9,7 +9,7 @@ const xss = require('xss-clean');
 const hpp = require('hpp');
 const compression = require('compression');
 const cors = require('cors');
-
+const bodyParser = require('body-parser');
 const globalErrorHandler = require('./backend/controller/errorController');
 const AppError = require('./backend/utils/AppError');
 const authRouter = require('./backend/router/authRouter');
@@ -17,6 +17,9 @@ const portfolioRouter = require('./backend/router/portfolioRouter');
 
 const app = express();
 dotenv.config();
+
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json({ limit: '5mb' }));
 
 app.use(cors());
 app.use(helmet());
@@ -35,6 +38,7 @@ app.get('/',(req,res) => {
   });
 })
 app.use('/api', limiter);
+
 app.use(compression());
 
 // Data sanitization against NoSQL query injection

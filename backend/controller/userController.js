@@ -4,8 +4,7 @@ const Experience = require('./../models/experienceModels')
 const AppError = require('./../utils/AppError');
 const catchAsync = require('./../utils/catchAsync');
 const Certificate = require('./../models/CertificateModels');
-// const resume = '../data/resume.pdf';
-// https://firstletter-multimedia.s3.ap-south-1.amazonaws.com/resume+(2).pdf
+
 
 
 const filterObj = (obj, ...allowedFields) => {
@@ -32,11 +31,24 @@ exports.updateUserDetail = catchAsync(async (req, res, next) => {
   if (req.result) {
     data.photo = req.result.url;
   }
-  const filteredBody = filterObj(data, 'email', 'name', 'photo', 'bio', 'skills', 'location','profession' ,'lookingForJob');
-  const updatedUser = await User.findByIdAndUpdate(req.user.id, filteredBody, {
+  const filteredBody = filterObj(
+    data,
+    'email',
+    'mobileNumber',
+    'name',
+    'photo',
+    'bio',
+    'skills',
+    'location',
+    'profession',
+    'lookingForJob',
+    'intrestedIn',
+    'gender'
+  );
+  await User.findByIdAndUpdate(req.user.id, filteredBody, {
     new: true,
-    runValidators: true
-  })
+    runValidators: true,
+  });
 
   res.status(200).json({
     status: 'success',
@@ -46,30 +58,23 @@ exports.updateUserDetail = catchAsync(async (req, res, next) => {
 
 
 exports.updateusername = catchAsync(async (req, res, next) => {
-
   const userData = {
-    username: req.body.username
-  }
+    username: req.body.username,
+  };
 
   if (!req.body.username) {
     return next(new AppError('username is required', 404));
   }
 
-  const checkUsername = User.findOne({
-    username: req.body.username,
-  });
-
-
   await User.findByIdAndUpdate(req.user.id, userData, {
     new: true,
-    runValidators: true
-  })
+    runValidators: true,
+  });
   res.status(200).json({
     status: 'success',
-    message:'Users Details update sucessfull!'
-  })
-
-})
+    message: 'Users Details update sucessfull!',
+  });
+});
 
 
 exports.updateSocialNetworking = catchAsync(async (req, res, next) => {
@@ -136,7 +141,7 @@ exports.addEducation = catchAsync(async (req, res, next) => {
 
   let logo;
   if (!req.result) {
-    logo = 'defauult.jpg';
+    logo = 'https://firstletter-multimedia.s3.ap-south-1.amazonaws.com/university.png';
   } else {
     logo = req.result.url;
   }
@@ -146,6 +151,7 @@ exports.addEducation = catchAsync(async (req, res, next) => {
     user: req.user.id,
     basicinfo: req.body.basicinfo,
     instituteLogo: logo,
+    city: req.user.city,
     degree: req.body.degree,
     startDate: req.body.startDate,
     endDate: req.body.endDate,
@@ -153,7 +159,7 @@ exports.addEducation = catchAsync(async (req, res, next) => {
     activitiesAndSocieties: req.body.activitiesAndSocieties,
   };
 
-  const educationDoc = await Education.create(education);
+   await Education.create(education);
 
   res.status(200).json({
     status: 'success',
@@ -229,7 +235,7 @@ exports.addExperience = catchAsync(async (req, res, next) => {
 
   let logo;
   if (!req.result) {
-    logo = 'default.jpg';
+    logo = 'https://firstletter-multimedia.s3.ap-south-1.amazonaws.com/company.png';
   } else {
     logo = req.result.url;
   }
@@ -239,14 +245,16 @@ exports.addExperience = catchAsync(async (req, res, next) => {
     organization: req.body.organization,
     organizationLogo: logo,
     website: req.body.website,
+    remote: req.user.remote,
     startDate: req.body.startDate,
     endDate: req.body.endDate,
+    city:  req.body.city,
     duration: req.body.duration,
     responsibilities: req.body.responsibilities,
   };
-  const experienceDoc = await Experience.create(experience);
+   await Experience.create(experience);
 
-  res.status(200).json({
+ return res.status(200).json({
     status: 'success',
     message:'new experience add successfully '
   })
@@ -292,15 +300,23 @@ exports.updateExperience = catchAsync(async (req, res, next) => {
 
 
 exports.addCertificate = catchAsync(async (req, res, next) => {
+
+  let uploadImage;
+  if (req.result) {
+    uploadImage = req.result.url;
+  }
+  if (!uploadImage) {
+    return next(new AppError('Upload Your Certificate', 401));
+  }
   const certificateData = {
     user: req.user.id,
     name: req.body.name,
-    image: req.result.url,
+    image: uploadImage,
     isseueDate: req.body.isseueDate,
     Organization: req.body.Organization,
     url: req.body.url,
   };
-  const certificate = await Certificate.create(certificateData);
+   await Certificate.create(certificateData);
   res.status(200).json({
     status: 'success',
     message:'New Certificate add successfully'
