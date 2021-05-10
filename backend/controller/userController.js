@@ -300,10 +300,18 @@ exports.updateExperience = catchAsync(async (req, res, next) => {
 
 
 exports.addCertificate = catchAsync(async (req, res, next) => {
+
+  let uploadImage;
+  if (req.result) {
+    uploadImage = req.result.url;
+  }
+  if (!uploadImage) {
+    return next(new AppError('Upload Your Certificate', 401));
+  }
   const certificateData = {
     user: req.user.id,
     name: req.body.name,
-    image: req.result.url,
+    image: uploadImage,
     isseueDate: req.body.isseueDate,
     Organization: req.body.Organization,
     url: req.body.url,
