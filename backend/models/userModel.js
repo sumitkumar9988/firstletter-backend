@@ -15,7 +15,9 @@ const userSchema = new mongoose.Schema(
       minlength: 3,
       maxlength: 12,
       unique: true,
-      required: [true, 'Please enter username'],
+      required: [true, "user name can't be blank"],
+      match: [/^[a-zA-Z0-9]+$/, 'username is invalid'],
+      index: true,
     },
     email: {
       type: String,
@@ -28,19 +30,20 @@ const userSchema = new mongoose.Schema(
       type: String,
       enum: ['developer', 'designer'],
     },
-    gender:{
-      type:String,
-      enum:['male','female']
+    gender: {
+      type: String,
+      enum: ['male', 'female'],
     },
-    
+
     photo: {
       type: String,
-      default: 'https://firstletter-multimedia.s3.ap-south-1.amazonaws.com/user.png',
+      default:
+        'https://firstletter-multimedia.s3.ap-south-1.amazonaws.com/user.png',
     },
 
     role: {
       type: String,
-      enum: ['user', 'admin',],
+      enum: ['user', 'admin'],
       default: 'user',
     },
     skills: {
@@ -52,11 +55,11 @@ const userSchema = new mongoose.Schema(
 
     bio: {
       type: String,
-      minlength: [10,'bio should have atleast 10 words'],
-      maxlength: [100,'length of bio should not be greater than 100 words'],
+      minlength: [10, 'bio should have atleast 10 words'],
+      maxlength: [100, 'length of bio should not be greater than 100 words'],
     },
-    intrestedIn:{
-      type:String
+    intrestedIn: {
+      type: String,
     },
 
     twitterAcount: { type: String },
