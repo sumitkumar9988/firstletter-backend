@@ -306,7 +306,7 @@ exports.addCertificate = catchAsync(async (req, res, next) => {
     uploadImage = req.result.url;
   }
   if (!uploadImage) {
-    return next(new AppError('Upload Your Certificate', 401));
+    return next(new AppError('Upload Your Certificate', 404));
   }
   const certificateData = {
     user: req.user.id,
@@ -314,6 +314,7 @@ exports.addCertificate = catchAsync(async (req, res, next) => {
     image: uploadImage,
     isseueDate: req.body.isseueDate,
     Organization: req.body.Organization,
+    learning: req.body.learning,
     url: req.body.url,
   };
    await Certificate.create(certificateData);
