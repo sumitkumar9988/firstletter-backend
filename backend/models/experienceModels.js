@@ -22,8 +22,8 @@ const workExperienceSchema = new mongoose.Schema({
   },
   city: String,
   website: String,
-  startDate: String,
-  endDate: String,
+  startDate: Date,
+  endDate: Date,
   duration: Number,
   responsibilities: String,
 });

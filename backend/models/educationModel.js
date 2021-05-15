@@ -15,8 +15,8 @@ const educationSchema = new mongoose.Schema({
   instituteLogo: String,
   city: String,
   degree: String,
-  startDate: Number,
-  endDate: Number,
+  startDate: Date,
+  endDate: Date,
   grade: String,
   activitiesAndSocieties: String,
 });
