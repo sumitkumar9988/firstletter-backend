@@ -2,7 +2,7 @@ const express = require('express');
 const dotenv = require('dotenv');
 const mongoose = require('mongoose');
 const morgan = require('morgan');
-const rateLimit = require('express-rate-limit');
+// const rateLimit = require('express-rate-limit');
 const helmet = require('helmet');
 const mongoSanitize = require('express-mongo-sanitize');
 const xss = require('xss-clean');
@@ -31,7 +31,7 @@ if (process.env.NODE_ENV === 'development') {
 // const limiter = rateLimit({
 //   max: 200,
 //   windowMs: 60 * 60 * 1000,
-//   message: 'Too many requests from this IP, please try again in an hour!'
+//   message: 'Too many requests from this IP, please try again in an hour!',
 // });
 app.get('/',(req,res) => {
  return res.status(200).json({
