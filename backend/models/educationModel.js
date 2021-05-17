@@ -12,7 +12,11 @@ const educationSchema = new mongoose.Schema({
     required: [true, 'Certificate must have User'],
   },
   basicinfo: String,
-  instituteLogo: String,
+  instituteLogo: {
+    type: String,
+    default:
+      'https://firstletter-multimedia.s3.ap-south-1.amazonaws.com/university.png',
+  },
   city: String,
   degree: String,
   startDate: Date,

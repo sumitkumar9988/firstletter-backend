@@ -139,18 +139,15 @@ exports.getAllEducation = catchAsync(async (req, res, next) => {
 
 exports.addEducation = catchAsync(async (req, res, next) => {
 
-  let logo;
-  if (!req.result) {
-    logo = 'https://firstletter-multimedia.s3.ap-south-1.amazonaws.com/university.png';
-  } else {
-    logo = req.result.url;
+  if (req.result) {
+    logoImage = req.result.url;
   }
 
   const education = {
     institute: req.body.institute,
     user: req.user.id,
     basicinfo: req.body.basicinfo,
-    instituteLogo: logo,
+    instituteLogo: logoImage,
     city: req.user.city,
     degree: req.body.degree,
     startDate: req.body.startDate,
@@ -232,33 +229,29 @@ exports.getExperienceById = catchAsync(async (req, res, next) => {
 })
 
 exports.addExperience = catchAsync(async (req, res, next) => {
-
-  let logo;
-  if (!req.result) {
-    logo = 'https://firstletter-multimedia.s3.ap-south-1.amazonaws.com/company.png';
-  } else {
-    logo = req.result.url;
+  if (req.result) {
+    logoImage = req.result.url;
   }
+
   const experience = {
     jobTitle: req.body.jobTitle,
     user: req.user.id,
     organization: req.body.organization,
-    organizationLogo: logo,
+    organizationLogo: logoImage,
     website: req.body.website,
     remote: req.user.remote,
     startDate: req.body.startDate,
     endDate: req.body.endDate,
-    city:  req.body.city,
+    city:req.body.city,
     duration: req.body.duration,
     responsibilities: req.body.responsibilities,
   };
-   await Experience.create(experience);
+  await Experience.create(experience);
 
- return res.status(200).json({
+  return res.status(200).json({
     status: 'success',
-    message:'new experience add successfully '
-  })
-
+    message: 'new experience add successfully ',
+  });
 })
 
 exports.deleteExperienceDetail = catchAsync(async (req, res, next) => {

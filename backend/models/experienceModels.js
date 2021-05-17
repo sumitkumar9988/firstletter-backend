@@ -16,6 +16,8 @@ const workExperienceSchema = new mongoose.Schema({
   },
   organizationLogo: {
     type: String,
+    default:
+      'https://firstletter-multimedia.s3.ap-south-1.amazonaws.com/company.png',
   },
   remote: {
     type: Boolean,
