@@ -38,7 +38,7 @@ app.get('/',(req,res) => {
     status: 'success',
   });
 })
-app.use('/api', limiter);
+// app.use('/api', limiter);
 
 app.use(compression());
 
