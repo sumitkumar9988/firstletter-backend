@@ -139,9 +139,6 @@ exports.refreshNewProject = catchAsync(async (req, res, next) => {
 
 
 
-
-
-
 exports.getProjectDetails = catchAsync(async (req, res, next) => {
   const project = await Project.findById(req.params.id);
   if (!project) {
@@ -157,10 +154,6 @@ exports.getProjectDetails = catchAsync(async (req, res, next) => {
 
 exports.updateProjectDetails = catchAsync(async (req, res, next) => {
   data = req.body;
-
-  if (req.result) {
-    data.projectLogo = req.result.url;
-  }
 
   const project = await Project.findByIdAndUpdate(req.params.id, data, {
     new: true,

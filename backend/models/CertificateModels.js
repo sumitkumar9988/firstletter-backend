@@ -12,7 +12,7 @@ const certificateSchema = new mongoose.Schema({
   },
   image: {
     type: String,
-    required: [true, 'Upload Your Certificate'],
+    required: [true, 'Upload Your Certificate Image],
   },
   isseueDate: { type: Date },
   Organization: {

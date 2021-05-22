@@ -42,11 +42,12 @@ exports.uploadImageToS3 = catchAsync(async (req, res, next) => {
     }
     console.log('test1');
     console.log(data.Location);
-    const result = {
-      url: data.Location,
-      key: data.Key,
-    };
-    req.result = result;
+    // const result = {
+    //   url: data.Location,
+    //   key: data.Key,
+    // };
+    // req.result = result;
+    req.body.image=data.Location
     next();
   });
 });
