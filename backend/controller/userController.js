@@ -1,15 +1,13 @@
 const User = require('./../models/userModel');
-const Education = require('./../models/educationModel')
-const Experience = require('./../models/experienceModels')
+const Education = require('./../models/educationModel');
+const Experience = require('./../models/experienceModels');
 const AppError = require('./../utils/AppError');
 const catchAsync = require('./../utils/catchAsync');
 const Certificate = require('./../models/CertificateModels');
 
-
-
 const filterObj = (obj, ...allowedFields) => {
   const newObj = {};
-  Object.keys(obj).forEach(el => {
+  Object.keys(obj).forEach((el) => {
     if (allowedFields.includes(el)) newObj[el] = obj[el];
   });
   return newObj;
@@ -20,15 +18,14 @@ exports.userDetail = catchAsync(async (req, res, next) => {
   res.status(200).json({
     status: 'success',
     data: {
-      user
+      user,
     },
   });
 });
 
 exports.updateUserDetail = catchAsync(async (req, res, next) => {
-
   data = req.body;
- 
+
   const filteredBody = filterObj(
     data,
     'email',
@@ -50,10 +47,9 @@ exports.updateUserDetail = catchAsync(async (req, res, next) => {
 
   res.status(200).json({
     status: 'success',
-    message:'User details update successfully!'
+    message: 'User details update successfully!',
   });
-})
-
+});
 
 exports.updateusername = catchAsync(async (req, res, next) => {
   const userData = {
@@ -74,76 +70,78 @@ exports.updateusername = catchAsync(async (req, res, next) => {
   });
 });
 
-
 exports.updateSocialNetworking = catchAsync(async (req, res, next) => {
-
-  const filteredBody = filterObj(req.body,
-    'twitterAcount', 'facebookAccount', 'linkedInAccount',
-    'InstaAccount', 'gitHubAccount', 'mediumAccount');
+  const filteredBody = filterObj(
+    req.body,
+    'twitterAcount',
+    'facebookAccount',
+    'linkedInAccount',
+    'InstaAccount',
+    'gitHubAccount',
+    'mediumAccount'
+  );
   const user = await User.findByIdAndUpdate(req.user.id, filteredBody, {
     new: true,
-    runValidators: true
-  })
-  if(!user){
+    runValidators: true,
+  });
+  if (!user) {
     return next(new AppError('There is no such user with these id', 400));
   }
 
   res.status(200).json({
     status: 'success',
-    message:'Users Details update successfully!'
-  })
-
-})
+    message: 'Users Details update successfully!',
+  });
+});
 
 exports.deleteUser = catchAsync(async (req, res, next) => {
   const user = await User.findByIdAndUpdate(req.user.id, {
-    active: false
+    active: false,
   });
-  if(!user){
-    return next(new AppError('There is no such user with this id',404))
+  if (!user) {
+    return next(new AppError('There is no such user with this id', 404));
   }
 
   res.status(200).json({
     status: 'success',
-    data: 'Account Deactivate! You can login your account whenever you want '
+    data: 'Account Deactivate! You can login your account whenever you want ',
   });
 });
 
 exports.getEducationDetail = catchAsync(async (req, res, next) => {
   const education = await Education.findById(req.params.id);
-  if(!education){
+  if (!education) {
     return next(new AppError('No document found with that ID', 400));
   }
   res.status(201).json({
     status: 'success',
     data: {
-      education: education
-    }
-  })
-})
+      education: education,
+    },
+  });
+});
 
 exports.getAllEducation = catchAsync(async (req, res, next) => {
   const education = await Education.find({
-    user: req.user.id
+    user: req.user.id,
   });
   res.status(201).json({
     status: 'success',
     length: education.length,
     data: {
-      education: education
-    }
-  })
-})
+      education: education,
+    },
+  });
+});
 
 exports.addEducation = catchAsync(async (req, res, next) => {
-
-  
-
   const education = {
     institute: req.body.institute,
     user: req.user.id,
     basicinfo: req.body.basicinfo,
-    instituteLogo: req.body.image,
+    instituteLogo:
+      req.body.image ||
+      'https://firstletter-multimedia.s3.ap-south-1.amazonaws.com/university.png',
     city: req.body.city,
     degree: req.body.degree,
     startDate: req.body.startDate,
@@ -152,14 +150,13 @@ exports.addEducation = catchAsync(async (req, res, next) => {
     activitiesAndSocieties: req.body.activitiesAndSocieties,
   };
 
-   await Education.create(education);
+  await Education.create(education);
 
   res.status(200).json({
     status: 'success',
-    message: 'new education add successful'
-  })
-
-})
+    message: 'new education add successful',
+  });
+});
 
 exports.deleteEducationDetail = catchAsync(async (req, res, next) => {
   const educationDoc = await Education.findByIdAndDelete(req.params.id);
@@ -168,62 +165,52 @@ exports.deleteEducationDetail = catchAsync(async (req, res, next) => {
   }
   res.status(200).json({
     status: 'success',
-    message: 'Item delete successfully'
-  })
-})
+    message: 'Item delete successfully',
+  });
+});
 
 exports.updateEducation = catchAsync(async (req, res, next) => {
-
- 
-
   const education = await Education.findByIdAndUpdate(req.params.id, req.body, {
     new: true,
-    runValidators: true
-  })
+    runValidators: true,
+  });
 
   if (!education) {
     return next(new AppError('No document found with that ID', 400));
   }
   res.status(201).json({
     status: 'success',
-    message:'Education update successfully'
-  })
-
-})
+    message: 'Education update successfully',
+  });
+});
 
 exports.allUserExeprience = catchAsync(async (req, res, next) => {
-
   const experience = await Experience.find({
-    user: req.user.id
+    user: req.user.id,
   });
   res.status(201).json({
     status: 'success',
     length: experience.length,
     data: {
-      experience
-    }
-  })
-
-})
+      experience,
+    },
+  });
+});
 
 exports.getExperienceById = catchAsync(async (req, res, next) => {
-
   const experience = await Experience.findById(req.params.id);
-  if(!experience){
-    return next(new AppError('No such data availabe with this ID',400))
+  if (!experience) {
+    return next(new AppError('No such data availabe with this ID', 400));
   }
   res.status(201).json({
     status: 'success',
     data: {
-      experience
-    }
-  })
-
-})
+      experience,
+    },
+  });
+});
 
 exports.addExperience = catchAsync(async (req, res, next) => {
- 
-
   const experience = {
     jobTitle: req.body.jobTitle,
     user: req.user.id,
@@ -233,7 +220,7 @@ exports.addExperience = catchAsync(async (req, res, next) => {
     remote: req.body.remote,
     startDate: req.body.startDate,
     endDate: req.body.endDate,
-    city:req.body.city,
+    city: req.body.city,
     duration: req.body.duration,
     responsibilities: req.body.responsibilities,
   };
@@ -243,47 +230,37 @@ exports.addExperience = catchAsync(async (req, res, next) => {
     status: 'success',
     message: 'new experience add successfully ',
   });
-})
+});
 
 exports.deleteExperienceDetail = catchAsync(async (req, res, next) => {
-
   const experienceDoc = await Experience.findByIdAndDelete(req.params.id);
   if (!experienceDoc) {
     return next(new AppError('No document found with that ID', 404));
   }
   res.status(200).json({
     status: 'success',
-    message: 'Item delete successfully'
-  })
-
-})
+    message: 'Item delete successfully',
+  });
+});
 
 exports.updateExperience = catchAsync(async (req, res, next) => {
-
   data = req.body;
-
 
   const experience = await Experience.findByIdAndUpdate(req.params.id, data, {
     new: true,
-    runValidators: true
-  })
+    runValidators: true,
+  });
 
   if (!experience) {
     return next(new AppError('No document found with that ID', 404));
   }
   res.status(201).json({
     status: 'success',
-    message:'Experience details update successfully'
-  })
-
-})
-
-
-
+    message: 'Experience details update successfully',
+  });
+});
 
 exports.addCertificate = catchAsync(async (req, res, next) => {
-
- 
   const certificateData = {
     user: req.user.id,
     name: req.body.name,
@@ -293,58 +270,55 @@ exports.addCertificate = catchAsync(async (req, res, next) => {
     learning: req.body.learning,
     url: req.body.url,
   };
-   await Certificate.create(certificateData);
+  await Certificate.create(certificateData);
   res.status(200).json({
     status: 'success',
-    message:'New Certificate add successfully'
-  })
-})
+    message: 'New Certificate add successfully',
+  });
+});
 
 exports.getYourCertificate = catchAsync(async (req, res, next) => {
   const certificate = await Certificate.find({
-    user: req.user.id
+    user: req.user.id,
   });
 
   res.status(200).json({
     status: 'success',
     length: certificate.length,
     data: {
-      certificate
-    }
-  })
-})
+      certificate,
+    },
+  });
+});
 
-exports.getCertificateByID = catchAsync(async (req, res, next)=>{
-
+exports.getCertificateByID = catchAsync(async (req, res, next) => {
   const certificate = await Certificate.findById(req.params.id);
-  if(!certificate){
-    next(new AppError('No certificate found By this id',404));
+  if (!certificate) {
+    next(new AppError('No certificate found By this id', 404));
   }
   res.status(200).json({
-    status:'success',
-    data:{
+    status: 'success',
+    data: {
       certificate,
-    }
-  })
-})
+    },
+  });
+});
 
-exports.deleteCertificate = catchAsync(async (req, res, next)=>{
+exports.deleteCertificate = catchAsync(async (req, res, next) => {
   const certificate = await Certificate.findByIdAndDelete(req.params.id);
   if (!certificate) {
     return next(new AppError('No document found with that ID', 404));
   }
   res.status(200).json({
     status: 'success',
-    message: 'item delete successfully'
-  })
-})
-
+    message: 'item delete successfully',
+  });
+});
 
 exports.uploadLinkedInResume = catchAsync(async (req, res, next) => {
-
   return res.status(205).json({
-    status:'success',
-    message:'this API is still in development stage !wait till this goes to production'
-  })
-  
+    status: 'success',
+    message:
+      'this API is still in development stage !wait till this goes to production',
+  });
 });

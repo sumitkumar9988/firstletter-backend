@@ -1,6 +1,5 @@
 const mongoose = require('mongoose');
 
-
 const educationSchema = new mongoose.Schema({
   institute: {
     type: String,
@@ -24,6 +23,14 @@ const educationSchema = new mongoose.Schema({
   grade: String,
   activitiesAndSocieties: String,
 });
+
+// educationSchema.pre('save', function (next) {
+//   if (this.instituteLogo === null || 'null') {
+//     this.instituteLogo =
+//       'https://firstletter-multimedia.s3.ap-south-1.amazonaws.com/university.png';
+//   }
+//   next();
+// });
 
 const Education = mongoose.model('Education', educationSchema);
 
