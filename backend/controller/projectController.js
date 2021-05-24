@@ -2,64 +2,68 @@ const Project = require('./../models/projectModel');
 const User = require('./../models/userModel');
 const AppError = require('./../utils/AppError');
 const catchAsync = require('./../utils/catchAsync');
-const axios = require('axios')
+const axios = require('axios');
 
 exports.guthubOAoth = catchAsync(async (req, res, next) => {
   res.status('200').json({
     status: 'success',
-    redirect: `https://github.com/login/oauth/authorize?client_id=${process.env.GITHUB_CLIENT_ID}`
-  })
-})
-
+    redirect: `https://github.com/login/oauth/authorize?client_id=${process.env.GITHUB_CLIENT_ID}`,
+  });
+});
 
 exports.githubCallBack = catchAsync(async (req, res, next) => {
-
-  const requestToken = req.query.code;
-  const {
-    data
-  } = await axios.post(`https://github.com/login/oauth/access_token?client_id=${process.env.GITHUB_CLIENT_ID}&client_secret=${process.env.GITHUB_SECRET_KEY}&code=${requestToken}`)
+  const requestToken = req.body.code;
+  const { data } = await axios.post(
+    `https://github.com/login/oauth/access_token?client_id=${process.env.GITHUB_CLIENT_ID}&client_secret=${process.env.GITHUB_SECRET_KEY}&code=${requestToken}`
+  );
   let access_token = data.split('&')[0];
   access_token = access_token.split('=')[1];
 
   const response = await axios.get(`https://api.github.com/user`, {
     headers: {
-      Authorization: 'token ' + access_token
-    }
-  })
-
-
+      Authorization: 'token ' + access_token,
+    },
+  });
 
   if (!response.data.login) {
     return next(new AppError('Some error occurred while GitHub OAuth', 404));
   }
 
+  githubUserName = {
+    gitHubAccount: response.data.login,
+  };
+  await User.findByIdAndUpdate(req.user.id, githubUserName, {
+    new: true,
+    runValidators: true,
+  });
+
   res.status(201).json({
     status: 'success',
     redirect: '/success',
+    message: `Hii! ${response.data.name} Your ${response.data.login} username save`,
     data: {
       username: response.data.login,
-      name: response.data.name
-    }
-  })
-})
+      name: response.data.name,
+    },
+  });
+});
 
 exports.setGitHubUserName = catchAsync(async (req, res, next) => {
-
   if (!req.body.githubUserName) {
     return next(new AppError('Please Authorize GitHub again'));
   }
   githubUserName = {
-    gitHubAccount: req.body.githubUserName
-  }
-   await User.findByIdAndUpdate(req.user.id, githubUserName, {
-     new: true,
-     runValidators: true,
-   });
+    gitHubAccount: req.body.githubUserName,
+  };
+  await User.findByIdAndUpdate(req.user.id, githubUserName, {
+    new: true,
+    runValidators: true,
+  });
   res.status(201).json({
     status: 'success',
-    message: 'Github username save'
-  })
-})
+    message: 'Github username save',
+  });
+});
 
 exports.getAllUserProject = catchAsync(async (req, res, next) => {
   const allProject = await Project.find({
@@ -125,20 +129,6 @@ exports.refreshNewProject = catchAsync(async (req, res, next) => {
   });
 });
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 exports.getProjectDetails = catchAsync(async (req, res, next) => {
   const project = await Project.findById(req.params.id);
   if (!project) {
@@ -147,10 +137,10 @@ exports.getProjectDetails = catchAsync(async (req, res, next) => {
   res.status(201).json({
     status: 'success',
     data: {
-      project: project
-    }
-  })
-})
+      project: project,
+    },
+  });
+});
 
 exports.updateProjectDetails = catchAsync(async (req, res, next) => {
   data = req.body;
@@ -167,7 +157,4 @@ exports.updateProjectDetails = catchAsync(async (req, res, next) => {
     status: 'success',
     message: 'Project Details Update Successully',
   });
-})
-
-
-
+});

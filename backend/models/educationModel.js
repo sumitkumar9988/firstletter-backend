@@ -24,14 +24,6 @@ const educationSchema = new mongoose.Schema({
   activitiesAndSocieties: String,
 });
 
-// educationSchema.pre('save', function (next) {
-//   if (this.instituteLogo === null || 'null') {
-//     this.instituteLogo =
-//       'https://firstletter-multimedia.s3.ap-south-1.amazonaws.com/university.png';
-//   }
-//   next();
-// });
-
 const Education = mongoose.model('Education', educationSchema);
 
 module.exports = Education;

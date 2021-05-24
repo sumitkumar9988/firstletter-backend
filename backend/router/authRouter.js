@@ -105,7 +105,11 @@ router.get(
   authController.protect,
   projectController.guthubOAoth
 );
-router.get('/github/callback', projectController.githubCallBack);
+router.post(
+  '/github/callback',
+  authController.protect,
+  projectController.githubCallBack
+);
 router.post(
   '/setGithubUserName',
   authController.protect,
@@ -117,7 +121,6 @@ router.get(
   authController.protect,
   projectController.getAllUserProject
 );
-
 
 router.get(
   '/project/refesh',
@@ -158,11 +161,13 @@ router.delete(
   userController.deleteCertificate
 ); //testing done
 
-router.post(
-  '/uploadresume',
-  authController.protect,
-  userController.uploadLinkedInResume
-);
+// router.post(
+//   '/uploadresume',
+//   authController.protect,
+//   userController.uploadLinkedInResume
+// );
+
+// CODECHEF API
 
 router.post(
   '/codechef',
@@ -171,19 +176,25 @@ router.post(
 ); //testing done
 router.get('/codechef', authController.protect, cpController.getCodeChefData); //testing done
 
+// SPOJ API
+
 router.post('/spoj', authController.protect, cpController.saveSPOJUserName); //testing done
 router.get('/spoj', authController.protect, cpController.getSpojData); //testing done
+
+// CODEFORCES API
 
 router.post(
   '/codeforces',
   authController.protect,
   cpController.saveCodeForcesUserName
 ); //testing done
+
 router.get(
   '/codeforces',
   authController.protect,
   cpController.getCodeforcesData
 ); //testing done
+
 router.post('/testemail', test.testEmailWorking); //testing done
 
 router.post(

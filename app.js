@@ -21,7 +21,6 @@ dotenv.config();
 app.use(express.json({ limit: '10kb' }));
 app.use(express.urlencoded({ extended: true, limit: '10kb' }));
 
-
 app.use(cors());
 app.use(helmet());
 if (process.env.NODE_ENV === 'development') {
@@ -33,11 +32,11 @@ if (process.env.NODE_ENV === 'development') {
 //   windowMs: 60 * 60 * 1000,
 //   message: 'Too many requests from this IP, please try again in an hour!',
 // });
-app.get('/',(req,res) => {
- return res.status(200).json({
+app.get('/', (req, res) => {
+  return res.status(200).json({
     status: 'success',
   });
-})
+});
 // app.use('/api', limiter);
 
 app.use(compression());
@@ -56,7 +55,6 @@ mongoose
   })
   .then(() => console.log('DB connection successful!'))
   .catch((err) => console.log(err));
-
 
 app.use('/api/v1/user', authRouter);
 app.use('/api/v1', portfolioRouter);

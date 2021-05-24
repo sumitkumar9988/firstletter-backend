@@ -17,9 +17,7 @@ exports.userDetail = catchAsync(async (req, res, next) => {
   const user = await User.findById(req.user.id);
   res.status(200).json({
     status: 'success',
-    data: {
-      user,
-    },
+    user,
   });
 });
 
@@ -122,10 +120,14 @@ exports.getEducationDetail = catchAsync(async (req, res, next) => {
 });
 
 exports.getAllEducation = catchAsync(async (req, res, next) => {
+  console.log('Request');
+
   const education = await Education.find({
     user: req.user.id,
   });
-  res.status(201).json({
+  console.log('Request1');
+
+  return res.status(201).json({
     status: 'success',
     length: education.length,
     data: {
@@ -170,7 +172,12 @@ exports.deleteEducationDetail = catchAsync(async (req, res, next) => {
 });
 
 exports.updateEducation = catchAsync(async (req, res, next) => {
-  const education = await Education.findByIdAndUpdate(req.params.id, req.body, {
+  const data = {
+    instituteLogo: req.body.image,
+    ...req.body,
+  };
+  console.log(data);
+  const education = await Education.findByIdAndUpdate(req.params.id, data, {
     new: true,
     runValidators: true,
   });
@@ -244,7 +251,10 @@ exports.deleteExperienceDetail = catchAsync(async (req, res, next) => {
 });
 
 exports.updateExperience = catchAsync(async (req, res, next) => {
-  data = req.body;
+  const data = {
+    organizationLogo: req.body.image,
+    ...req.body,
+  };
 
   const experience = await Experience.findByIdAndUpdate(req.params.id, data, {
     new: true,
