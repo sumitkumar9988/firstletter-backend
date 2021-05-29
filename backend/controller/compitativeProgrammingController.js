@@ -5,6 +5,8 @@ const catchAsync = require('./../utils/catchAsync');
 
 //API for codechef data
 
+axios.defaults.timeout = 5000;
+
 exports.saveCodeChefUserName = catchAsync(async (req, res, next) => {
     const username = req.body.codeChefUsername;
     if (!username) {
