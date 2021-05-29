@@ -105,12 +105,12 @@ router.get(
   authController.protect,
   projectController.guthubOAoth
 );
-router.get('/github/callback', projectController.githubCallBack);
-router.post(
-  '/setGithubUserName',
-  authController.protect,
-  projectController.setGitHubUserName
-);
+router.post('/github/callback', authController.protect, projectController.githubCallBack);
+// router.post(
+//   '/setGithubUserName',
+//   authController.protect,
+//   projectController.setGitHubUserName
+// );
 
 router.get(
   '/project',

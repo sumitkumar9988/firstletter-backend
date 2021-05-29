@@ -4,7 +4,7 @@ const AppError = require('./../utils/AppError');
 const User = require('./../models/userModel');
 const catchAsync = require('./../utils/catchAsync');
 const Email = require('./../utils/email');
-const request = require('request');
+const axios=require('axios')
 
 const signInToke = (id) => {
   return jwt.sign(
@@ -22,6 +22,7 @@ const createSendToken = (user, statusCode, res) => {
   const token = signInToke(user._id);
   const visibalData = {
     photo: user.photo,
+    username:user.username,
     role: user.role,
     name: user.name,
     email: user.email,
@@ -47,6 +48,28 @@ exports.signUp = catchAsync(async (req, res, next) => {
   await new Email(newUser, url).sendWelcome();
 
   //add email to list
+  const config={
+    headers: {
+          'content-type': 'application/json',
+          authorization:
+            'Bearer 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',
+        }
+  }
+
+  data={
+    list_ids: ['956575b3-93e1-4b79-b0f4-bafeb6af003f'],
+          contacts: [
+            {
+              email: `${newUser.email}`,
+              first_name: `${newUser.name}`,
+              custom_fields:{
+                username:newUser.username
+              }
+            },
+          ],
+        
+  }
+  await axios.post('https://api.sendgrid.com/v3/marketing/contacts', data, config);
 
   // const options = {
   //   method: 'PUT',

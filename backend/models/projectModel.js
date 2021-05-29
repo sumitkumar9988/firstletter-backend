@@ -19,7 +19,8 @@ const projectSchema = new mongoose.Schema({
     type: [String]
   },
   projectLogo:{
-    type: String
+    type: String,
+    default:'https://firstletter-multimedia.s3.ap-south-1.amazonaws.com/projectIcon.png'
   },
   repoUrl: {
     type: String

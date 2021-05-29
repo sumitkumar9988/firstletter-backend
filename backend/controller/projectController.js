@@ -14,7 +14,7 @@ exports.guthubOAoth = catchAsync(async (req, res, next) => {
 
 exports.githubCallBack = catchAsync(async (req, res, next) => {
 
-  const requestToken = req.query.code;
+  const requestToken = req.body.code;
   const {
     data
   } = await axios.post(`https://github.com/login/oauth/access_token?client_id=${process.env.GITHUB_CLIENT_ID}&client_secret=${process.env.GITHUB_SECRET_KEY}&code=${requestToken}`)
@@ -28,10 +28,20 @@ exports.githubCallBack = catchAsync(async (req, res, next) => {
   })
 
 
-
   if (!response.data.login) {
     return next(new AppError('Some error occurred while GitHub OAuth', 404));
   }
+
+
+  githubUserName = {
+    gitHubAccount: response.data.login
+  }
+  console.log(githubUserName)
+   await User.findByIdAndUpdate(req.user.id, githubUserName, {
+     new: true,
+     runValidators: true,
+   });
+
 
   res.status(201).json({
     status: 'success',
@@ -43,23 +53,23 @@ exports.githubCallBack = catchAsync(async (req, res, next) => {
   })
 })
 
-exports.setGitHubUserName = catchAsync(async (req, res, next) => {
+// exports.setGitHubUserName = catchAsync(async (req, res, next) => {
 
-  if (!req.body.githubUserName) {
-    return next(new AppError('Please Authorize GitHub again'));
-  }
-  githubUserName = {
-    gitHubAccount: req.body.githubUserName
-  }
-   await User.findByIdAndUpdate(req.user.id, githubUserName, {
-     new: true,
-     runValidators: true,
-   });
-  res.status(201).json({
-    status: 'success',
-    message: 'Github username save'
-  })
-})
+//   if (!req.body.githubUserName) {
+//     return next(new AppError('Please Authorize GitHub again'));
+//   }
+//   githubUserName = {
+//     gitHubAccount: req.body.githubUserName
+//   }
+//    await User.findByIdAndUpdate(req.user.id, githubUserName, {
+//      new: true,
+//      runValidators: true,
+//    });
+//   res.status(201).json({
+//     status: 'success',
+//     message: 'Github username save'
+//   })
+// })
 
 exports.getAllUserProject = catchAsync(async (req, res, next) => {
   const allProject = await Project.find({
@@ -80,7 +90,6 @@ exports.refreshNewProject = catchAsync(async (req, res, next) => {
   if (!user.gitHubAccount) {
     return next(new AppError('Please provide your GitHub account', 404));
   }
-  console.log(user.gitHubAccount);
 
   const { data } = await axios.get(
     `https://api.github.com/users/${user.gitHubAccount}/repos`
@@ -93,7 +102,7 @@ exports.refreshNewProject = catchAsync(async (req, res, next) => {
       repoUrl: item.url,
       DemoUrl: item.html_url,
       projectLogo:
-        'https://firstletter-multimedia.s3.ap-south-1.amazonaws.com/project.png',
+        'https://firstletter-multimedia.s3.ap-south-1.amazonaws.com/projectIcon.png',
       updated_at: item.updated_at,
       description: item.description,
     };
