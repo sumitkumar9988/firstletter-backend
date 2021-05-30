@@ -69,7 +69,7 @@ exports.signUp = catchAsync(async (req, res, next) => {
           ],
         
   }
-  await axios.post('https://api.sendgrid.com/v3/marketing/contacts', data, config);
+  // await axios.put('https://api.sendgrid.com/v3/marketing/contacts', data, config);
 
   // const options = {
   //   method: 'PUT',

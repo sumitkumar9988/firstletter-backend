@@ -28,22 +28,24 @@ exports.getEducationDetails = catchAsync(async (req, res, next) => {
   const userDoc = await User.find({
     username: req.params.username,
   });
-  const userID = userDoc._id;
 
-  if (!userDoc) {
+  if (userDoc.length===0) {
     return next(
       new AppError('no such username exist! Enter correct username', 404)
     );
   }
-
+else{
+  const userId=userDoc[0]._id
   const education = await Education.find({
-    user: userID,
+    user:userId ,
   });
 
   return res.status(200).json({
     status: 'success',
     education: education,
   });
+}
+  
 });
 
 exports.getExperienceDetails = catchAsync(async (req, res, next) => {
