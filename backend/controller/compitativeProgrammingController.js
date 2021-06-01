@@ -61,7 +61,7 @@ exports.getCodeChefData = catchAsync(async (req, res, next) => {
 //for spoj  account details
 
 exports.saveSPOJUserName = catchAsync(async (req, res, next) => {
-    const username = req.body.spojUsername;
+    const username = req.body.spojAccount;
     if (!username) {
         return next(new AppError('Please Enter your SPOJ Username', 404));
     }
@@ -119,7 +119,7 @@ exports.getSpojData = catchAsync(async (req, res, next) => {
 //set your Codeforces  account details
 
 exports.saveCodeForcesUserName = catchAsync(async (req, res, next) => {
-    const username = req.body.codeforcesUsername;
+    const username = req.body.codeforcesAccount;
     if (!username) {
         return next(new AppError('Please Enter your CodeForces Username', 404));
     }

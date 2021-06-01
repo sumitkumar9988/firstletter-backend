@@ -365,3 +365,28 @@ exports.uploadLinkedInResume = catchAsync(async (req, res, next) => {
   })
   
 });
+
+
+exports.addSkills = catchAsync(async (req, res, next) => {
+
+  const skill=req.body.skill;
+  const user=await User.findById(req.user.id);
+  user.skills.push(skill);
+  await user.save()
+  console.log(user);
+  return res.status(205).json({
+    status:'success',
+    message:'Skills add successfully'
+  })
+  
+});
+
+
+exports.removeSkills = catchAsync(async (req, res, next) => {
+
+  return res.status(205).json({
+    status:'success',
+    message:'this API is still in development stage !wait till this goes to production'
+  })
+  
+});

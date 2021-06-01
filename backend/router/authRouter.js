@@ -193,4 +193,6 @@ router.post(
   uploadImageToS3.uploadImageToS3
 ); //testing done
 
+
+router.post('/addskills',authController.protect,userController.addSkills);
 module.exports = router;
