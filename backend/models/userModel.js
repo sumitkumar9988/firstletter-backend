@@ -88,7 +88,7 @@ const userSchema = new mongoose.Schema(
       default: Date.now(),
     },
     mobileNumber: {
-      type: Number,
+      type: String,
     },
     passwordChangedAt: Date,
     passwordResetToken: String,
