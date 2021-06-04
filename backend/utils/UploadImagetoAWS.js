@@ -39,11 +39,12 @@ exports.uploadImageToS3 = catchAsync(async (req, res, next) => {
         new AppError('Something went wrong with storage try again later', 404)
       );
     }
-    const result = {
-      url: data.Location,
-      key: data.Key,
-    };
-    req.result = result;
+    // const result = {
+    //   url: data.Location,
+    //   key: data.Key,
+    // };
+    // req.result = result;
+    req.body.image=data.Location
     next();
   });
 });

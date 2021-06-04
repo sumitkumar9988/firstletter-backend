@@ -28,9 +28,6 @@ exports.userDetail = catchAsync(async (req, res, next) => {
 exports.updateUserDetail = catchAsync(async (req, res, next) => {
 
   data = req.body;
-  if (req.result) {
-    data.photo = req.result.url;
-  }
   const filteredBody = filterObj(
     data,
     'email',
@@ -146,16 +143,13 @@ exports.getAllEducation = catchAsync(async (req, res, next) => {
 
 exports.addEducation = catchAsync(async (req, res, next) => {
 
-  if (req.result) {
-    logoImage = req.result.url;
-  }
-
+ 
   const education = {
     institute: req.body.institute,
     user: req.user.id,
     basicinfo: req.body.basicinfo,
-    instituteLogo: logoImage,
-    city: req.user.city,
+    instituteLogo: req.body.image,
+    city: req.body.city,
     degree: req.body.degree,
     startDate: req.body.startDate,
     endDate: req.body.endDate,
@@ -186,9 +180,6 @@ exports.deleteEducationDetail = catchAsync(async (req, res, next) => {
 exports.updateEducation = catchAsync(async (req, res, next) => {
 
   data = req.body;
-  if (req.result) {
-    data.instituteLogo = req.result.url;
-  }
 
   const education = await Education.findByIdAndUpdate(req.params.id, data, {
     new: true,
@@ -236,17 +227,15 @@ exports.getExperienceById = catchAsync(async (req, res, next) => {
 })
 
 exports.addExperience = catchAsync(async (req, res, next) => {
-  if (req.result) {
-    logoImage = req.result.url;
-  }
+ 
 
   const experience = {
     jobTitle: req.body.jobTitle,
     user: req.user.id,
     organization: req.body.organization,
-    organizationLogo: logoImage,
+    organizationLogo: req.body.image,
     website: req.body.website,
-    remote: req.user.remote,
+    remote: req.body.remote,
     startDate: req.body.startDate,
     endDate: req.body.endDate,
     city:req.body.city,
@@ -277,9 +266,7 @@ exports.deleteExperienceDetail = catchAsync(async (req, res, next) => {
 exports.updateExperience = catchAsync(async (req, res, next) => {
 
   data = req.body;
-  if (req.result) {
-    data.organizationLogo = req.result.url;
-  }
+
 
   const experience = await Experience.findByIdAndUpdate(req.params.id, data, {
     new: true,
@@ -301,17 +288,10 @@ exports.updateExperience = catchAsync(async (req, res, next) => {
 
 exports.addCertificate = catchAsync(async (req, res, next) => {
 
-  let uploadImage;
-  if (req.result) {
-    uploadImage = req.result.url;
-  }
-  if (!uploadImage) {
-    return next(new AppError('Upload Your Certificate', 404));
-  }
   const certificateData = {
     user: req.user.id,
     name: req.body.name,
-    image: uploadImage,
+    image: req.body.image,
     isseueDate: req.body.isseueDate,
     Organization: req.body.Organization,
     learning: req.body.learning,
