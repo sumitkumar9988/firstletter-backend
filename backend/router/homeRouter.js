@@ -45,15 +45,18 @@ router.post('/sendEmail',async function (req, res) {
       sgMail
         .send(msg)
         .then(() => {
-          console.log('Email sent');;
+           return res.json({
+
+                message:'Email sent!'
+            })
         })
         .catch((error) => {
-          console.error(error);;
+            return res.json({
+                message:'error ! try again later'
+            })
         });;
     
-    res.json({
-        success:'Email sent!'
-    })
+    
 })
 
 
