@@ -15,6 +15,36 @@ exports.getBasicDetails = catchAsync(async (req, res, next) => {
 });
 
 
+
+
+exports.getAllDetails = catchAsync(async (req, res, next) => {
+
+  const userId=req.user._id;
+  const education = await Education.find({
+    user:userId ,
+  });
+
+  const experience =await Experience.find({
+    user:userId ,
+  })
+
+  const project = await Project.find({
+    user: userId,
+    included: true,
+  });
+
+
+
+  res.status(200).json({
+   status: 'success',
+   user: req.user,
+   education:education,
+   project: project,
+   experience:experience,
+   certificate: certificate,
+ });
+});
+
 exports.getUsername = catchAsync(async (req, res, next) => {
   const userDoc = await User.findOne({
     username: req.params.username,
@@ -39,9 +69,7 @@ exports.getEducationDetails = catchAsync(async (req, res, next) => {
   const education = await Education.find({
     user:userId ,
   });
-  const experience =await Experience.find({
-    user:userId ,
-  })
+
 
   return res.status(200).json({
     status: 'success',

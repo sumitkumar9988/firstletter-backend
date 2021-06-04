@@ -13,6 +13,7 @@ const bodyParser = require('body-parser');
 const globalErrorHandler = require('./backend/controller/errorController');
 const AppError = require('./backend/utils/AppError');
 const authRouter = require('./backend/router/authRouter');
+const homeRouter = require('./backend/router/homeRouter');
 const portfolioRouter = require('./backend/router/portfolioRouter');
 
 const app = express();
@@ -59,7 +60,9 @@ mongoose
 
 
 app.use('/api/v1/user', authRouter);
+app.use('/api/v1/home', homeRouter);
 app.use('/api/v1', portfolioRouter);
+
 
 app.all('*', (req, res, next) => {
   next(new AppError(`Can't find ${req.originalUrl} on this server!`, 404));
