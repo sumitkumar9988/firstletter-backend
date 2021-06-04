@@ -1,5 +1,3 @@
-const axios = require('axios')
-
 const User = require('./../models/userModel');
 const Certificate = require('./../models/CertificateModels');
 const Education = require('./../models/educationModel');
@@ -9,81 +7,73 @@ const AppError = require('./../utils/AppError');
 const catchAsync = require('./../utils/catchAsync');
 
 exports.getBasicDetails = catchAsync(async (req, res, next) => {
-  const userDoc = await User.find({
-    username: req.params.username,
-  });
-  if (!userDoc) {
-    return next(
-      new AppError('no such username exist! Enter correct username', 404)
-    );
-  }
 
-  return res.status(200).json({
+   res.status(200).json({
     status: 'success',
-    data: userDoc,
+    user: req.user,
   });
 });
 
-exports.getEducationDetails = catchAsync(async (req, res, next) => {
-  const userDoc = await User.find({
+
+exports.getUsername = catchAsync(async (req, res, next) => {
+  const userDoc = await User.findOne({
     username: req.params.username,
   });
 
-  if (userDoc.length===0) {
+  if (!userDoc) {
     return next(
       new AppError('no such username exist! Enter correct username', 404)
     );
   }
 else{
-  const userId=userDoc[0]._id
+  req.user=userDoc;
+  next();
+}
+  
+});
+
+
+exports.getEducationDetails = catchAsync(async (req, res, next) => {
+ 
+  const userId=req.user._id;
   const education = await Education.find({
     user:userId ,
   });
+  const experience =await Experience.find({
+    user:userId ,
+  })
 
   return res.status(200).json({
     status: 'success',
     education: education,
   });
-}
   
 });
 
+
 exports.getExperienceDetails = catchAsync(async (req, res, next) => {
-  const userDoc = await User.find({
-    username: req.params.username,
-  });
-  const userID = userDoc._id;
+ 
+  const userId=req.user._id;
 
-  if (!userDoc) {
-    return next(
-      new AppError('no such username exist! Enter correct username', 404)
-    );
-  }
-
-  const experience = await Experience.find({
-    user: userID,
-  });
+  const experience =await Experience.find({
+    user:userId ,
+  })
 
   return res.status(200).json({
     status: 'success',
-    experience: experience,
+    experience:experience
   });
+  
 });
 
+
+
+
 exports.getProjectDetails = catchAsync(async (req, res, next) => {
-  const userDoc = await User.find({
-    username: req.params.username,
-  });
-  const userID = userDoc._id;
-
-  if (!userDoc) {
-    return next(
-      new AppError('no such username exist! Enter correct username', 404)
-    );
-  }
-
+ 
+  const userId=req.user._id;
   const project = await Project.find({
-    user: userID,
+    user: userId,
     included: true,
   });
 
@@ -94,50 +84,15 @@ exports.getProjectDetails = catchAsync(async (req, res, next) => {
 });
 
 exports.getCertificate = catchAsync(async (req, res, next) => {
-  const userDoc = await User.find({
-    username: req.params.username,
-  });
-  const userID = userDoc._id;
 
-  if (!userDoc) {
-    return next(
-      new AppError('no such username exist! Enter correct username', 404)
-    );
-  }
+  const userId=req.user._id;
 
+  const certificate =await Certificate.find({
+    user:userId ,
+  })
   return res.status(200).json({
     status: 'success',
     certificate: certificate,
   });
 });
 
-exports.getDetailsByUsername = catchAsync(async (req, res, next) => {
-  const userDoc = await User.find({
-    usernamee: req.params.username,
-  });
-  const userID = userDoc._id;
-  const education = await Education.find({
-    user: userID,
-  });
-  const certificate = await Certificate.find({
-    user: userID,
-  });
-  const experience = await Experience.find({
-    user: userID,
-  });
-  const project = await Project.find({
-    user: userID,
-    included: true,
-  });
-
-  return res.status(200).json({
-    status: 'success',
-    data: {
-      user: userDoc,
-      education: education,
-      certificate: certificate,
-      experience: experience,
-      project: project,
-    },
-  });
-});
