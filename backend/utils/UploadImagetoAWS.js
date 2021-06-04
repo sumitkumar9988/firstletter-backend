@@ -35,13 +35,10 @@ exports.uploadImageToS3 = catchAsync(async (req, res, next) => {
 
   s3.upload(params, (error, data) => {
     if (error) {
-      console.log(error);
       return next(
         new AppError('Something went wrong with storage try again later', 404)
       );
     }
-    console.log('test1');
-    console.log(data.Location);
     const result = {
       url: data.Location,
       key: data.Key,

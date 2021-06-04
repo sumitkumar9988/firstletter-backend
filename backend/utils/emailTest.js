@@ -58,7 +58,7 @@ exports.testEmailWorking = catchAsync(async (req, res, next) => {
   request(options, function (error, response, body) {
     if (error) throw new Error(error);
 
-    console.log(body);
+    // console.log(body);
   });
 
 
@@ -70,7 +70,7 @@ exports.testEmailWorking = catchAsync(async (req, res, next) => {
 
     });
   } catch (error) {
-    console.log(error);
+    // console.log(error);
     res.status(404).json({ status: 'error', error });
   }
 });

@@ -36,7 +36,7 @@ exports.githubCallBack = catchAsync(async (req, res, next) => {
   githubUserName = {
     gitHubAccount: response.data.login
   }
-  console.log(githubUserName)
+  // console.log(githubUserName)
    await User.findByIdAndUpdate(req.user.id, githubUserName, {
      new: true,
      runValidators: true,

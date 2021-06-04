@@ -39,7 +39,7 @@ exports.uploadPDFToS3 = catchAsync(async (req, res, next) => {
         new AppError('Something went wrong with storage try again later', 4040)
       );
     }
-    console.log(data.Location);
+    // console.log(data.Location);
     const result = {
       url: data.Location,
       key: data.Key,

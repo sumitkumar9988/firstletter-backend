@@ -6,7 +6,7 @@ const router = express.Router();
 
 router.post('/newsletter',async function (req, res) {
     const {email}=req.body;
-    console.log(email);
+    // console.log(email);
     const config={
         headers: {
               'content-type': 'application/json',
@@ -25,7 +25,7 @@ router.post('/newsletter',async function (req, res) {
             
       }
     const {data}=await axios.put('https://api.sendgrid.com/v3/marketing/contacts', body, config);
-    console.log(data);
+    // console.log(data);
     res.json({
         success:'Thankyou for Subscribe'
     })

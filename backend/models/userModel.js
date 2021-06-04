@@ -55,7 +55,6 @@ const userSchema = new mongoose.Schema(
 
     bio: {
       type: String,
-      minlength: [10, 'bio should have atleast 10 words'],
       maxlength: [100, 'length of bio should not be greater than 100 words'],
     },
     intrestedIn: {

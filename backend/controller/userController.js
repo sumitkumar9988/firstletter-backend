@@ -380,7 +380,7 @@ exports.addSkills = catchAsync(async (req, res, next) => {
   const user=await User.findById(req.user.id);
   user.skills.push(skill);
   await user.save()
-  console.log(user);
+  // console.log(user);
   return res.status(205).json({
     status:'success',
     message:'Skills add successfully'
