@@ -48,7 +48,7 @@ exports.getAllDetails = catchAsync(async (req, res, next) => {
 exports.getUsername = catchAsync(async (req, res, next) => {
   const userDoc = await User.findOne({
     username: req.params.username,
-  });
+  }).select('-__v  -role -accountCreateAt -passwordResetExpires -passwordResetToken');
 
   if (!userDoc) {
     return next(
