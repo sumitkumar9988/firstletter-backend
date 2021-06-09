@@ -35,7 +35,9 @@ router.post('/newsletter',async function (req, res) {
 router.post('/createTailwind',async function (req, res) {
     const {email}=req.body;
     // console.log(email);
-    const config={
+    try{
+
+      const config={
         headers: {
               'content-type': 'application/json',
               authorization:
@@ -52,11 +54,17 @@ router.post('/createTailwind',async function (req, res) {
               ],
             
       }
-    const {data}=await axios.put('https://api.sendgrid.com/v3/marketing/contacts', body, config);
-    // console.log(data);
+    await axios.put('https://api.sendgrid.com/v3/marketing/contacts', body, config);
     res.json({
         success:'Thankyou for Subscribe'
     })
+
+    }catch(err){
+        res.status(400).json({
+            status:'fail'
+        })
+    }
+    
 })
 
 
