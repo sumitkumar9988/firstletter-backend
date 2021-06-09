@@ -32,6 +32,34 @@ router.post('/newsletter',async function (req, res) {
 })
 
 
+router.post('/createTailwind',async function (req, res) {
+    const {email}=req.body;
+    // console.log(email);
+    const config={
+        headers: {
+              'content-type': 'application/json',
+              authorization:
+                'Bearer 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',
+            }
+      }
+    
+      body={
+        list_ids: ['9c100f5c-3556-4044-b073-5c6967a5bbec'],
+              contacts: [
+                {
+                  email: `${email}`,
+                },
+              ],
+            
+      }
+    const {data}=await axios.put('https://api.sendgrid.com/v3/marketing/contacts', body, config);
+    // console.log(data);
+    res.json({
+        success:'Thankyou for Subscribe'
+    })
+})
+
+
 router.post('/sendEmail',async function (req, res) {
     const {to,from,message,name}=req.body;
 
