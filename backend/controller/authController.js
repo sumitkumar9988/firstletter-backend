@@ -4,7 +4,11 @@ const AppError = require('./../utils/AppError');
 const User = require('./../models/userModel');
 const catchAsync = require('./../utils/catchAsync');
 const Email = require('./../utils/email');
-const axios=require('axios')
+const {OAuth2Client} = require('google-auth-library');
+const axios=require('axios');
+const { response } = require('express');
+
+const client=new OAuth2Client(process.env.GOOGLE_OAUTH_CLIENT_ID)
 
 const signInToke = (id) => {
   return jwt.sign(
@@ -98,6 +102,70 @@ exports.signUp = catchAsync(async (req, res, next) => {
 
   createSendToken(newUser, 201, res);
 });
+
+
+
+
+
+exports.googleOAuthSignup = catchAsync(async (req, res, next) => {
+  
+  const {tokenID,username}=req.body;
+  const {payload}=await client.verifyIdToken({
+    idToken:tokenID,
+    audience:process.env.GOOGLE_OAUTH_CLIENT_ID
+  });
+
+  const {email,picture,name}=payload;
+  const user=await User.findOne({email});
+  if(!user){
+
+    const password = crypto.randomBytes(32).toString('hex');
+
+    const newUser = await User.create({
+      username: username,
+      name: name,
+      email: email,
+      password: password,
+      photo:picture
+    });
+    const url = `https://firstletter.tech/`;
+    await new Email(newUser, url).sendWelcome();
+    createSendToken(newUser, 201, res);
+    
+  }else{
+   
+    return next(
+      new AppError('You already have Account! Please Login Your Account', 401)
+    );
+  }
+
+
+
+});
+
+
+exports.googleOauthLogin = catchAsync(async (req, res, next) => {
+
+  const {tokenID}=req.body;
+  const {payload}=await client.verifyIdToken({
+    idToken:tokenID,
+    audience:process.env.GOOGLE_OAUTH_CLIENT_ID
+  });
+
+  const {email}=payload;
+  const user=await User.findOne({email});
+  if(!user){
+    return next(
+      new AppError('Please create your Account! Go to signup page', 401)
+    );
+    
+  }else{
+    createSendToken(user, 200, res);
+  }
+
+});
+
+
 
 exports.login = catchAsync(async (req, res, next) => {
   const { email, password } = req.body;

@@ -34,7 +34,6 @@ router.post('/newsletter',async function (req, res) {
 
 router.post('/createTailwind',async function (req, res) {
     const {email}=req.body;
-    // console.log(email);
     try{
 
       const config={

@@ -10,7 +10,12 @@ const uploadImageToS3 = require('./../utils/UploadImagetoAWS');
 const router = express.Router();
 
 router.post('/signup', authController.signUp); //testing done
+router.post('/signupGoogleOauth', authController.googleOAuthSignup); //testing done
+
 router.post('/login', authController.login); //testing done
+router.post('/goAuthLogin', authController.googleOauthLogin); //testing done
+
+
 router.post('/forgetpassword', authController.forgotPassword); // testing done
 router.post('/resetpassword/:token', authController.resetPassword); //testing done
 router.post(
