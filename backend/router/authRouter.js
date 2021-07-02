@@ -23,6 +23,14 @@ router.post(
   authController.protect,
   authController.updatePassword
 ); //testing done
+
+router.post(
+  '/uploadImage',
+  uploadImageToS3.uploadUserPhoto,
+  uploadImageToS3.uploadImageToS3,
+  userController.uploadImage
+); //testing done
+
 router
   .route('/')
   .get(authController.protect, userController.userDetail) //testing done

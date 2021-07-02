@@ -136,11 +136,6 @@ exports.refreshNewProject = catchAsync(async (req, res, next) => {
 
 
 
-
-
-
-
-
 exports.getProjectDetails = catchAsync(async (req, res, next) => {
   const project = await Project.findById(req.params.id);
   if (!project) {

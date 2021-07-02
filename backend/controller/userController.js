@@ -7,6 +7,16 @@ const Certificate = require('./../models/CertificateModels');
 
 
 
+exports.uploadImage = catchAsync(async (req, res, next) => {
+
+ const image=req.body.image;
+  res.status(200).json({
+    status: 'success',
+    url:image
+  });
+
+});
+
 const filterObj = (obj, ...allowedFields) => {
   const newObj = {};
   Object.keys(obj).forEach(el => {
@@ -24,6 +34,9 @@ exports.userDetail = catchAsync(async (req, res, next) => {
     },
   });
 });
+
+
+
 
 exports.updateUserDetail = catchAsync(async (req, res, next) => {
 
@@ -59,6 +72,8 @@ exports.updateUserDetail = catchAsync(async (req, res, next) => {
     message:'User details update successfully!'
   });
 })
+
+
 
 
 exports.updateusername = catchAsync(async (req, res, next) => {
