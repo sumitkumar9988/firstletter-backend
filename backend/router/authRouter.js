@@ -207,5 +207,11 @@ router.post(
 ); //testing done
 
 
+router.post(
+  '/google-analtics-data',
+  authController.protect,
+  userController.getAnalticsData
+);
+
 router.post('/addskills',authController.protect,userController.addSkills);
 module.exports = router;

@@ -1,25 +1,35 @@
 const User = require('./../models/userModel');
-const Education = require('./../models/educationModel')
-const Experience = require('./../models/experienceModels')
+const Education = require('./../models/educationModel');
+const Experience = require('./../models/experienceModels');
 const AppError = require('./../utils/AppError');
 const catchAsync = require('./../utils/catchAsync');
 const Certificate = require('./../models/CertificateModels');
+const service_account = require('../utils/key.json');
+const { google } = require('googleapis');
+var dateFormat = require('dateformat');
+const { now } = require('mongoose');
+const reporting = google.analyticsreporting('v4');
+let scopes = ['https://www.googleapis.com/auth/analytics.readonly'];
+let jwt = new google.auth.JWT(
+  service_account.client_email,
+  null,
+  service_account.private_key,
+  scopes
+);
 
-
+let view_id = '244321056';
 
 exports.uploadImage = catchAsync(async (req, res, next) => {
-
- const image=req.body.image;
+  const image = req.body.image;
   res.status(200).json({
     status: 'success',
-    url:image
+    url: image,
   });
-
 });
 
 const filterObj = (obj, ...allowedFields) => {
   const newObj = {};
-  Object.keys(obj).forEach(el => {
+  Object.keys(obj).forEach((el) => {
     if (allowedFields.includes(el)) newObj[el] = obj[el];
   });
   return newObj;
@@ -30,16 +40,12 @@ exports.userDetail = catchAsync(async (req, res, next) => {
   res.status(200).json({
     status: 'success',
     data: {
-      user
+      user,
     },
   });
 });
 
-
-
-
 exports.updateUserDetail = catchAsync(async (req, res, next) => {
-
   data = req.body;
   const filteredBody = filterObj(
     data,
@@ -69,12 +75,9 @@ exports.updateUserDetail = catchAsync(async (req, res, next) => {
 
   res.status(200).json({
     status: 'success',
-    message:'User details update successfully!'
+    message: 'User details update successfully!',
   });
-})
-
-
-
+});
 
 exports.updateusername = catchAsync(async (req, res, next) => {
   const userData = {
@@ -95,70 +98,71 @@ exports.updateusername = catchAsync(async (req, res, next) => {
   });
 });
 
-
 exports.updateSocialNetworking = catchAsync(async (req, res, next) => {
-
-  const filteredBody = filterObj(req.body,
-    'twitterAcount', 'facebookAccount', 'linkedInAccount',
-    'InstaAccount', 'gitHubAccount', 'mediumAccount');
+  const filteredBody = filterObj(
+    req.body,
+    'twitterAcount',
+    'facebookAccount',
+    'linkedInAccount',
+    'InstaAccount',
+    'gitHubAccount',
+    'mediumAccount'
+  );
   const user = await User.findByIdAndUpdate(req.user.id, filteredBody, {
     new: true,
-    runValidators: true
-  })
-  if(!user){
+    runValidators: true,
+  });
+  if (!user) {
     return next(new AppError('There is no such user with these id', 400));
   }
 
   res.status(200).json({
     status: 'success',
-    message:'Users Details update successfully!'
-  })
-
-})
+    message: 'Users Details update successfully!',
+  });
+});
 
 exports.deleteUser = catchAsync(async (req, res, next) => {
   const user = await User.findByIdAndUpdate(req.user.id, {
-    active: false
+    active: false,
   });
-  if(!user){
-    return next(new AppError('There is no such user with this id',404))
+  if (!user) {
+    return next(new AppError('There is no such user with this id', 404));
   }
 
   res.status(200).json({
     status: 'success',
-    data: 'Account Deactivate! You can login your account whenever you want '
+    data: 'Account Deactivate! You can login your account whenever you want ',
   });
 });
 
 exports.getEducationDetail = catchAsync(async (req, res, next) => {
   const education = await Education.findById(req.params.id);
-  if(!education){
+  if (!education) {
     return next(new AppError('No document found with that ID', 400));
   }
   res.status(201).json({
     status: 'success',
     data: {
-      education: education
-    }
-  })
-})
+      education: education,
+    },
+  });
+});
 
 exports.getAllEducation = catchAsync(async (req, res, next) => {
   const education = await Education.find({
-    user: req.user.id
+    user: req.user.id,
   });
   res.status(201).json({
     status: 'success',
     length: education.length,
     data: {
-      education: education
-    }
-  })
-})
+      education: education,
+    },
+  });
+});
 
 exports.addEducation = catchAsync(async (req, res, next) => {
-
- 
   const education = {
     institute: req.body.institute,
     user: req.user.id,
@@ -172,14 +176,13 @@ exports.addEducation = catchAsync(async (req, res, next) => {
     activitiesAndSocieties: req.body.activitiesAndSocieties,
   };
 
-   await Education.create(education);
+  await Education.create(education);
 
   res.status(200).json({
     status: 'success',
-    message: 'new education add successful'
-  })
-
-})
+    message: 'new education add successful',
+  });
+});
 
 exports.deleteEducationDetail = catchAsync(async (req, res, next) => {
   const educationDoc = await Education.findByIdAndDelete(req.params.id);
@@ -188,62 +191,54 @@ exports.deleteEducationDetail = catchAsync(async (req, res, next) => {
   }
   res.status(200).json({
     status: 'success',
-    message: 'Item delete successfully'
-  })
-})
+    message: 'Item delete successfully',
+  });
+});
 
 exports.updateEducation = catchAsync(async (req, res, next) => {
-
   data = req.body;
 
   const education = await Education.findByIdAndUpdate(req.params.id, data, {
     new: true,
-    runValidators: true
-  })
+    runValidators: true,
+  });
 
   if (!education) {
     return next(new AppError('No document found with that ID', 400));
   }
   res.status(201).json({
     status: 'success',
-    message:'Education update successfully'
-  })
-
-})
+    message: 'Education update successfully',
+  });
+});
 
 exports.allUserExeprience = catchAsync(async (req, res, next) => {
-
   const experience = await Experience.find({
-    user: req.user.id
+    user: req.user.id,
   });
   res.status(201).json({
     status: 'success',
     length: experience.length,
     data: {
-      experience
-    }
-  })
-
-})
+      experience,
+    },
+  });
+});
 
 exports.getExperienceById = catchAsync(async (req, res, next) => {
-
   const experience = await Experience.findById(req.params.id);
-  if(!experience){
-    return next(new AppError('No such data availabe with this ID',400))
+  if (!experience) {
+    return next(new AppError('No such data availabe with this ID', 400));
   }
   res.status(201).json({
     status: 'success',
     data: {
-      experience
-    }
-  })
-
-})
+      experience,
+    },
+  });
+});
 
 exports.addExperience = catchAsync(async (req, res, next) => {
- 
-
   const experience = {
     jobTitle: req.body.jobTitle,
     user: req.user.id,
@@ -253,7 +248,7 @@ exports.addExperience = catchAsync(async (req, res, next) => {
     remote: req.body.remote,
     startDate: req.body.startDate,
     endDate: req.body.endDate,
-    city:req.body.city,
+    city: req.body.city,
     duration: req.body.duration,
     responsibilities: req.body.responsibilities,
   };
@@ -263,46 +258,37 @@ exports.addExperience = catchAsync(async (req, res, next) => {
     status: 'success',
     message: 'new experience add successfully ',
   });
-})
+});
 
 exports.deleteExperienceDetail = catchAsync(async (req, res, next) => {
-
   const experienceDoc = await Experience.findByIdAndDelete(req.params.id);
   if (!experienceDoc) {
     return next(new AppError('No document found with that ID', 404));
   }
   res.status(200).json({
     status: 'success',
-    message: 'Item delete successfully'
-  })
-
-})
+    message: 'Item delete successfully',
+  });
+});
 
 exports.updateExperience = catchAsync(async (req, res, next) => {
-
   data = req.body;
-
 
   const experience = await Experience.findByIdAndUpdate(req.params.id, data, {
     new: true,
-    runValidators: true
-  })
+    runValidators: true,
+  });
 
   if (!experience) {
     return next(new AppError('No document found with that ID', 404));
   }
   res.status(201).json({
     status: 'success',
-    message:'Experience details update successfully'
-  })
-
-})
-
-
-
+    message: 'Experience details update successfully',
+  });
+});
 
 exports.addCertificate = catchAsync(async (req, res, next) => {
-
   const certificateData = {
     user: req.user.id,
     name: req.body.name,
@@ -312,83 +298,151 @@ exports.addCertificate = catchAsync(async (req, res, next) => {
     learning: req.body.learning,
     url: req.body.url,
   };
-   await Certificate.create(certificateData);
+  await Certificate.create(certificateData);
   res.status(200).json({
     status: 'success',
-    message:'New Certificate add successfully'
-  })
-})
+    message: 'New Certificate add successfully',
+  });
+});
 
 exports.getYourCertificate = catchAsync(async (req, res, next) => {
   const certificate = await Certificate.find({
-    user: req.user.id
+    user: req.user.id,
   });
 
   res.status(200).json({
     status: 'success',
     length: certificate.length,
     data: {
-      certificate
-    }
-  })
-})
+      certificate,
+    },
+  });
+});
 
-exports.getCertificateByID = catchAsync(async (req, res, next)=>{
-
+exports.getCertificateByID = catchAsync(async (req, res, next) => {
   const certificate = await Certificate.findById(req.params.id);
-  if(!certificate){
-    next(new AppError('No certificate found By this id',404));
+  if (!certificate) {
+    next(new AppError('No certificate found By this id', 404));
   }
   res.status(200).json({
-    status:'success',
-    data:{
+    status: 'success',
+    data: {
       certificate,
-    }
-  })
-})
+    },
+  });
+});
 
-exports.deleteCertificate = catchAsync(async (req, res, next)=>{
+exports.deleteCertificate = catchAsync(async (req, res, next) => {
   const certificate = await Certificate.findByIdAndDelete(req.params.id);
   if (!certificate) {
     return next(new AppError('No document found with that ID', 404));
   }
   res.status(200).json({
     status: 'success',
-    message: 'item delete successfully'
-  })
-})
-
+    message: 'item delete successfully',
+  });
+});
 
 exports.uploadLinkedInResume = catchAsync(async (req, res, next) => {
-
   return res.status(205).json({
-    status:'success',
-    message:'this API is still in development stage !wait till this goes to production'
-  })
-  
+    status: 'success',
+    message:
+      'this API is still in development stage !wait till this goes to production',
+  });
 });
-
 
 exports.addSkills = catchAsync(async (req, res, next) => {
-
-  const skill=req.body.skill;
-  const user=await User.findById(req.user.id);
+  const skill = req.body.skill;
+  const user = await User.findById(req.user.id);
   user.skills.push(skill);
-  await user.save()
+  await user.save();
   // console.log(user);
   return res.status(205).json({
-    status:'success',
-    message:'Skills add successfully'
-  })
-  
+    status: 'success',
+    message: 'Skills add successfully',
+  });
 });
-
 
 exports.removeSkills = catchAsync(async (req, res, next) => {
-
   return res.status(205).json({
-    status:'success',
-    message:'this API is still in development stage !wait till this goes to production'
-  })
-  
+    status: 'success',
+    message:
+      'this API is still in development stage !wait till this goes to production',
+  });
 });
+
+exports.getAnalticsData = catchAsync(async (req, res, next) => {
+  const total_days = req.body.total_days || 90;
+  const today_date = dateFormat(new Date(), 'yyyy-mm-dd');
+  const milli_second_in_days = 86400000;
+  let last_date;
+
+  if (total_days === 7) {
+    last_date = new Date(new Date() -7 * milli_second_in_days);
+  } else if (total_days === 30) {
+    last_date = new Date(new Date() -30 * milli_second_in_days);
+  } else {
+    last_date = new Date(new Date() -90 * milli_second_in_days);
+  }
+
+  last_date=dateFormat(last_date,'yyyy-mm-dd')
+  console.log('last_date', last_date);
+
+  let metrics_report = {
+    reportRequests: [
+      {
+        viewId: view_id,
+        dateRanges: [{ startDate: last_date, endDate: today_date }],
+        metrics: [{ expression: 'ga:pageviews' }],
+        dimensions: [{ name: 'ga:date' }, { name: 'ga:pagePath' }],
+        dimensionFilterClauses: [
+          {
+            filters: [
+              {
+                operator: 'EXACT',
+                dimensionName: 'ga:pagePath',
+                expressions: ['sumit.firstletter.tech/'],
+              },
+            ],
+          },
+        ],
+      },
+    ],
+  };
+
+  try {
+    await jwt.authorize();
+    let request = {
+      headers: { 'Content-Type': 'application/json' },
+      auth: jwt,
+      resource: metrics_report,
+    };
+
+    const { data } = await reporting.reports.batchGet(request);
+    const rowData=data.reports[0].data.rows;
+    const totalData=data.reports[0].data.totals;
+    // const filterData=filterAnalticsData(data.reports);
+  //  const datewithFormat= changeDateFormat('20210708');
+    res.status(201).json({
+      status: 'sucess',
+      rowData,
+      totalUser:totalData[0].values[0]
+    });
+  } catch (error) {
+    return next(new AppError(error.message, 404));
+  }
+});
+
+
+const filterAnalticsData=(data)={
+
+}
+  // funky date format from google analtics 20210708 YYYYMMDD cahnge to DD-MM-YYYY
+const changeDateFormat=(funkyDateFormat)=>{
+
+    const year  = funkyDateFormat.slice(0,4);
+    const month= funkyDateFormat.slice(4,6);
+    const day  = funkyDateFormat.slice(6,8);
+    const format=day+"-"+month+"-"+year;
+    return format;
+}
