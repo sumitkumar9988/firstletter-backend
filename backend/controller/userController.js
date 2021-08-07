@@ -8,6 +8,7 @@ const service_account = require('../utils/key.json');
 const { google } = require('googleapis');
 var dateFormat = require('dateformat');
 const { now } = require('mongoose');
+const { findOne } = require('./../models/userModel');
 const reporting = google.analyticsreporting('v4');
 let scopes = ['https://www.googleapis.com/auth/analytics.readonly'];
 let jwt = new google.auth.JWT(
@@ -378,15 +379,16 @@ exports.getAnalticsData = catchAsync(async (req, res, next) => {
   let last_date;
 
   if (total_days === 7) {
-    last_date = new Date(new Date() -7 * milli_second_in_days);
+    last_date = new Date(new Date() - 7 * milli_second_in_days);
   } else if (total_days === 30) {
-    last_date = new Date(new Date() -30 * milli_second_in_days);
+    last_date = new Date(new Date() - 30 * milli_second_in_days);
   } else {
-    last_date = new Date(new Date() -90 * milli_second_in_days);
+    last_date = new Date(new Date() - 90 * milli_second_in_days);
   }
-
-  last_date=dateFormat(last_date,'yyyy-mm-dd')
-  console.log('last_date', last_date);
+  
+  let allDate=gernateDate(last_date,new Date())
+  console.log(allDate)
+  last_date = dateFormat(last_date, 'yyyy-mm-dd');
 
   let metrics_report = {
     reportRequests: [
@@ -419,30 +421,66 @@ exports.getAnalticsData = catchAsync(async (req, res, next) => {
     };
 
     const { data } = await reporting.reports.batchGet(request);
-    const rowData=data.reports[0].data.rows;
-    const totalData=data.reports[0].data.totals;
-    // const filterData=filterAnalticsData(data.reports);
-  //  const datewithFormat= changeDateFormat('20210708');
+    const rowData = data.reports[0].data.rows;
+    const totalData = data.reports[0].data.totals;
+    const filterData=filterAnalticsData(rowData);
+
+    // filter between allDate and filterData
+    
+    Object.keys(allDate).forEach(function(key) {
+      if(filterData[key]){
+        allDate[key] = filterData[key];
+      }
+      // if (item[key] == null || item[key] == 0) {
+      //   item[key] = results[key];
+      // }
+    })
+
+    console.log(allDate)
+    //  const datewithFormat= changeDateFormat('20210708');
     res.status(201).json({
       status: 'sucess',
-      rowData,
-      totalUser:totalData[0].values[0]
+      data:filterData,
+      totalUser: totalData[0].values[0],
     });
   } catch (error) {
     return next(new AppError(error.message, 404));
   }
 });
 
-
-const filterAnalticsData=(data)={
-
+const filterAnalticsData = (data => {
+  
+  let filterdata={}
+  for ( var index=0; index<data.length; index++ ) {
+    let date=data[index].dimensions[0]
+    date=changeDateFormat(date)
+    const value=data[index].metrics[0].values[0];
+    filterdata[date]=value;
 }
-  // funky date format from google analtics 20210708 YYYYMMDD cahnge to DD-MM-YYYY
-const changeDateFormat=(funkyDateFormat)=>{
+return filterdata;
 
-    const year  = funkyDateFormat.slice(0,4);
-    const month= funkyDateFormat.slice(4,6);
-    const day  = funkyDateFormat.slice(6,8);
-    const format=day+"-"+month+"-"+year;
-    return format;
+
+});
+// funky date format from google analtics 20210708 YYYYMMDD cahnge to DD-MM-YYYY
+const changeDateFormat = (funkyDateFormat) => {
+  const year = funkyDateFormat.slice(0, 4);
+  const month = funkyDateFormat.slice(4, 6);
+  const day = funkyDateFormat.slice(6, 8);
+  const format = year + '-' + month + '-' + day;
+  return format;
+};
+
+const gernateDate=(startDate,endDate)=>{
+  const milli_second_in_days = 86400000;
+  let start=new Date(startDate)
+  let end=new Date(endDate)
+  let dt;
+
+  let data={}
+  while (start<=end) {
+    start = new Date(start.getTime() +  milli_second_in_days); 
+    dt=dateFormat(start,'yyyy-mm-dd');
+    data[dt]=0;    
+  }
+  return data;
 }
