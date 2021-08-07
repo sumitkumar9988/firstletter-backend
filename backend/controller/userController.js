@@ -385,9 +385,9 @@ exports.getAnalticsData = catchAsync(async (req, res, next) => {
   } else {
     last_date = new Date(new Date() - 90 * milli_second_in_days);
   }
-  
-  let allDate=gernateDate(last_date,new Date())
-  console.log(allDate)
+
+  let allDate = gernateDate(last_date, new Date());
+  console.log(allDate);
   last_date = dateFormat(last_date, 'yyyy-mm-dd');
 
   let metrics_report = {
@@ -423,24 +423,21 @@ exports.getAnalticsData = catchAsync(async (req, res, next) => {
     const { data } = await reporting.reports.batchGet(request);
     const rowData = data.reports[0].data.rows;
     const totalData = data.reports[0].data.totals;
-    const filterData=filterAnalticsData(rowData);
+    const filterData = filterAnalticsData(rowData);
 
     // filter between allDate and filterData
-    
-    Object.keys(allDate).forEach(function(key) {
-      if(filterData[key]){
+
+    Object.keys(allDate).forEach(function (key) {
+      if (filterData[key]) {
         allDate[key] = filterData[key];
       }
-      // if (item[key] == null || item[key] == 0) {
-      //   item[key] = results[key];
-      // }
-    })
+    });
 
-    console.log(allDate)
+    console.log(allDate);
     //  const datewithFormat= changeDateFormat('20210708');
     res.status(201).json({
       status: 'sucess',
-      data:filterData,
+      data: allDate,
       totalUser: totalData[0].values[0],
     });
   } catch (error) {
@@ -448,19 +445,16 @@ exports.getAnalticsData = catchAsync(async (req, res, next) => {
   }
 });
 
-const filterAnalticsData = (data => {
-  
-  let filterdata={}
-  for ( var index=0; index<data.length; index++ ) {
-    let date=data[index].dimensions[0]
-    date=changeDateFormat(date)
-    const value=data[index].metrics[0].values[0];
-    filterdata[date]=value;
-}
-return filterdata;
-
-
-});
+const filterAnalticsData = (data) => {
+  let filterdata = {};
+  for (var index = 0; index < data.length; index++) {
+    let date = data[index].dimensions[0];
+    date = changeDateFormat(date);
+    const value = data[index].metrics[0].values[0];
+    filterdata[date] = value;
+  }
+  return filterdata;
+};
 // funky date format from google analtics 20210708 YYYYMMDD cahnge to DD-MM-YYYY
 const changeDateFormat = (funkyDateFormat) => {
   const year = funkyDateFormat.slice(0, 4);
@@ -470,17 +464,17 @@ const changeDateFormat = (funkyDateFormat) => {
   return format;
 };
 
-const gernateDate=(startDate,endDate)=>{
+const gernateDate = (startDate, endDate) => {
   const milli_second_in_days = 86400000;
-  let start=new Date(startDate)
-  let end=new Date(endDate)
+  let start = new Date(startDate);
+  let end = new Date(endDate);
   let dt;
 
-  let data={}
-  while (start<=end) {
-    start = new Date(start.getTime() +  milli_second_in_days); 
-    dt=dateFormat(start,'yyyy-mm-dd');
-    data[dt]=0;    
+  let data = {};
+  while (start <= end) {
+    start = new Date(start.getTime() + milli_second_in_days);
+    dt = dateFormat(start, 'yyyy-mm-dd');
+    data[dt] = 0;
   }
   return data;
-}
+};
